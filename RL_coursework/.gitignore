@@ -1,0 +1,7 @@
+# Docker-created student state
+outputs/
+
+# Python and notebook state
+**/__pycache__/
+*.py[cod]
+.ipynb_checkpoints/

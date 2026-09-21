@@ -1,13 +1,15 @@
 """Common helper functions and classes for RL algorithms."""
 
 from dataclasses import dataclass
+from pathlib import Path
 
 import numpy as np
 import torch
 from numpy.typing import NDArray
 from torch import Tensor
 
-from course_package import MARLEnv
+from course_package import Expert, MARLEnv
+from course_package.policies.expert import PIDParams, initialize_mpc_param
 from course_package.policies.rl.networks import PolicyNetwork
 
 
@@ -105,6 +107,39 @@ def evaluate_marl_policy(
     for i in range(num_episodes):
         episode_returns = _rollout(env, policy, seed=seed + i)
         returns_array[i, :] = episode_returns
+    return returns_array
+
+
+def make_expert(env: MARLEnv, gain_dir: str | Path | None = None) -> Expert:
+    """Create the model-based expert (battery MPC + thermal PID), one MPC per agent."""
+    mpc_params = [
+        initialize_mpc_param(env.env, agent_idx=i) for i in range(env.num_agents)
+    ]
+    return Expert(mpc_params, PIDParams(), gain_dir=gain_dir)
+
+
+def evaluate_expert(
+    env: MARLEnv,
+    expert: Expert,
+    num_episodes: int = 10,
+    seed: int = 1234,
+) -> NDArray:
+    """
+    Evaluate the expert controller on the same episodes as ``evaluate_marl_policy``.
+
+    Returns
+    -------
+    NDArray
+        Array of shape (num_episodes, env.num_agents) of episode returns.
+    """
+    returns_array = np.zeros((num_episodes, env.num_agents), dtype=np.float32)
+    for i in range(num_episodes):
+        env.reset(seed=seed + i)
+        expert.reset()
+        done = False
+        while not done:
+            _, rewards, done, _, _ = env.step(expert(env))
+            returns_array[i, :] += rewards
     return returns_array
 
 

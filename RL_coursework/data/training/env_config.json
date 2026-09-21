@@ -1,5 +1,5 @@
 {
-    "data_dir": "data/datasets/training",
+    "data_dir": "data/training",
     "start_date": "2023-01-01 00:00:00",
     "end_date": "2025-08-31 23:00:00",
     "episode_len": 168,

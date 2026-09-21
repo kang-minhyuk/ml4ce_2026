@@ -1,30 +1,29 @@
-# Student compose file: runs the prebuilt course image from the registry (no build, no repo needed).
-#
-#   mkdir -p student-work outputs
-#   docker compose -f compose.student.yaml pull      # download / update the image
-#   docker compose -f compose.student.yaml up
-#
+# Build and run the coursework from a clone of this repository:
+#   docker compose build
+#   docker compose up
 # Then open http://localhost:8888 (token: ml4ce-2026).
-#
-# TEACHING STAFF: replace the default image below with your registry path and version tag
-# before handing this file out. Students can also override it without editing the file:
-#   COURSE_IMAGE=registry.example.org/course/ml4ce-coursework:2026.1 docker compose -f compose.student.yaml up
 
 services:
   rl-coursework:
     build:
       context: .
       dockerfile: dockerfile
-      
+    init: true
     ports:
       # Localhost only: the Jupyter server is not exposed to the rest of the network.
       - "127.0.0.1:${JUPYTER_PORT:-8888}:8888"
 
     volumes:
-      # Your workspace: notebook, algorithms/ and the training data (seeded from the image on first start).
-      - ./files:/home/jovyan/work
+      # Keep every student-facing item at the Jupyter root.
+      - "${COURSE_README:-./README.md}:/home/jovyan/work/README.md:ro"
+      - "${COURSE_NOTEBOOK:-./RL_coursework.ipynb}:/home/jovyan/work/RL_coursework.ipynb"
+      - "${ALGORITHMS_DIR:-./algorithms}:/home/jovyan/work/algorithms"
+      # Only the training dataset is exposed, and it is input-only.
+      - "${COURSE_DATA_DIR:-./data/training}:/home/jovyan/work/data/training:ro"
+      # Network schema, to be displayed in the Jupyter interface.
+      - "${SCHEMA_PNG_DIR:-./data/schema.png}:/home/jovyan/work/data/schema.png:ro"
       # Trained policies, learning curves and your submission end up here.
-      - ./outputs:/home/jovyan/work/outputs
+      - "${COURSE_OUTPUTS_DIR:-./outputs}:/home/jovyan/work/outputs"
 
     environment:
-      JUPYTER_TOKEN: ${JUPYTER_TOKEN:-ml4ce-2026}
+      JUPYTER_TOKEN: ""

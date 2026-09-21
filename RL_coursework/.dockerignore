@@ -1,0 +1,19 @@
+# Allowlist: only files required by the student image enter the build context.
+*
+
+!pyproject.toml
+!README.md
+!RL_coursework.ipynb
+!docker-entrypoint.sh
+!course_package/
+!course_package/**
+!algorithms/
+!algorithms/**
+!data/
+data/*
+!data/training/
+!data/training/**
+
+# Never include generated Python files.
+**/__pycache__
+**/*.pyc
