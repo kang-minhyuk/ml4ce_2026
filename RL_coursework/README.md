@@ -2,26 +2,39 @@
 
 You will train **one policy** that controls the heat pump and EV battery of five households at once, so that together they spend less, stay comfortable, and wear out the battery less. You compare two ready-made algorithms (CEM and REINFORCE), then write **your own** and submit it. Your algorithm is graded automatically on data you have never seen.
 
-## 1. Start in 3 steps
+## 1. Start the coursework
 
-You only need [Docker](https://docs.docker.com/get-docker/). No Python installation. Put the `compose.student.yaml` file you were given in an empty folder and run, from that folder:
+You only need [Docker](https://docs.docker.com/get-docker/). No Python installation or manual directory setup is required. Clone the repository and run from its root:
 
 ```bash
-docker login <registry>           # once, only if your instructor says the registry is private
-mkdir -p student-work outputs     # your workspace and your results
-docker compose -f compose.student.yaml pull   # downloads the course image (a few GB, first time only)
-docker compose -f compose.student.yaml up
+git clone https://github.com/OptiMaL-PSE-Lab/ml4ce_2026.git
+cd ml4ce_2026/RL_coursework
+docker compose build
+docker compose up
 ```
 
-Your instructor gives you the registry address and, if needed, a user name and a token for `docker login`.
+The first build downloads the base image and Python packages, so it takes longer than later starts.
 
 Then open <http://localhost:8888> and enter the token `ml4ce-2026`. Open `RL_coursework.ipynb`.
 
-Stop with `Ctrl+C`, then run `docker compose -f compose.student.yaml down`.
+Stop with `Ctrl+C`, then run `docker compose down`.
 
-Your files stay on your computer:
-- `student-work/` holds the notebook, `algorithms/` and the training data.
-- `outputs/` holds trained policies, learning curves and your submission.
+For a one-off container instead of `up`, run:
+
+```bash
+docker compose run --service-ports rl-coursework
+```
+
+`--service-ports` is required for Jupyter to be reachable from the host.
+
+The Jupyter file browser shows these entries at one level:
+
+- `README.md` and `RL_coursework.ipynb`
+- `algorithms/`, where you edit your implementation
+- `data/training/`, mounted read-only
+- `outputs/`, created automatically for trained policies, plots and submissions
+
+These paths map directly to the corresponding files and directories in this repository, so notebook and algorithm edits persist on the host.
 
 ## 2. Your workflow
 
@@ -66,8 +79,7 @@ def train(env, agent_policy, config, seed):
 
 ## 6. If something goes wrong
 
-- **`pull access denied` or `unauthorized`.** Run `docker login <registry>` again and check the user name and token your instructor gave you.
-- **Permission errors in `student-work/` or `outputs/`.** These folders were created by Docker as root. Delete them and create them yourself with `mkdir -p` before starting.
-- **Port 8888 is busy.** Use another port: `JUPYTER_PORT=8899 docker compose -f compose.student.yaml up`, then open <http://localhost:8899>.
+- **The first build is slow.** It downloads the Jupyter base image, CPU-only PyTorch and the coursework dependencies. Later builds reuse Docker's cache.
+- **Port 8888 is busy.** Use another port: `JUPYTER_PORT=8899 docker compose up`, then open <http://localhost:8899>.
 - **`export_submission` complains.** Your file must define both `AlgorithmConfig` and `train`.
-- **A new course version was announced.** Run `docker compose -f compose.student.yaml pull` again (and use the new compose file or image tag if you were given one). Your existing `student-work/` is **not** updated automatically. To get the new notebook, first copy your own algorithm somewhere safe, then move the old `student-work/RL_coursework.ipynb` and `student-work/algorithms/` aside and start again.
+- **The repository was updated.** Save your algorithm, run `git pull`, and then run `docker compose build`.
