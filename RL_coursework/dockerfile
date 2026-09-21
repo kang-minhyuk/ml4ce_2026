@@ -3,7 +3,7 @@ FROM quay.io/jupyter/minimal-notebook:python-3.12
 USER root
 
 ENV COURSE_ROOT=/opt/course \
-    COURSE_OUTPUT_DIR=/home/jovyan/work/files/outputs \
+    COURSE_OUTPUT_DIR=/home/jovyan/work/outputs \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     MPLCONFIGDIR=/tmp/matplotlib
@@ -11,7 +11,7 @@ ENV COURSE_ROOT=/opt/course \
 WORKDIR /opt/course/source
 
 # The environment/helpers package is installed read-only, outside the student workspace.
-COPY pyproject.toml uv.lock ./
+COPY pyproject.toml ./
 COPY course_package/ ./course_package/
 
 # CPU-only torch (no GPU is used; the default wheel pulls several GB of CUDA libraries).
@@ -21,21 +21,23 @@ RUN pip install --no-cache-dir uv \
     && uv pip install --system .
 
 # Pristine copies of the student-facing files, used to seed an empty workspace.
+COPY README.md /opt/course/templates/README.md
 COPY RL_coursework.ipynb /opt/course/templates/RL_coursework.ipynb
 COPY algorithms/ /opt/course/templates/algorithms/
-COPY data/ /opt/course/templates/data/
-COPY README.md /opt/course/templates/README.md
+COPY data/training/ /opt/course/templates/data/training/
 
 COPY docker-entrypoint.sh /usr/local/bin/course-entrypoint
 
 RUN chmod +x /usr/local/bin/course-entrypoint \
     && chown -R root:root /opt/course \
     && chmod -R a-w /opt/course \
-    && mkdir -p /home/jovyan/work/files/ \
-    && mkdir -p /home/jovyan/work/files/outputs \
+    && mkdir -p /home/jovyan/work/data/training \
+    && mkdir -p /home/jovyan/work/outputs \
     && chown -R "${NB_UID}:${NB_GID}" /home/jovyan/work
 
-USER ${NB_UID}
+# Initialise bind mounts as root, then let the base image drop privileges
+# before Jupyter starts.
+USER root
 
 # Jupyter only serves /home/jovyan/work: notebook, algorithms/, data/ and outputs/.
 WORKDIR /home/jovyan/work
@@ -47,4 +49,6 @@ ENTRYPOINT ["course-entrypoint"]
 CMD ["jupyter", "lab", \
     "--ip=0.0.0.0", \
     "--no-browser", \
+    "--IdentityProvider.token=", \
+    "--FileContentsManager.use_atomic_writing=False", \
     "--ServerApp.root_dir=/home/jovyan/work"]
