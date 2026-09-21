@@ -1,0 +1,36 @@
+[project]
+name = "ML4CE_RL_CW_2026"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+dependencies = [
+    "torch",
+    "gymnasium",
+    "tqdm",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "pvlib",
+    "jupyterlab",
+    "ipykernel",
+    "ipywidgets",
+    "notebook",
+    "gurobipy",
+    "pyomo"
+]
+
+[project.optional-dependencies]
+dev = [
+    "mkdocs",
+    "pytest",
+    "ruff>=0.15.21",
+    "types-tqdm>=4.68.0.20260608"
+    ]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["course_package*"]
+namespaces = true

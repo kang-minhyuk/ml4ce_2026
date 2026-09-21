@@ -1,0 +1,30 @@
+# Student compose file: runs the prebuilt course image from the registry (no build, no repo needed).
+#
+#   mkdir -p student-work outputs
+#   docker compose -f compose.student.yaml pull      # download / update the image
+#   docker compose -f compose.student.yaml up
+#
+# Then open http://localhost:8888 (token: ml4ce-2026).
+#
+# TEACHING STAFF: replace the default image below with your registry path and version tag
+# before handing this file out. Students can also override it without editing the file:
+#   COURSE_IMAGE=registry.example.org/course/ml4ce-coursework:2026.1 docker compose -f compose.student.yaml up
+
+services:
+  rl-coursework:
+    build:
+      context: .
+      dockerfile: dockerfile
+      
+    ports:
+      # Localhost only: the Jupyter server is not exposed to the rest of the network.
+      - "127.0.0.1:${JUPYTER_PORT:-8888}:8888"
+
+    volumes:
+      # Your workspace: notebook, algorithms/ and the training data (seeded from the image on first start).
+      - ./files:/home/jovyan/work
+      # Trained policies, learning curves and your submission end up here.
+      - ./outputs:/home/jovyan/work/outputs
+
+    environment:
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN:-ml4ce-2026}

@@ -1,0 +1,50 @@
+FROM quay.io/jupyter/minimal-notebook:python-3.12
+
+USER root
+
+ENV COURSE_ROOT=/opt/course \
+    COURSE_OUTPUT_DIR=/home/jovyan/work/files/outputs \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    MPLCONFIGDIR=/tmp/matplotlib
+
+WORKDIR /opt/course/source
+
+# The environment/helpers package is installed read-only, outside the student workspace.
+COPY pyproject.toml uv.lock ./
+COPY course_package/ ./course_package/
+
+# CPU-only torch (no GPU is used; the default wheel pulls several GB of CUDA libraries).
+# Keep the version in sync with benchmark/Dockerfile.grader.
+RUN pip install --no-cache-dir uv \
+    && uv pip install --system "torch==2.14.0" --index-url https://download.pytorch.org/whl/cpu \
+    && uv pip install --system .
+
+# Pristine copies of the student-facing files, used to seed an empty workspace.
+COPY RL_coursework.ipynb /opt/course/templates/RL_coursework.ipynb
+COPY algorithms/ /opt/course/templates/algorithms/
+COPY data/ /opt/course/templates/data/
+COPY README.md /opt/course/templates/README.md
+
+COPY docker-entrypoint.sh /usr/local/bin/course-entrypoint
+
+RUN chmod +x /usr/local/bin/course-entrypoint \
+    && chown -R root:root /opt/course \
+    && chmod -R a-w /opt/course \
+    && mkdir -p /home/jovyan/work/files/ \
+    && mkdir -p /home/jovyan/work/files/outputs \
+    && chown -R "${NB_UID}:${NB_GID}" /home/jovyan/work
+
+USER ${NB_UID}
+
+# Jupyter only serves /home/jovyan/work: notebook, algorithms/, data/ and outputs/.
+WORKDIR /home/jovyan/work
+
+EXPOSE 8888
+
+ENTRYPOINT ["course-entrypoint"]
+
+CMD ["jupyter", "lab", \
+    "--ip=0.0.0.0", \
+    "--no-browser", \
+    "--ServerApp.root_dir=/home/jovyan/work"]
