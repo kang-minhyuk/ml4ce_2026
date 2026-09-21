@@ -2,7 +2,9 @@ from .helpers import (
     BaseAlgorithmConfig,
     choose_action,
     compute_returns,
+    evaluate_expert,
     evaluate_marl_policy,
+    make_expert,
     make_shared_policy,
 )
 from .io import (
@@ -19,8 +21,10 @@ __all__ = [
     "CSVLogger",
     "choose_action",
     "compute_returns",
+    "evaluate_expert",
     "evaluate_marl_policy",
     "export_submission",
+    "make_expert",
     "make_shared_policy",
     "save_training_plots",
     "set_seed",
