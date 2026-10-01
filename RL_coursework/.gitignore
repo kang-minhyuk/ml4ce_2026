@@ -1,5 +1,6 @@
 # Docker-created student state
 outputs/
+work/
 
 # Python and notebook state
 **/__pycache__/

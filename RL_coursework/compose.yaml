@@ -14,6 +14,11 @@ services:
       - "127.0.0.1:${JUPYTER_PORT:-8888}:8888"
 
     volumes:
+      # Back the whole Jupyter root with the host too, so any extra file a
+      # student creates outside the paths below (scratch notebooks, notes)
+      # also survives `docker compose down`, not just the paths listed next.
+      - "${COURSE_WORKDIR:-./work}:/home/jovyan/work"
+
       # Keep every student-facing item at the Jupyter root.
       - "${COURSE_README:-./README.md}:/home/jovyan/work/README.md:ro"
       - "${COURSE_NOTEBOOK:-./RL_coursework.ipynb}:/home/jovyan/work/RL_coursework.ipynb"

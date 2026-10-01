@@ -4,37 +4,26 @@ You will train **one policy** that controls the heat pump and EV battery of five
 
 ## 1. Start the coursework
 
-You only need [Docker](https://docs.docker.com/get-docker/). No Python installation or manual directory setup is required. Clone the repository and run from its root:
+You only need [Docker](https://docs.docker.com/get-docker/) — no Python install, no manual setup.
 
 ```bash
 git clone https://github.com/OptiMaL-PSE-Lab/ml4ce_2026.git
 cd ml4ce_2026/RL_coursework
-docker compose build
-docker compose up
+docker compose up --build
 ```
 
-The first build downloads the base image and Python packages, so it takes longer than later starts.
+The first build downloads the base image and Python packages, so it's slower than later starts.
 
-Then open <http://localhost:8888> and enter the token `ml4ce-2026`. Open `RL_coursework.ipynb`.
-
-Stop with `Ctrl+C`, then run `docker compose down`.
-
-For a one-off container instead of `up`, run:
-
-```bash
-docker compose run --service-ports rl-coursework
-```
-
-`--service-ports` is required for Jupyter to be reachable from the host.
-
-The Jupyter file browser shows these entries at one level:
+Open <http://localhost:8888> (token `ml4ce-2026`) and open `RL_coursework.ipynb`. The file browser shows:
 
 - `README.md` and `RL_coursework.ipynb`
-- `algorithms/`, where you edit your implementation
-- `data/training/`, mounted read-only
-- `outputs/`, created automatically for trained policies, plots and submissions
+- `algorithms/` — where you edit your implementation
+- `data/training/` — read-only
+- `outputs/` — created automatically for trained policies, plots and submissions
 
-These paths map directly to the corresponding files and directories in this repository, so notebook and algorithm edits persist on the host.
+**Your work is always safe on your machine**, not just inside the container: everything in the file browser, including any extra file you create, is written straight to your local `RL_coursework/` folder. Stop anytime with `Ctrl+C` or `docker compose down` and resume later with `docker compose up` — nothing on disk is lost.
+
+The one exception is **variables in memory**: stopping the container ends the Python kernel, so a break resets anything you haven't saved to a file. Use *Kernel → Restart & Run All* to rebuild that state, and save anything expensive (trained policies, plots) to `outputs/` as soon as you compute it rather than keeping it only in a variable.
 
 ## 2. Your workflow
 
@@ -83,3 +72,4 @@ def train(env, agent_policy, config, seed):
 - **Port 8888 is busy.** Use another port: `JUPYTER_PORT=8899 docker compose up`, then open <http://localhost:8899>.
 - **`export_submission` complains.** Your file must define both `AlgorithmConfig` and `train`.
 - **The repository was updated.** Save your algorithm, run `git pull`, and then run `docker compose build`.
+- **My variables are gone after a break.** Expected — see the note in [Section 1](#1-start-the-coursework). Files are safe; kernel memory isn't. *Restart & Run All*.
