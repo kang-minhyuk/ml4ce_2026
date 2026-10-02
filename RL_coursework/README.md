@@ -30,7 +30,7 @@ The one exception is **variables in memory**: stopping the container ends the Py
 | Step | What to do | Where |
 |---|---|---|
 | **1. Explore** | Run the cells that create the environment, reset it and take a few actions. | Notebook, section 1 |
-| **2. Compare** | Train the provided **CEM** and **REINFORCE** and evaluate them. This is your benchmark to beat. | Notebook, section 3.1 |
+| **2. Compare** | Train the provided **CEM** and **REINFORCE** and evaluate them. | Notebook, section 3.1 |
 | **3. Write yours** | Fill in `AlgorithmConfig` and `train()` in the blank cell. Running the cell saves it as `algorithms/student_algorithm.py`. | Notebook, section 3.2 |
 | **4. Test** | Train and evaluate your algorithm with the cells that follow. Iterate. | Notebook, section 3.2 |
 | **5. Submit** | Set your group id in the last cell and run it. It writes `outputs/submissions/<your group>.py` and checks that `train` and `AlgorithmConfig` exist. | Notebook, section 3.3 |
@@ -50,7 +50,7 @@ def train(env, agent_policy, config, seed):
 ```
 
 - Improve the `agent_policy` you are given and **return it**. One `PolicyNetwork` is shared by all agents.
-- **Stop by yourself** before `config.max_steps` environment steps or `config.max_time` seconds. Count steps in your own loop (as `cem.py` does).
+- **Stop** before `config.max_steps` environment steps or `config.max_time` seconds. Any attempt to cheat on the step counting (1 step = 1 call to `env.step(action)`) will be overriden in the evaluation platform. 
 - Save anything you want to keep (checkpoints, plots) under `outputs/`.
 
 ## 4. How you are graded
@@ -62,7 +62,7 @@ def train(env, agent_policy, config, seed):
 
 ## 5. Key ideas
 
-- **Shared policy (parameter sharing).** One network is used by every agent. Agents still behave differently because their observations differ: besides time-varying signals, each agent observes its own heat pump, PV and EV battery parameters (capacities, efficiencies, charging limits, COP, consumption). CEM and REINFORCE both update this one policy using the experience of all agents.
+- **Shared policy (parameter sharing).** One network is used by every agent. Agents still behave differently because their observations differ: besides time-varying signals, each agent observes its own heat pump, PV and EV battery parameters (capacities, efficiencies, charging limits, COP, consumption).
 - **Joint rollouts.** The dynamics depend on everyone's actions, so an episode is always run with all agents acting together. Rewards come back per agent. Your algorithm decides how to combine them (for example by summing them).
 - **Why it matters.** Evaluating agents one at a time would give misleading rewards, because the other agents would behave differently.
 
