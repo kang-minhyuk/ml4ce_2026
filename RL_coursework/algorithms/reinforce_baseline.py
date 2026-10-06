@@ -9,11 +9,9 @@ import torch
 from tqdm import tqdm
 
 from course_package import MARLEnv
-from course_package.policies.rl.networks import PolicyNetwork, ValueNetwork
 from course_package.utils.helpers import (
     BaseAlgorithmConfig,
     CSVLogger,
-    choose_action,
     compute_returns,
     evaluate_marl_policy,
     save_training_plots,
@@ -34,21 +32,95 @@ class AlgorithmConfig(BaseAlgorithmConfig):
     group_identifier: str = "REINFORCE"
 
 
+class PolicyNetwork(torch.nn.Module):
+    """
+    Single policy shared by all agents, with Gaussian outputs.
+
+    It maps ONE agent's local observation to that agent's action; the same
+    weights are used for every agent. The layers act row-wise, so a batch of
+    local observations (one row per agent) is processed with the same weights.
+    """
+
+    def __init__(self, obs_dim: int, action_dim: int):
+        super().__init__()
+        self.fc1 = torch.nn.Linear(obs_dim, 256)
+        self.fc2 = torch.nn.Linear(256, 256)
+        self.output = torch.nn.Linear(256, action_dim * 2)
+
+    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
+        x = torch.relu(self.fc1(x))
+        x = torch.relu(self.fc2(x))
+        x = self.output(x)
+        mean, log_std = torch.chunk(x, 2, dim=-1)
+        return mean, log_std
+
+    @torch.no_grad()
+    def act(self, local_obs: np.ndarray) -> np.ndarray:
+        """Deterministic (mean) action ``(action_dim,)`` for one agent's observation ``(obs_dim,)``."""
+        mean, _ = self(torch.as_tensor(local_obs, dtype=torch.float32))
+        return mean.numpy()
+
+
+class ValueNetwork(torch.nn.Module):
+    """State-value baseline evaluated on one agent's local observation."""
+
+    def __init__(self, input_size: int):
+        super().__init__()
+        self.fc1 = torch.nn.Linear(input_size, 256)
+        self.fc2 = torch.nn.Linear(256, 128)
+        self.fc3 = torch.nn.Linear(128, 1)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        x = torch.relu(self.fc1(x))
+        x = torch.relu(self.fc2(x))
+        return self.fc3(x)
+
+
+def choose_action(
+    state: np.ndarray, policy_net: PolicyNetwork
+) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+    """
+    Sample actions from the diagonal Gaussian shared policy.
+
+    Works for a single local observation ``(obs_dim,)`` or a batch with one row
+    per agent ``(num_agents, obs_dim)``. Each agent gets an independent sample
+    from the same policy. Log-probabilities and entropies are summed over the
+    action dimension only, so each agent keeps its own value.
+
+    Returns
+    -------
+    tuple[Tensor, Tensor, Tensor]
+        Sampled actions ``(..., action_dim)``, log-probabilities ``(...)`` and entropies ``(...)``.
+    """
+    state_t = torch.from_numpy(state).float()
+    mean, log_std = policy_net(state_t)
+    log_std = torch.clamp(log_std, min=-0.0)
+    std = torch.exp(log_std)
+
+    dist = torch.distributions.Normal(mean, std)
+    action = dist.sample()
+    logprob = dist.log_prob(action).sum(dim=-1)
+    entropy = dist.entropy().sum(dim=-1)
+
+    return action, logprob, entropy
+
+
 def train(
     env: MARLEnv,
-    agent_policy: PolicyNetwork,
     config: AlgorithmConfig,
     seed: int = 0,
 ) -> tuple[PolicyNetwork, dict[str, str]]:
     """
     Train ONE shared policy (used by every agent) with REINFORCE + baseline.
 
-    MARLEnv exposes a joint observation array with shape
-    ``(num_agents, obs_dim)``. The shared policy processes all rows in a single
-    batched forward pass, and the experience of every agent is pooled into one
-    training batch for a single gradient update per iteration.
+    MARLEnv exposes observations with shape ``(num_agents, obs_dim)``, where row
+    ``i`` is agent ``i``'s local observation. During training the shared policy
+    processes all rows in a single batched forward pass (same weights for every
+    row), and the experience of every agent is pooled into one training batch
+    for a single gradient update per iteration.
     """
     set_seed(seed)
+    agent_policy = PolicyNetwork(env.observation_space.shape[1], env.action_space.shape[1])
     pbar = tqdm(
         desc=f"Running {config.group_identifier} RL training loop",
         total=config.max_steps,

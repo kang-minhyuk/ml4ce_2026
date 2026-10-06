@@ -2,6 +2,7 @@
 
 import csv
 import importlib.util
+import inspect
 import os
 import random
 import shutil
@@ -90,12 +91,18 @@ def setup_model_saving(algorithm: str) -> Path:
 
 
 def validate_module(module: ModuleType) -> None:
-    """Check that an algorithm module defines ``train`` and ``AlgorithmConfig``."""
+    """Check that an algorithm module defines ``train(env, config, seed)`` and ``AlgorithmConfig``."""
     module_name = module.__name__
     if not hasattr(module, "train"):
         raise AttributeError(f"{module_name} must define train()")
     if not hasattr(module, "AlgorithmConfig"):
         raise AttributeError(f"{module_name} must define AlgorithmConfig")
+    params = list(inspect.signature(module.train).parameters)
+    if params != ["env", "config", "seed"]:
+        raise TypeError(
+            f"{module_name}.train must have the signature train(env, config, seed), "
+            f"got train({', '.join(params)})"
+        )
 
 
 def export_submission(

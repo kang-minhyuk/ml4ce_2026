@@ -9,7 +9,6 @@ import torch
 from tqdm import tqdm
 
 from course_package import MARLEnv
-from course_package.policies import PolicyNetwork
 from course_package.utils.helpers import (
     BaseAlgorithmConfig,
     CSVLogger,
@@ -30,6 +29,35 @@ class AlgorithmConfig(BaseAlgorithmConfig):
     group_identifier: str = "CEM"
 
 
+class PolicyNetwork(torch.nn.Module):
+    """
+    Single policy shared by all agents, with Gaussian outputs.
+
+    It maps ONE agent's local observation to that agent's action; the same
+    weights are used for every agent. The layers act row-wise, so a batch of
+    local observations (one row per agent) is processed with the same weights.
+    """
+
+    def __init__(self, obs_dim: int, action_dim: int):
+        super().__init__()
+        self.fc1 = torch.nn.Linear(obs_dim, 256)
+        self.fc2 = torch.nn.Linear(256, 256)
+        self.output = torch.nn.Linear(256, action_dim * 2)
+
+    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
+        x = torch.relu(self.fc1(x))
+        x = torch.relu(self.fc2(x))
+        x = self.output(x)
+        mean, log_std = torch.chunk(x, 2, dim=-1)
+        return mean, log_std
+
+    @torch.no_grad()
+    def act(self, local_obs: np.ndarray) -> np.ndarray:
+        """Deterministic (mean) action ``(action_dim,)`` for one agent's observation ``(obs_dim,)``."""
+        mean, _ = self(torch.as_tensor(local_obs, dtype=torch.float32))
+        return mean.numpy()
+
+
 def _policy_vector(policy: PolicyNetwork) -> torch.Tensor:
     """Flatten a policy network into a single parameter vector."""
     with torch.no_grad():
@@ -38,20 +66,21 @@ def _policy_vector(policy: PolicyNetwork) -> torch.Tensor:
 
 def train(
     env: MARLEnv,
-    agent_policy: PolicyNetwork,
     config: AlgorithmConfig,
-    seed: int,
+    seed: int = 0,
 ) -> tuple[PolicyNetwork, dict[str, str]]:
     """
     Train ONE shared policy (used by every agent) with the Cross-Entropy Method.
 
     CEM does not use gradients. For every generation we sample candidate
     parameter vectors from a Gaussian, install each one into the shared policy
-    and evaluate it in a joint rollout of all agents. A candidate's fitness is
-    the total return summed over agents; the elite candidates define the next
-    sampling distribution.
+    and evaluate it in a joint rollout of all agents, where the policy acts on
+    each agent's local observation. A candidate's fitness is the total return
+    summed over agents; the elite candidates define the next sampling
+    distribution.
     """
     set_seed(seed)
+    agent_policy = PolicyNetwork(env.observation_space.shape[1], env.action_space.shape[1])
     pbar = tqdm(
         desc=f"Running {config.group_identifier} RL training loop",
         total=config.max_steps,

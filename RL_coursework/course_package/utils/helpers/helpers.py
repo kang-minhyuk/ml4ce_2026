@@ -4,13 +4,10 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import numpy as np
-import torch
 from numpy.typing import NDArray
-from torch import Tensor
 
 from course_package import Expert, MARLEnv
 from course_package.policies.expert import PIDParams, initialize_mpc_param
-from course_package.policies.rl.networks import PolicyNetwork
 
 
 @dataclass
@@ -22,41 +19,6 @@ class BaseAlgorithmConfig:
     max_time: float = 5.0 * 60.0
     num_eval_episodes: int = 3
     group_identifier: str = "GXXX"
-
-
-def choose_action(
-    state: NDArray, policy_net: PolicyNetwork
-) -> tuple[Tensor, Tensor, Tensor]:
-    """
-    Sample actions from a diagonal Gaussian policy.
-
-    Works for a single observation ``(obs_dim,)`` or a batch with one row per
-    agent ``(num_agents, obs_dim)``. Log-probabilities and entropies are summed
-    over the action dimension only, so each agent keeps its own value.
-
-    Parameters
-    ----------
-    state : NDArray
-        The current observation(s).
-    policy_net : PolicyNetwork
-        The policy network that outputs the mean and log standard deviation of the action distribution.
-
-    Returns
-    -------
-    tuple[Tensor, Tensor, Tensor]
-        Sampled actions ``(..., action_dim)``, log-probabilities ``(...)`` and entropies ``(...)``.
-    """
-    state_t = torch.from_numpy(state).float()
-    mean, log_std = policy_net(state_t)
-    log_std = torch.clamp(log_std, min=-0.0)
-    std = torch.exp(log_std)
-
-    dist = torch.distributions.Normal(mean, std)
-    action = dist.sample()
-    logprob = dist.log_prob(action).sum(dim=-1)
-    entropy = dist.entropy().sum(dim=-1)
-
-    return action, logprob, entropy
 
 
 def compute_returns(rewards: NDArray, gamma: float = 1.0) -> NDArray:
@@ -80,19 +42,24 @@ def compute_returns(rewards: NDArray, gamma: float = 1.0) -> NDArray:
 
 def evaluate_marl_policy(
     env: MARLEnv,
-    policy: PolicyNetwork,
+    policy,
     num_episodes: int = 10,
     seed: int = 1234,
 ) -> NDArray:
     """
     Evaluate a shared policy (used by every agent) in the environment.
 
+    The policy's deterministic ``act`` is applied to each agent's local
+    observation separately, as in grading.
+
     Parameters
     ----------
     env : MARLEnv
         The multi-agent reinforcement learning environment.
-    policy : PolicyNetwork
-        The single policy network shared by all agents.
+    policy
+        The single policy shared by all agents. It must define
+        ``act(local_obs) -> action`` mapping one agent's observation
+        ``(obs_dim,)`` to that agent's action ``(action_dim,)``.
     num_episodes : int, optional
         The number of episodes to evaluate the policy, by default 10.
     seed : int, optional
@@ -143,12 +110,39 @@ def evaluate_expert(
     return returns_array
 
 
-def make_shared_policy(obs_dim: int, action_dim: int) -> PolicyNetwork:
-    """Create the single policy network shared by all agents."""
-    return PolicyNetwork(obs_dim, action_dim)
+def _shared_policy_actions(env: MARLEnv, policy, obs: NDArray) -> NDArray:
+    """
+    Apply the shared policy to each agent's local observation, one agent at a time.
+
+    Parameters
+    ----------
+    env : MARLEnv
+        The multi-agent reinforcement learning environment.
+    policy
+        The single policy shared by all agents (see ``evaluate_marl_policy``).
+    obs : NDArray
+        Observations ``(num_agents, obs_dim)``; row ``i`` is agent ``i``'s local observation.
+
+    Returns
+    -------
+    NDArray
+        Clipped actions ``(num_agents, action_dim)``; row ``i`` is agent ``i``'s action.
+    """
+    actions = np.stack(
+        [np.asarray(policy.act(local_obs), dtype=np.float32) for local_obs in obs]
+    )
+    if actions.shape != env.action_space.shape:
+        raise ValueError(
+            f"policy.act must return one action of shape {env.action_space.shape[1:]} "
+            f"per agent, got {actions.shape[1:]}"
+        )
+    # MARLEnv maps NaN actions to 0, so they would otherwise go unnoticed.
+    if not np.all(np.isfinite(actions)):
+        raise ValueError("policy.act returned non-finite actions")
+    return np.clip(actions, env.action_space.low, env.action_space.high)
 
 
-def _rollout(env: MARLEnv, policy: PolicyNetwork, seed: int | None = None) -> NDArray:
+def _rollout(env: MARLEnv, policy, seed: int | None = None) -> NDArray:
     """
     Rollout a single episode with one shared policy acting for every agent.
 
@@ -156,8 +150,8 @@ def _rollout(env: MARLEnv, policy: PolicyNetwork, seed: int | None = None) -> ND
     ----------
     env : MARLEnv
         The multi-agent reinforcement learning environment.
-    policy : PolicyNetwork
-        The shared policy network.
+    policy
+        The single policy shared by all agents (see ``evaluate_marl_policy``).
     seed : int, optional
         Random seed for reproducibility. If None, no seed is set.
 
@@ -170,10 +164,7 @@ def _rollout(env: MARLEnv, policy: PolicyNetwork, seed: int | None = None) -> ND
     done = False
     episode_returns = np.zeros(env.num_agents, dtype=np.float32)
     while not done:
-        action, _, _ = choose_action(obs, policy)
-        actions = np.clip(
-            action.detach().numpy(), env.action_space.low, env.action_space.high
-        )
+        actions = _shared_policy_actions(env, policy, obs)
         (obs, rewards, done, _, _) = env.step(actions)
         episode_returns += rewards
     return episode_returns
