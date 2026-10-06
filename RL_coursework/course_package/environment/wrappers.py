@@ -11,6 +11,7 @@ class MARLEnv(Wrapper):
         super().__init__(EnergySystem(env_config))
         self.env: EnergySystem
         self.num_agents = self.env.num_agents
+        self.step_count = 0
         self._obs_keys = tuple(self.env.active_observations)
 
         self.obs_low = self.env.observation_space.low.astype(np.float32, copy=False)
@@ -56,6 +57,7 @@ class MARLEnv(Wrapper):
         )
 
         obs, rewards, terminated, truncated, info = self.env.step(actions)
+        self.step_count += 1
         return (
             self._normalize(self._vectorize_obs(obs)),
             rewards,

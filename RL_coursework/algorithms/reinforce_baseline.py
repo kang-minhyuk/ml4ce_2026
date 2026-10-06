@@ -6,8 +6,6 @@ from time import time
 
 import numpy as np
 import torch
-from tqdm import tqdm
-
 from course_package import MARLEnv
 from course_package.utils.helpers import (
     BaseAlgorithmConfig,
@@ -18,6 +16,7 @@ from course_package.utils.helpers import (
     set_seed,
     setup_model_saving,
 )
+from tqdm import tqdm
 
 
 @dataclass
@@ -35,10 +34,6 @@ class AlgorithmConfig(BaseAlgorithmConfig):
 class PolicyNetwork(torch.nn.Module):
     """
     Single policy shared by all agents, with Gaussian outputs.
-
-    It maps ONE agent's local observation to that agent's action; the same
-    weights are used for every agent. The layers act row-wise, so a batch of
-    local observations (one row per agent) is processed with the same weights.
     """
 
     def __init__(self, obs_dim: int, action_dim: int):
@@ -82,11 +77,6 @@ def choose_action(
     """
     Sample actions from the diagonal Gaussian shared policy.
 
-    Works for a single local observation ``(obs_dim,)`` or a batch with one row
-    per agent ``(num_agents, obs_dim)``. Each agent gets an independent sample
-    from the same policy. Log-probabilities and entropies are summed over the
-    action dimension only, so each agent keeps its own value.
-
     Returns
     -------
     tuple[Tensor, Tensor, Tensor]
@@ -112,15 +102,11 @@ def train(
 ) -> tuple[PolicyNetwork, dict[str, str]]:
     """
     Train ONE shared policy (used by every agent) with REINFORCE + baseline.
-
-    MARLEnv exposes observations with shape ``(num_agents, obs_dim)``, where row
-    ``i`` is agent ``i``'s local observation. During training the shared policy
-    processes all rows in a single batched forward pass (same weights for every
-    row), and the experience of every agent is pooled into one training batch
-    for a single gradient update per iteration.
     """
     set_seed(seed)
-    agent_policy = PolicyNetwork(env.observation_space.shape[1], env.action_space.shape[1])
+    agent_policy = PolicyNetwork(
+        env.observation_space.shape[1], env.action_space.shape[1]
+    )
     pbar = tqdm(
         desc=f"Running {config.group_identifier} RL training loop",
         total=config.max_steps,
@@ -140,11 +126,13 @@ def train(
     start_time = time()
     step_count = 0
     batch_idx = 0
+    eval_cost = env.episode_len * config.num_eval_episodes
 
     def budget_remaining() -> bool:
         pbar.update(step_count - pbar.n)
         return (
-            step_count < config.max_steps and time() - start_time < config.max_time
+            step_count + eval_cost < config.max_steps
+            and time() - start_time < config.max_time
         )
 
     while budget_remaining():
@@ -191,21 +179,16 @@ def train(
 
         advantages = returns - values.detach()
         if len(advantages) > 1:
-            advantages = (advantages - advantages.mean()) / (
-                advantages.std() + 1e-8
-            )
+            advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-8)
 
         policy_loss = (
-            -(advantages * logprobs).mean()
-            - config.entropy_weight * entropies.mean()
+            -(advantages * logprobs).mean() - config.entropy_weight * entropies.mean()
         )
         value_loss = torch.mean((values - returns) ** 2)
 
         policy_opt.zero_grad()
         policy_loss.backward()
-        torch.nn.utils.clip_grad_norm_(
-            agent_policy.parameters(), config.gradient_clip
-        )
+        torch.nn.utils.clip_grad_norm_(agent_policy.parameters(), config.gradient_clip)
         policy_opt.step()
 
         value_opt.zero_grad()
@@ -221,7 +204,6 @@ def train(
         eval_return = float(eval_returns.sum())
         train_return = float(np.mean(episode_returns))
         step_count += env.episode_len * config.num_eval_episodes
-
 
         if eval_return > best_eval_return:
             best_eval_return = eval_return

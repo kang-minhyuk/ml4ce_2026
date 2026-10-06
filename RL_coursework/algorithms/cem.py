@@ -6,8 +6,6 @@ from time import time
 
 import numpy as np
 import torch
-from tqdm import tqdm
-
 from course_package import MARLEnv
 from course_package.utils.helpers import (
     BaseAlgorithmConfig,
@@ -17,6 +15,7 @@ from course_package.utils.helpers import (
     set_seed,
     setup_model_saving,
 )
+from tqdm import tqdm
 
 
 @dataclass
@@ -30,13 +29,7 @@ class AlgorithmConfig(BaseAlgorithmConfig):
 
 
 class PolicyNetwork(torch.nn.Module):
-    """
-    Single policy shared by all agents, with Gaussian outputs.
-
-    It maps ONE agent's local observation to that agent's action; the same
-    weights are used for every agent. The layers act row-wise, so a batch of
-    local observations (one row per agent) is processed with the same weights.
-    """
+    """Single policy shared by all agents, with Gaussian outputs."""
 
     def __init__(self, obs_dim: int, action_dim: int):
         super().__init__()
@@ -71,16 +64,11 @@ def train(
 ) -> tuple[PolicyNetwork, dict[str, str]]:
     """
     Train ONE shared policy (used by every agent) with the Cross-Entropy Method.
-
-    CEM does not use gradients. For every generation we sample candidate
-    parameter vectors from a Gaussian, install each one into the shared policy
-    and evaluate it in a joint rollout of all agents, where the policy acts on
-    each agent's local observation. A candidate's fitness is the total return
-    summed over agents; the elite candidates define the next sampling
-    distribution.
     """
     set_seed(seed)
-    agent_policy = PolicyNetwork(env.observation_space.shape[1], env.action_space.shape[1])
+    agent_policy = PolicyNetwork(
+        env.observation_space.shape[1], env.action_space.shape[1]
+    )
     pbar = tqdm(
         desc=f"Running {config.group_identifier} RL training loop",
         total=config.max_steps,
@@ -101,11 +89,13 @@ def train(
     start_time = time()
     step_count = 0
     generation = 0
+    candidate_cost = env.episode_len * config.num_eval_episodes
 
     def budget_remaining() -> bool:
         pbar.update(step_count - pbar.n)
         return (
-            step_count < config.max_steps and time() - start_time < config.max_time
+            step_count + candidate_cost <= config.max_steps
+            and time() - start_time < config.max_time
         )
 
     while budget_remaining():
