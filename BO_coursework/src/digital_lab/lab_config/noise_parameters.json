@@ -1,0 +1,20 @@
+{
+    "process_noise_c_product": 0.0,
+    "process_noise_x_total": 0.0,
+    "process_noise_x_viable": 0.0,
+    "process_noise_x_dead": 0.0,
+    "process_noise_c_glc": 0.0,
+    "process_noise_c_gln": 0.0,
+    "process_noise_c_lac": 0.0,
+    "process_noise_c_ammonia": 0.0,
+    "process_noise_c_aggregates": 0.0,
+    "measurement_noise_c_product": 0.05,
+    "measurement_noise_x_total": 0.0,
+    "measurement_noise_x_viable": 0.0,
+    "measurement_noise_x_dead": 0.0,
+    "measurement_noise_c_glc": 0.0,
+    "measurement_noise_c_gln": 0.0,
+    "measurement_noise_c_lac": 0.0,
+    "measurement_noise_c_ammonia": 0.0,
+    "measurement_noise_c_aggregates": 0.0
+}
