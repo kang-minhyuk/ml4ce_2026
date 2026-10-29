@@ -39,11 +39,13 @@ and again whenever the course repository is updated.
 
 ## 3. Open the notebook
 
-- **VS Code** (recommended): open the repository folder, open `student/project.ipynb`, click *Select Kernel* in the top right and
+- **VS Code** (recommended): open the repository folder, open `student/project.ipynb`, click *Select Kernel** in the top right and
   choose the `.venv` Python environment.
 - **Jupyter Lab**: from the repository root, run `uv run --with jupyterlab jupyter lab` and open `student/project.ipynb`.
 
 Run the cells from top to bottom.
+
+*if you don't see the kernel, restart VS Code or Jupyter Lab and try again.
 
 ## Files
 

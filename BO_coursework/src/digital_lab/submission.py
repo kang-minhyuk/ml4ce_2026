@@ -96,7 +96,7 @@ def validate_submission(path: str | Path) -> list[str]:
         problems.append(f"No top-level function named '{SUBMISSION_FUNCTION}'.")
     names = read_student_names(path)
     if not names or any("TODO" in n for n in names):
-        problems.append(f"Set {NAMES_VARIABLE} to a list with your full names, e.g. ['Jane Doe', 'John Smith'].")
+        problems.append(f"Set {NAMES_VARIABLE} to a list with your full names, e.g. ['Sam Stricker 006547054', 'Antonio del Rio Chanona 001234567'].")
     return problems
 
 
