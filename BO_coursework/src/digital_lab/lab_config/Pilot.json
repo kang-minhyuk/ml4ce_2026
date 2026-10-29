@@ -1,0 +1,6 @@
+{
+    "name": "Pilot",
+    "volume": 3.0,
+    "scale_factor": 1.3,
+    "growth_inhibition": 0.9
+}

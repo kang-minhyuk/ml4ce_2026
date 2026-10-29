@@ -1,0 +1,87 @@
+[project]
+name = "bo-coursework-chem-eng"
+version = "0.1.0"
+description = "Bayesian-optimisation coursework on a simulated cell-culture lab"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "dbiolab",
+    "plotly>=6.9.0",
+    "polars>=1.43.2",
+    "scikit-learn>=1.9.0",
+    "scipy>=1.18.0",
+    "sobol-seq>=0.2.0",
+    "ipykernel>=7.0",
+    "nbformat>=5.10",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/digital_lab"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.uv.sources]
+# Pinned: the lab_config JSONs match this version's CellType fields.
+dbiolab = { git = "https://github.com/samstricker/digital_biolab.git", rev = "623dee4e1e0fc2d3a1edddfd2c91b20fa9f78ba8" }
+
+[dependency-groups]
+# GTA only: uv sync --group assessment
+assessment = [
+    "mlflow>=3.0",
+]
+dev = [
+    "mypy>=2.3.0",
+    "nbconvert>=7.17.1",
+    "pylint>=4.0.7",
+    "ruff>=0.16.3",
+]
+
+[tool.pylint.main]
+ignore-paths = ["^\\.venv/.*$"]
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.pylint.design]
+# Slightly above defaults: numerical/simulation code (GP fitting, batch
+# acquisition) legitimately needs a few more named quantities than typical
+# business logic before splitting further would hurt readability.
+max-args = 8
+max-positional-arguments = 7
+max-locals = 20
+
+[tool.pylint."messages control"]
+disable = [
+    "duplicate-code",         # small shared snippets across independent, self-contained reference algorithms are intentional
+    "too-many-instance-attributes", # DigitalLab exposes the problem description as plain attributes
+    "fixme",                  # TODO markers are intentional placeholders for GTAs to fill in
+]
+
+[tool.mypy]
+python_version = "3.14"
+mypy_path = "src"
+warn_unused_ignores = true
+warn_redundant_casts = true
+
+[[tool.mypy.overrides]]
+# Third-party scientific/plotting stack with no (or no complete) type stubs.
+module = ["dbiolab.*", "sobol_seq.*", "scipy.*", "sklearn.*", "plotly.*", "mlflow.*", "config"]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["D"]  # pydocstyle only — pylint already covers the rest
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+# __init__.py files carry a one-line package docstring, no Parameters/Returns.
+"__init__.py" = ["D"]
