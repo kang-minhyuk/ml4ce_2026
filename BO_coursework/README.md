@@ -60,7 +60,7 @@ Run the cells from top to bottom.
 
 ## The rules in short
 
-- Budget: $25,000 per run (`lab.budget`). Costs per experiment: plate well $10, mini bioreactor $500, pilot reactor $2,000.
+- Budget: $25,000 per run (`lab.budget`). Costs per experiment: plate well $10, mini bioreactor $500, pilot reactor $3,000.
 - 5 minutes per run (one seed). At 5 minutes your algorithm is stopped and graded on what it found up to then.
 - At most 300 experiments per run (`lab.max_experiments`, wells + reactors, including the initial design), besides the
   budget. A batch runs completely or not at all.

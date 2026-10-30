@@ -52,7 +52,7 @@ REACTOR_TYPES = ["MTP", "MBR", "Pilot"]
 REACTOR_COSTS = {
     "MTP": 10,  # $ per well / reactor
     "MBR": 500,
-    "Pilot": 2000,
+    "Pilot": 3000,
 }
 
 # Multi-fidelity setup: MTP/MBR are cheap, lower-fidelity exploratory reactors.

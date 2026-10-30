@@ -2,8 +2,8 @@
 
 import numpy as np
 
-# Full names of everyone in your group. Your results are reported under these names.
-STUDENT_NAMES = ["TODO Firstname Lastname"]
+# Full names (like onImperial ID card) and CIDs of everyone in your group. Your results are reported under these names.
+STUDENT_NAMES = ["TODO Firstname Lastname CID", "TODO Firstname Lastname CID"]
 
 
 def my_algorithm(initial_x, initial_y, lab, seed):
