@@ -1,0 +1,9 @@
+generic_bayes2.py    tiny_budget      score         0 ckpt [None, None, None] end budget err False wall 6.0
+generic_bayes2.py    one_pilot        score         0 ckpt [None, None, None] end budget err False wall 4.0
+generic_bayes2.py    few_experiments  score     43779 ckpt [11269, 15340, 17169] end experiment limit err False wall 0.6
+generic_bayes2.py    odd_batches      score     70596 ckpt [23532, 23532, 23532] end budget err False wall 10.4
+generic_bayes2.py    big_init         score     40608 ckpt [None, 11930, 28679] end budget + experiment limit err False wall 8.6
+generic_bayes2.py    no_init          score     71746 ckpt [14391, 28677, 28677] end budget err False wall 5.1
+generic_bayes2.py    cheap_mbr        score     84483 ckpt [14249, 34205, 36029] end budget err False wall 7.2
+generic_bayes2.py    pricey_mbr       score     24190 ckpt [None, 8706, 15484] end budget err False wall 2.6
+generic_bayes2.py    huge_budget      score     86352 ckpt [25975, 27871, 32507] end budget err False wall 9.7

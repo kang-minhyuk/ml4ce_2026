@@ -1,0 +1,105 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+30 runs per algorithm on 'dev', 38 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i22_funnel                          0.614 0.034 0.443 0.673 0.726 0.338    68748    3   0    28   6.9
+informed_funnel                     0.614 0.034 0.443 0.673 0.726 0.338    68748    3   0    19   7.5
+paired diff informed_funnel - i22_funnel: +0.000 ± 0.000, wins 0%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+30 runs per algorithm on 'dev', 43 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+g2_genlog                           0.443 0.022 0.306 0.462 0.561 0.285    49938    3   0    28   8.7
+generic_funnel                      0.443 0.022 0.306 0.462 0.561 0.285    49938    3   0    20   7.1
+paired diff generic_funnel - g2_genlog: +0.000 ± 0.000, wins 0%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 96 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+mfgp_structured                     0.333 0.016 0.244 0.352 0.402 0.169    39757    8   0   170  50.7
+generic_funnel                      0.426 0.014 0.271 0.456 0.550 0.263    50428    8   0    29   9.6
+informed_funnel                     0.609 0.019 0.423 0.666 0.738 0.339    71907    8   0    25   9.5
+paired diff generic_funnel - mfgp_structured: +0.093 ± 0.017, wins 68%
+paired diff informed_funnel - mfgp_structured: +0.276 ± 0.021, wins 90%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 150 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+mfgp_structured                     0.287 0.015 0.206 0.295 0.360 0.098    34662   14   0   219  91.5
+generic_funnel                      0.401 0.016 0.248 0.431 0.523 0.202    48445   14   0    31  13.6
+informed_funnel                     0.598 0.020 0.420 0.651 0.723 0.356    73324   14   0    28  11.7
+paired diff generic_funnel - mfgp_structured: +0.114 ± 0.015, wins 82%
+paired diff informed_funnel - mfgp_structured: +0.311 ± 0.018, wins 96%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'hold', 124 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+mfgp_structured                     0.339 0.016 0.255 0.350 0.413 0.178    37974    3   0   207  62.6
+generic_funnel                      0.440 0.015 0.301 0.457 0.561 0.248    50182    3   0    32  10.1
+informed_funnel                     0.646 0.017 0.473 0.701 0.764 0.429    73642    3   0    33   9.2
+paired diff generic_funnel - mfgp_structured: +0.100 ± 0.020, wins 73%
+paired diff informed_funnel - mfgp_structured: +0.307 ± 0.021, wins 95%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_hold', 151 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+mfgp_structured                     0.291 0.015 0.187 0.314 0.371 0.124    33680   20   0   222  58.5
+generic_funnel                      0.450 0.015 0.271 0.487 0.592 0.247    52974   20   0    34  13.2
+informed_funnel                     0.615 0.017 0.386 0.690 0.768 0.405    71843   20   0    35  12.2
+paired diff generic_funnel - mfgp_structured: +0.160 ± 0.017, wins 83%
+paired diff informed_funnel - mfgp_structured: +0.324 ± 0.017, wins 96%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+40 runs per algorithm on 'off_low', 46 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+mfgp_structured                     0.210 0.022 0.076 0.257 0.299 0.069    24367   31   0   148  38.7
+generic_funnel                      0.251 0.024 0.061 0.322 0.370 0.054    28320   31   0    23   8.0
+informed_funnel                     0.398 0.025 0.076 0.511 0.606 0.191    46140   31   0    21   7.9
+paired diff generic_funnel - mfgp_structured: +0.041 ± 0.023, wins 65%
+paired diff informed_funnel - mfgp_structured: +0.188 ± 0.022, wins 92%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+5 runs per algorithm on 'practice', 15 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+mfgp_structured                     0.200 0.046 0.148 0.204 0.249 0.086    26707    0   0    78  43.2
+generic_funnel                      0.512 0.056 0.388 0.517 0.630 0.359    68400    0   0    12   8.0
+informed_funnel                     0.672 0.042 0.567 0.701 0.747 0.586    89689    0   0     7   6.8
+paired diff generic_funnel - mfgp_structured: +0.312 ± 0.059, wins 100%
+paired diff informed_funnel - mfgp_structured: +0.471 ± 0.056, wins 100%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/evaluate.py:154: RuntimeWarning: Mean of empty slice
+  print(f"{n[:34]:34s} {nv.mean():6.3f} {nv.std() / np.sqrt(max(len(nv), 1)):5.3f} {ck[0]:5.3f} {ck[1]:5.3f} "
+/home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:219: RuntimeWarning: Degrees of freedom <= 0 for slice
+  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:178: RuntimeWarning: invalid value encountered in divide
+  arrmean = um.true_divide(arrmean, div, out=arrmean,
+/home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:211: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+60 runs per algorithm on 'stress', 84 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+mfgp_structured                       nan   nan   nan   nan   nan   nan    38962    4   0   226  67.3
+generic_funnel                        nan   nan   nan   nan   nan   nan    50994    4   0    65   8.5
+informed_funnel                       nan   nan   nan   nan   nan   nan    67858    4   0    52   8.4
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+informed_funnel.py   tiny_budget      score         0 ckpt [None, None, None] end budget err False wall 4.6
+informed_funnel.py   one_pilot        score         0 ckpt [None, None, None] end budget err False wall 3.2
+informed_funnel.py   few_experiments  score     58255 ckpt [19418, 19418, 19418] end experiment limit err False wall 0.6
+informed_funnel.py   odd_batches      score     60551 ckpt [19333, 19333, 21886] end budget err False wall 4.1
+informed_funnel.py   big_init         score     56696 ckpt [None, 23668, 33028] end budget + experiment limit err False wall 6.4
+informed_funnel.py   no_init          score     98527 ckpt [20771, 38255, 39501] end budget err False wall 4.6
+informed_funnel.py   cheap_mbr        score     88497 ckpt [27518, 29480, 31499] end budget err False wall 6.0
+informed_funnel.py   pricey_mbr       score     55580 ckpt [None, 27790, 27790] end budget err False wall 3.0
+informed_funnel.py   huge_budget      score    118783 ckpt [32874, 40904, 45005] end budget err False wall 8.0
+generic_funnel.py    tiny_budget      score         0 ckpt [None, None, None] end budget err False wall 6.3
+generic_funnel.py    one_pilot        score         0 ckpt [None, None, None] end budget err False wall 3.0
+generic_funnel.py    few_experiments  score     42335 ckpt [11269, 15340, 15726] end experiment limit err False wall 0.5
+generic_funnel.py    odd_batches      score     70596 ckpt [23532, 23532, 23532] end budget err False wall 5.3
+generic_funnel.py    big_init         score     40444 ckpt [None, 11747, 28696] end budget + experiment limit err False wall 5.5
+generic_funnel.py    no_init          score     59871 ckpt [14835, 14835, 30201] end budget err False wall 5.1
+generic_funnel.py    cheap_mbr        score     88639 ckpt [24346, 25157, 39136] end budget err False wall 7.9
+generic_funnel.py    pricey_mbr       score     41861 ckpt [None, 12612, 29249] end budget err False wall 2.4
+generic_funnel.py    huge_budget      score     83614 ckpt [27757, 27892, 27965] end budget err False wall 10.2

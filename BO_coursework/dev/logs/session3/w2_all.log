@@ -1,0 +1,93 @@
+400 runs per algorithm on 'off_big', 506 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+w1_c                                0.740 0.009 0.561 0.791 0.869 0.489    91392   47   0    12   5.6
+w2_c3                               0.741 0.009 0.561 0.792 0.869 0.491    91481   47   0    14   5.8
+w2_s07                              0.739 0.009 0.559 0.791 0.868 0.487    91259   47   0    14   5.8
+w2_lf2                              0.738 0.009 0.556 0.792 0.867 0.491    91185   47   0    15   5.8
+w2_m221                             0.745 0.009 0.572 0.793 0.869 0.489    91938   47   0    13   5.6
+paired diff w2_c3 - w1_c: +0.000 ± 0.001, wins 7%
+paired diff w2_s07 - w1_c: -0.001 ± 0.001, wins 18%
+paired diff w2_lf2 - w1_c: -0.002 ± 0.001, wins 25%
+paired diff w2_m221 - w1_c: +0.005 ± 0.002, wins 13%
+100 runs per algorithm on 'dev', 109 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+w1_c                                0.691 0.017 0.521 0.739 0.812 0.468    81229    8   0    10   4.4
+w2_c3                               0.692 0.018 0.525 0.739 0.813 0.468    81477    8   0    11   5.1
+w2_s07                              0.693 0.017 0.520 0.744 0.815 0.468    81491    8   0    12   4.6
+w2_lf2                              0.688 0.017 0.518 0.738 0.809 0.472    80888    8   0    10   4.9
+w2_m221                             0.696 0.017 0.524 0.749 0.815 0.495    81992    8   0     9   4.3
+paired diff w2_c3 - w1_c: +0.002 ± 0.002, wins 9%
+paired diff w2_s07 - w1_c: +0.002 ± 0.003, wins 24%
+paired diff w2_lf2 - w1_c: -0.002 ± 0.002, wins 25%
+paired diff w2_m221 - w1_c: +0.005 ± 0.004, wins 10%
+100 runs per algorithm on 'off_dev', 134 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+w1_c                                0.688 0.018 0.477 0.762 0.824 0.489    84895   14   0    11   5.6
+w2_c3                               0.686 0.018 0.479 0.759 0.821 0.486    84694   14   0    11   6.0
+w2_s07                              0.689 0.018 0.478 0.762 0.826 0.492    84983   14   0    11   5.7
+w2_lf2                              0.686 0.018 0.476 0.763 0.820 0.487    84670   14   0    12   5.7
+w2_m221                             0.695 0.018 0.498 0.761 0.826 0.492    85819   14   0    12   5.7
+paired diff w2_c3 - w1_c: -0.002 ± 0.001, wins 6%
+paired diff w2_s07 - w1_c: +0.001 ± 0.001, wins 18%
+paired diff w2_lf2 - w1_c: -0.002 ± 0.002, wins 24%
+paired diff w2_m221 - w1_c: +0.007 ± 0.004, wins 17%
+100 runs per algorithm on 'hold', 117 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+w1_c                                0.722 0.017 0.545 0.770 0.852 0.506    82587    3   0    12   4.8
+w2_c3                               0.721 0.017 0.545 0.766 0.853 0.501    82505    3   0    13   4.9
+w2_s07                              0.719 0.017 0.545 0.763 0.849 0.497    82156    3   0    13   5.0
+w2_lf2                              0.718 0.017 0.543 0.764 0.847 0.513    82191    3   0    11   5.1
+w2_m221                             0.729 0.016 0.551 0.783 0.854 0.508    83414    3   0    11   5.0
+paired diff w2_c3 - w1_c: -0.001 ± 0.001, wins 8%
+paired diff w2_s07 - w1_c: -0.003 ± 0.002, wins 14%
+paired diff w2_lf2 - w1_c: -0.004 ± 0.003, wins 31%
+paired diff w2_m221 - w1_c: +0.007 ± 0.005, wins 12%
+100 runs per algorithm on 'off_hold', 128 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+w1_c                                0.708 0.015 0.491 0.783 0.850 0.507    83270   20   0    11   5.5
+w2_c3                               0.710 0.015 0.491 0.785 0.853 0.507    83468   20   0    11   5.9
+w2_s07                              0.702 0.016 0.490 0.776 0.840 0.498    82656   20   0    10   5.6
+w2_lf2                              0.709 0.015 0.488 0.787 0.852 0.525    83408   20   0    14   5.5
+w2_m221                             0.715 0.016 0.509 0.785 0.851 0.509    84125   20   0    10   5.6
+paired diff w2_c3 - w1_c: +0.002 ± 0.002, wins 13%
+paired diff w2_s07 - w1_c: -0.006 ± 0.003, wins 14%
+paired diff w2_lf2 - w1_c: +0.001 ± 0.003, wins 33%
+paired diff w2_m221 - w1_c: +0.007 ± 0.004, wins 15%
+40 runs per algorithm on 'off_low', 41 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+w1_c                                0.478 0.029 0.132 0.607 0.696 0.221    56793   31   0    10   3.7
+w2_c3                               0.481 0.029 0.132 0.605 0.704 0.221    57031   31   0     9   3.9
+w2_s07                              0.479 0.029 0.132 0.605 0.698 0.220    56795   31   0     9   4.1
+w2_lf2                              0.482 0.030 0.132 0.611 0.702 0.243    57106   31   0    10   4.3
+w2_m221                             0.481 0.029 0.132 0.607 0.705 0.221    57149   31   0     8   3.4
+paired diff w2_c3 - w1_c: +0.002 ± 0.002, wins 5%
+paired diff w2_s07 - w1_c: +0.000 ± 0.001, wins 5%
+paired diff w2_lf2 - w1_c: +0.003 ± 0.003, wins 18%
+paired diff w2_m221 - w1_c: +0.003 ± 0.003, wins 2%
+40 runs per algorithm on 'off_wide', 56 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+w1_c                                0.683 0.027 0.434 0.765 0.851 0.411    91991    8   0     9   5.5
+w2_c3                               0.682 0.027 0.433 0.764 0.849 0.410    91716    8   0    14   5.6
+w2_s07                              0.687 0.027 0.443 0.766 0.854 0.435    92581    8   0    11   5.8
+w2_lf2                              0.682 0.026 0.434 0.764 0.846 0.457    92061    8   0    12   6.3
+w2_m221                             0.671 0.027 0.421 0.748 0.845 0.411    90947    8   0     9   5.2
+paired diff w2_c3 - w1_c: -0.002 ± 0.001, wins 8%
+paired diff w2_s07 - w1_c: +0.004 ± 0.003, wins 40%
+paired diff w2_lf2 - w1_c: -0.002 ± 0.004, wins 30%
+paired diff w2_m221 - w1_c: -0.012 ± 0.007, wins 2%
+20 runs per algorithm on 'practice20', 25 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+w1_c                                0.719 0.013 0.547 0.751 0.859 0.642    94724    0   0     6   4.2
+w2_c3                               0.724 0.014 0.547 0.753 0.872 0.642    95382    0   0     7   4.8
+w2_s07                              0.713 0.014 0.540 0.747 0.853 0.624    93896    0   0     8   5.0
+w2_lf2                              0.708 0.013 0.547 0.748 0.828 0.626    93236    0   0     7   5.0
+w2_m221                             0.719 0.013 0.547 0.751 0.859 0.642    94724    0   0     6   3.8
+paired diff w2_c3 - w1_c: +0.005 ± 0.003, wins 25%
+paired diff w2_s07 - w1_c: -0.006 ± 0.003, wins 20%
+paired diff w2_lf2 - w1_c: -0.012 ± 0.003, wins 5%
+paired diff w2_m221 - w1_c: +0.000 ± 0.000, wins 0%
+w2_c3          pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): +0.0003 +- 0.0008
+w2_s07         pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): -0.0010 +- 0.0010
+w2_lf2         pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): -0.0012 +- 0.0012
+w2_m221        pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): +0.0047 +- 0.0019
+Mon Nov 16 10:57:23 PM GMT 2026

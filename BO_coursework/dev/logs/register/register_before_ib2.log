@@ -1,0 +1,187 @@
+== off_big
+400 runs per algorithm on 'off_big', 1 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+reference_mfbo                      0.149 0.006 0.045 0.168 0.235 0.012    17744  168  19   300 158.0
+reference_screen_then_confirm       0.226 0.007 0.169 0.239 0.270 0.068    27538   47   0     2   0.3
+mfgp_structured                     0.304 0.007 0.214 0.316 0.381 0.130    37360   47   0   222  94.8
+generic_funnel                      0.429 0.007 0.279 0.458 0.549 0.237    52873   47   0    53  13.3
+generic_bayes                       0.475 0.007 0.326 0.498 0.602 0.275    58509   47   0    83  20.5
+informed_funnel                     0.636 0.010 0.444 0.694 0.769 0.375    78618   47   0    76  16.2
+informed_library                    0.639 0.010 0.444 0.696 0.777 0.377    79026   47   0    66  14.3
+informed_bayes                      0.730 0.009 0.552 0.781 0.856 0.485    90108   47   0    12   5.0
+paired diff reference_screen_then_confirm - reference_mfbo: +0.077 ± 0.008, wins 70%
+paired diff mfgp_structured - reference_mfbo: +0.155 ± 0.009, wins 82%
+paired diff generic_funnel - reference_mfbo: +0.280 ± 0.009, wins 95%
+paired diff generic_bayes - reference_mfbo: +0.326 ± 0.008, wins 97%
+paired diff informed_funnel - reference_mfbo: +0.487 ± 0.010, wins 99%
+paired diff informed_library - reference_mfbo: +0.490 ± 0.010, wins 99%
+paired diff informed_bayes - reference_mfbo: +0.581 ± 0.009, wins 100%
+== dev
+100 runs per algorithm on 'dev', 139 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+reference_screen_then_confirm       0.215 0.015 0.164 0.217 0.264 0.062    25829    8   0     1   0.3
+mfgp_structured                     0.333 0.016 0.244 0.352 0.402 0.169    39757    8   0   170  50.7
+generic_funnel                      0.426 0.014 0.271 0.456 0.550 0.263    50428    8   0    29   9.6
+generic_bayes                       0.456 0.014 0.314 0.477 0.577 0.278    54056    8   0    47  12.1
+informed_funnel                     0.609 0.019 0.423 0.666 0.738 0.339    71907    8   0    25   9.5
+informed_library                    0.614 0.020 0.422 0.670 0.750 0.344    72697    8   0    34  11.0
+informed_bayes                      0.670 0.018 0.516 0.706 0.790 0.462    78899    8   0    10   4.0
+paired diff mfgp_structured - reference_screen_then_confirm: +0.118 ± 0.019, wins 73%
+paired diff generic_funnel - reference_screen_then_confirm: +0.211 ± 0.019, wins 93%
+paired diff generic_bayes - reference_screen_then_confirm: +0.241 ± 0.019, wins 90%
+paired diff informed_funnel - reference_screen_then_confirm: +0.394 ± 0.022, wins 96%
+paired diff informed_library - reference_screen_then_confirm: +0.399 ± 0.022, wins 96%
+paired diff informed_bayes - reference_screen_then_confirm: +0.455 ± 0.020, wins 98%
+== off_dev
+100 runs per algorithm on 'off_dev', 164 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+reference_screen_then_confirm       0.211 0.015 0.152 0.224 0.257 0.029    24982   14   0     1   0.3
+mfgp_structured                     0.287 0.015 0.206 0.295 0.360 0.098    34662   14   0   219  91.5
+generic_funnel                      0.401 0.016 0.248 0.431 0.523 0.202    48445   14   0    31  13.6
+generic_bayes                       0.447 0.016 0.290 0.484 0.567 0.250    55277   14   0    59  15.5
+informed_funnel                     0.598 0.020 0.420 0.651 0.723 0.356    73324   14   0    28  11.7
+informed_library                    0.604 0.020 0.420 0.652 0.741 0.365    74125   14   0    36  13.6
+informed_bayes                      0.678 0.018 0.469 0.746 0.820 0.485    83807   14   0    13   4.8
+paired diff mfgp_structured - reference_screen_then_confirm: +0.076 ± 0.018, wins 67%
+paired diff generic_funnel - reference_screen_then_confirm: +0.190 ± 0.016, wins 91%
+paired diff generic_bayes - reference_screen_then_confirm: +0.236 ± 0.015, wins 95%
+paired diff informed_funnel - reference_screen_then_confirm: +0.387 ± 0.019, wins 97%
+paired diff informed_library - reference_screen_then_confirm: +0.394 ± 0.019, wins 98%
+paired diff informed_bayes - reference_screen_then_confirm: +0.468 ± 0.018, wins 100%
+== hold
+100 runs per algorithm on 'hold', 126 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+reference_screen_then_confirm       0.243 0.013 0.177 0.257 0.296 0.095    27756    3   0     1   0.3
+mfgp_structured                     0.339 0.016 0.255 0.350 0.413 0.178    37974    3   0   207  62.6
+generic_funnel                      0.440 0.015 0.301 0.457 0.561 0.248    50182    3   0    32  10.1
+generic_bayes                       0.467 0.015 0.347 0.479 0.574 0.282    53417    3   0    45  10.9
+informed_funnel                     0.646 0.017 0.473 0.701 0.764 0.429    73642    3   0    33   9.2
+informed_library                    0.650 0.018 0.473 0.709 0.768 0.439    74040    3   0    39  11.1
+informed_bayes                      0.713 0.017 0.539 0.760 0.841 0.499    81698    3   0    11   4.0
+paired diff mfgp_structured - reference_screen_then_confirm: +0.096 ± 0.019, wins 70%
+paired diff generic_funnel - reference_screen_then_confirm: +0.196 ± 0.017, wins 88%
+paired diff generic_bayes - reference_screen_then_confirm: +0.223 ± 0.018, wins 86%
+paired diff informed_funnel - reference_screen_then_confirm: +0.403 ± 0.017, wins 100%
+paired diff informed_library - reference_screen_then_confirm: +0.407 ± 0.017, wins 100%
+paired diff informed_bayes - reference_screen_then_confirm: +0.470 ± 0.018, wins 100%
+== off_hold
+100 runs per algorithm on 'off_hold', 162 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+reference_screen_then_confirm       0.209 0.015 0.152 0.226 0.250 0.039    23996   20   0     1   0.2
+mfgp_structured                     0.291 0.015 0.187 0.314 0.371 0.124    33680   20   0   222  58.5
+generic_funnel                      0.450 0.015 0.271 0.487 0.592 0.247    52974   20   0    34  13.2
+generic_bayes                       0.486 0.015 0.310 0.532 0.616 0.306    57402   20   0    40  15.6
+informed_funnel                     0.615 0.017 0.386 0.690 0.768 0.405    71843   20   0    35  12.2
+informed_library                    0.618 0.017 0.386 0.694 0.775 0.405    72332   20   0    36  13.5
+informed_bayes                      0.712 0.016 0.489 0.785 0.863 0.485    83771   20   0    11   4.9
+paired diff mfgp_structured - reference_screen_then_confirm: +0.081 ± 0.020, wins 74%
+paired diff generic_funnel - reference_screen_then_confirm: +0.241 ± 0.019, wins 90%
+paired diff generic_bayes - reference_screen_then_confirm: +0.277 ± 0.018, wins 93%
+paired diff informed_funnel - reference_screen_then_confirm: +0.406 ± 0.017, wins 98%
+paired diff informed_library - reference_screen_then_confirm: +0.409 ± 0.017, wins 98%
+paired diff informed_bayes - reference_screen_then_confirm: +0.503 ± 0.016, wins 100%
+== off_low
+40 runs per algorithm on 'off_low', 55 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+reference_screen_then_confirm       0.092 0.014 0.025 0.120 0.130 0.010    10435   31   0     0   0.0
+mfgp_structured                     0.210 0.022 0.076 0.257 0.299 0.069    24367   31   0   148  38.7
+generic_funnel                      0.251 0.024 0.061 0.322 0.370 0.054    28320   31   0    23   8.0
+generic_bayes                       0.281 0.021 0.049 0.372 0.421 0.102    32914   31   0    33   9.5
+informed_funnel                     0.398 0.025 0.076 0.511 0.606 0.191    46140   31   0    21   7.9
+informed_library                    0.398 0.025 0.076 0.511 0.607 0.191    46169   31   0    22   8.2
+informed_bayes                      0.471 0.031 0.130 0.604 0.680 0.234    55754   31   0     9   3.1
+paired diff mfgp_structured - reference_screen_then_confirm: +0.119 ± 0.023, wins 78%
+paired diff generic_funnel - reference_screen_then_confirm: +0.160 ± 0.023, wins 82%
+paired diff generic_bayes - reference_screen_then_confirm: +0.189 ± 0.023, wins 88%
+paired diff informed_funnel - reference_screen_then_confirm: +0.306 ± 0.027, wins 98%
+paired diff informed_library - reference_screen_then_confirm: +0.307 ± 0.027, wins 98%
+paired diff informed_bayes - reference_screen_then_confirm: +0.379 ± 0.028, wins 100%
+== off_wide
+40 runs per algorithm on 'off_wide', 73 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+reference_screen_then_confirm       0.119 0.016 0.071 0.137 0.149 0.019    15372    8   0     1   0.3
+mfgp_structured                     0.260 0.023 0.164 0.262 0.354 0.125    33858    8   0   187  95.9
+generic_funnel                      0.455 0.026 0.305 0.505 0.554 0.281    61229    8   0    41  12.6
+generic_bayes                       0.506 0.026 0.324 0.561 0.633 0.292    68832    8   0    47  14.4
+informed_funnel                     0.542 0.034 0.345 0.606 0.674 0.210    73330    8   0    31  11.6
+informed_library                    0.553 0.034 0.345 0.616 0.699 0.226    74739    8   0    34  13.1
+informed_bayes                      0.661 0.025 0.411 0.750 0.821 0.462    89852    8   0     8   5.1
+paired diff mfgp_structured - reference_screen_then_confirm: +0.141 ± 0.025, wins 82%
+paired diff generic_funnel - reference_screen_then_confirm: +0.335 ± 0.029, wins 95%
+paired diff generic_bayes - reference_screen_then_confirm: +0.387 ± 0.030, wins 98%
+paired diff informed_funnel - reference_screen_then_confirm: +0.423 ± 0.038, wins 95%
+paired diff informed_library - reference_screen_then_confirm: +0.434 ± 0.038, wins 95%
+paired diff informed_bayes - reference_screen_then_confirm: +0.541 ± 0.029, wins 100%
+== practice20
+20 runs per algorithm on 'practice20', 412 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+reference_mfbo                      0.127 0.015 0.058 0.147 0.176 0.058    16712    3   0   300 168.3
+reference_screen_then_confirm       0.205 0.014 0.187 0.206 0.221 0.159    26945    0   0     1   0.3
+mfgp_structured                     0.269 0.029 0.215 0.260 0.331 0.126    35366    0   0    78  47.7
+generic_funnel                      0.488 0.032 0.351 0.508 0.605 0.315    64087    0   0    14   9.7
+generic_bayes                       0.602 0.021 0.461 0.636 0.709 0.457    79205    0   0    21  15.6
+informed_funnel                     0.667 0.024 0.527 0.703 0.771 0.537    87573    0   0    19  10.2
+informed_library                    0.673 0.024 0.527 0.703 0.791 0.535    88473    0   0    17   8.8
+informed_bayes                      0.689 0.014 0.530 0.721 0.818 0.602    90758    0   0     5   3.2
+paired diff reference_screen_then_confirm - reference_mfbo: +0.078 ± 0.020, wins 85%
+paired diff mfgp_structured - reference_mfbo: +0.141 ± 0.031, wins 85%
+paired diff generic_funnel - reference_mfbo: +0.361 ± 0.034, wins 100%
+paired diff generic_bayes - reference_mfbo: +0.475 ± 0.028, wins 100%
+paired diff informed_funnel - reference_mfbo: +0.539 ± 0.031, wins 100%
+paired diff informed_library - reference_mfbo: +0.546 ± 0.032, wins 100%
+paired diff informed_bayes - reference_mfbo: +0.562 ± 0.020, wins 100%
+== milestones dev
+100 runs per algorithm on 'dev', 110 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i3_funnel                           0.452 0.022 0.338 0.462 0.556 0.191    52628    8   0    75  14.7
+i6_funnel                           0.478 0.021 0.340 0.497 0.596 0.209    56746    8   0    79  13.0
+i10_funnel                          0.478 0.022 0.362 0.490 0.581 0.226    56591    8   0    58  12.2
+i14_funnel                          0.563 0.018 0.368 0.617 0.705 0.329    66972    8   0    30  10.2
+i17_funnel                          0.596 0.019 0.408 0.658 0.721 0.350    70600    8   0    37   9.8
+k5_bayes                            0.644 0.019 0.461 0.697 0.774 0.380    76545    8   0    38  10.5
+k7_voi_s2                           0.677 0.018 0.517 0.721 0.792 0.457    79733    8   0    34   9.5
+paired diff i6_funnel - i3_funnel: +0.026 ± 0.017, wins 62%
+paired diff i10_funnel - i3_funnel: +0.025 ± 0.018, wins 55%
+paired diff i14_funnel - i3_funnel: +0.111 ± 0.019, wins 75%
+paired diff i17_funnel - i3_funnel: +0.143 ± 0.022, wins 80%
+paired diff k5_bayes - i3_funnel: +0.192 ± 0.020, wins 88%
+paired diff k7_voi_s2 - i3_funnel: +0.224 ± 0.020, wins 87%
+== milestones off_dev
+100 runs per algorithm on 'off_dev', 149 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i3_funnel                           0.396 0.021 0.280 0.402 0.504 0.077    47405   14   0    49  16.0
+i6_funnel                           0.448 0.025 0.327 0.466 0.550 0.062    53702   14   0    53  16.2
+i10_funnel                          0.500 0.024 0.370 0.520 0.611 0.104    60085   14   0    45  15.3
+i14_funnel                          0.555 0.022 0.379 0.610 0.675 0.202    67553   14   0    30  12.5
+i17_funnel                          0.578 0.021 0.397 0.632 0.704 0.263    70884   14   0    34  12.1
+k5_bayes                            0.635 0.019 0.430 0.696 0.779 0.370    78207   14   0    35  12.4
+k7_voi_s2                           0.662 0.018 0.464 0.731 0.791 0.468    81448   14   0    52  13.6
+paired diff i6_funnel - i3_funnel: +0.052 ± 0.017, wins 63%
+paired diff i10_funnel - i3_funnel: +0.105 ± 0.017, wins 77%
+paired diff i14_funnel - i3_funnel: +0.159 ± 0.017, wins 89%
+paired diff i17_funnel - i3_funnel: +0.182 ± 0.017, wins 91%
+paired diff k5_bayes - i3_funnel: +0.239 ± 0.020, wins 91%
+paired diff k7_voi_s2 - i3_funnel: +0.266 ± 0.020, wins 95%
+== milestones practice20
+20 runs per algorithm on 'practice20', 229 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i3_funnel                           0.487 0.031 0.443 0.469 0.549 0.322    64008    0   0    32  16.4
+i6_funnel                           0.560 0.031 0.533 0.542 0.605 0.381    73468    0   0    70  19.1
+i10_funnel                          0.542 0.036 0.516 0.526 0.583 0.352    70910    0   0    81  35.1
+i14_funnel                          0.641 0.022 0.518 0.675 0.731 0.513    84266    0   0    21  13.3
+i17_funnel                          0.667 0.024 0.527 0.703 0.771 0.537    87573    0   0    17  12.6
+k5_bayes                            0.722 0.018 0.592 0.745 0.828 0.635    94892    0   0    22  12.6
+k7_voi_s2                           0.699 0.014 0.548 0.724 0.827 0.633    92134    0   0    24  14.7
+paired diff i6_funnel - i3_funnel: +0.073 ± 0.031, wins 75%
+paired diff i10_funnel - i3_funnel: +0.055 ± 0.037, wins 60%
+paired diff i14_funnel - i3_funnel: +0.154 ± 0.028, wins 90%
+paired diff i17_funnel - i3_funnel: +0.180 ± 0.029, wins 95%
+paired diff k5_bayes - i3_funnel: +0.235 ± 0.032, wins 95%
+paired diff k7_voi_s2 - i3_funnel: +0.212 ± 0.033, wins 85%
+== DONE
+== milestones off_big
+400 runs per algorithm on 'off_big', 1 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+k5_bayes                            0.688 0.009 0.496 0.745 0.822 0.439    84730   47   0    59  14.2
+k7_voi_s2                           0.712 0.009 0.515 0.774 0.847 0.473    88024   47   0    59  16.0
+paired diff k7_voi_s2 - k5_bayes: +0.024 ± 0.006, wins 57%

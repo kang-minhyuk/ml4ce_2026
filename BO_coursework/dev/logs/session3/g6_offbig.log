@@ -1,0 +1,12 @@
+400 runs per algorithm on 'off_big', 1670 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+generic_bayes2                      0.488 0.007 0.339 0.511 0.613 0.285    59896   47   0    50  11.4
+g6_ls15                             0.490 0.007 0.341 0.513 0.617 0.290    60292   47   0    73  19.1
+g6_ls3                              0.483 0.007 0.337 0.506 0.605 0.285    59267   47   0    68  19.0
+g6_nl96                             0.490 0.007 0.341 0.516 0.612 0.298    60087   47   0    70  18.8
+g6_lsd                              0.491 0.008 0.338 0.521 0.613 0.292    60362   47   0    59  18.8
+paired diff g6_ls15 - generic_bayes2: +0.003 ± 0.002, wins 44%
+paired diff g6_ls3 - generic_bayes2: -0.005 ± 0.003, wins 38%
+paired diff g6_nl96 - generic_bayes2: +0.002 ± 0.003, wins 42%
+paired diff g6_lsd - generic_bayes2: +0.003 ± 0.003, wins 44%
+Tue Nov 17 08:07:02 AM GMT 2026

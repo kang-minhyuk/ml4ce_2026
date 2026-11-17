@@ -1,0 +1,20 @@
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                    0.639 0.010 0.444 0.696 0.777 0.377    79026   47   0    66  14.3
+k5_bayes                            0.688 0.009 0.496 0.745 0.822 0.439    84730   47   0    59  14.2
+k5_bayes_mf                         0.689 0.009 0.497 0.747 0.823 0.439    84997   47   0    47  14.1
+k6_w16                              0.683 0.009 0.487 0.743 0.820 0.421    84363   47   0    64  14.2
+k6_s06                              0.683 0.009 0.489 0.744 0.816 0.442    84157   47   0    56  14.3
+k6_rs                               0.688 0.009 0.497 0.746 0.823 0.439    84943   47   0    48  14.6
+k6_mf2                              0.691 0.009 0.501 0.748 0.824 0.440    85226   47   0    50  14.3
+k7_voi                              0.703 0.009 0.503 0.765 0.842 0.465    86936   47   0    65  15.5
+k7_voi_s2                           0.712 0.009 0.515 0.774 0.847 0.473    88024   47   0    59  16.0
+paired diff k5_bayes - informed_library: +0.049 ± 0.007, wins 61%
+paired diff k5_bayes_mf - informed_library: +0.050 ± 0.007, wins 60%
+paired diff k6_w16 - informed_library: +0.044 ± 0.007, wins 58%
+paired diff k6_s06 - informed_library: +0.044 ± 0.007, wins 60%
+paired diff k6_rs - informed_library: +0.049 ± 0.007, wins 60%
+paired diff k6_mf2 - informed_library: +0.052 ± 0.007, wins 62%
+paired diff k7_voi - informed_library: +0.064 ± 0.007, wins 64%
+paired diff k7_voi_s2 - informed_library: +0.073 ± 0.007, wins 67%
+
+[exited with code 0]

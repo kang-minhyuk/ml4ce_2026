@@ -1,0 +1,17 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 1144 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i3_funnel                           0.452 0.022 0.338 0.462 0.556 0.191    52628    8   0    75  14.7
+i5_funnel                           0.462 0.022 0.342 0.478 0.565 0.211    54660    8   0    78  13.7
+i5_mean                             0.442 0.022 0.333 0.457 0.537 0.117    52842    8   0   129  13.8
+i5_b4                               0.469 0.021 0.340 0.489 0.579 0.210    56314    8   0    81  14.1
+i5_s                                0.457 0.022 0.342 0.470 0.560 0.193    54219    8   0   107  14.2
+i5_s2                               0.463 0.021 0.341 0.482 0.566 0.206    54847    8   0    70  13.6
+i5_s2e                              0.478 0.021 0.340 0.497 0.596 0.209    56746    8   0   129  13.6
+paired diff i5_funnel - i3_funnel: +0.009 ± 0.018, wins 54%
+paired diff i5_mean - i3_funnel: -0.010 ± 0.019, wins 55%
+paired diff i5_b4 - i3_funnel: +0.017 ± 0.018, wins 55%
+paired diff i5_s - i3_funnel: +0.005 ± 0.017, wins 56%
+paired diff i5_s2 - i3_funnel: +0.011 ± 0.017, wins 56%
+paired diff i5_s2e - i3_funnel: +0.026 ± 0.017, wins 62%

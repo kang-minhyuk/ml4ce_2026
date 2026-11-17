@@ -1,0 +1,22 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 335 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i6_funnel                           0.478 0.021 0.340 0.497 0.596 0.209    56746    8   0    79  13.0
+i8_funnel                           0.456 0.021 0.305 0.491 0.573 0.152    54760    8   0    45  12.4
+i8_hyb                              0.471 0.021 0.325 0.495 0.592 0.189    55943    8   0   127  31.8
+x8_cheatloc                         0.505 0.024 0.369 0.534 0.612 0.175    59583    8   0    48  12.2
+paired diff i8_funnel - i6_funnel: -0.021 ± 0.016, wins 34%
+paired diff i8_hyb - i6_funnel: -0.007 ± 0.019, wins 53%
+paired diff x8_cheatloc - i6_funnel: +0.027 ± 0.016, wins 52%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 397 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i6_funnel                           0.448 0.025 0.327 0.466 0.550 0.062    53702   14   0    53  16.2
+i8_funnel                           0.441 0.026 0.316 0.459 0.548 0.083    52929   14   0    39  16.8
+i8_hyb                              0.447 0.025 0.297 0.464 0.579 0.087    53956   14   0   128  38.9
+x8_cheatloc                         0.493 0.026 0.364 0.502 0.611 0.106    59341   14   0    58  14.9
+paired diff i8_funnel - i6_funnel: -0.007 ± 0.019, wins 42%
+paired diff i8_hyb - i6_funnel: -0.001 ± 0.018, wins 47%
+paired diff x8_cheatloc - i6_funnel: +0.045 ± 0.018, wins 61%

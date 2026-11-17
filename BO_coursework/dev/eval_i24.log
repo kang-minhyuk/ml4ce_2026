@@ -1,0 +1,14 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 67 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i22_funnel                          0.609 0.019 0.423 0.666 0.738 0.339    71907    8   0    38   9.1
+i24_funnel                          0.607 0.019 0.423 0.666 0.732 0.335    71690    8   0    37  10.4
+paired diff i24_funnel - i22_funnel: -0.002 ± 0.003, wins 10%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 75 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i22_funnel                          0.598 0.020 0.420 0.651 0.723 0.356    73324   14   0    34  12.2
+i24_funnel                          0.593 0.020 0.420 0.651 0.710 0.356    72754   14   0    32  11.5
+paired diff i24_funnel - i22_funnel: -0.005 ± 0.001, wins 6%

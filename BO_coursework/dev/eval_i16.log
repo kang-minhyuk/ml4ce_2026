@@ -1,0 +1,22 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 181 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i14_mbp                             0.573 0.019 0.403 0.623 0.694 0.329    68342    8   0    28   8.8
+i16_funnel                          0.582 0.018 0.400 0.636 0.709 0.347    69225    8   0    31  10.5
+i16_p431                            0.579 0.018 0.400 0.635 0.702 0.327    68756    8   0    30  11.7
+i16_m221                            0.582 0.019 0.398 0.638 0.711 0.347    69372    8   0    38   9.6
+paired diff i16_funnel - i14_mbp: +0.008 ± 0.007, wins 25%
+paired diff i16_p431 - i14_mbp: +0.006 ± 0.009, wins 41%
+paired diff i16_m221 - i14_mbp: +0.009 ± 0.006, wins 30%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 269 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i14_mbp                             0.559 0.022 0.394 0.611 0.673 0.202    67854   14   0    31  11.6
+i16_funnel                          0.566 0.022 0.392 0.624 0.683 0.202    68891   14   0    34  13.3
+i16_p431                            0.554 0.022 0.392 0.600 0.671 0.202    67907   14   0    48  15.7
+i16_m221                            0.561 0.022 0.392 0.615 0.677 0.202    68335   14   0    69  14.0
+paired diff i16_funnel - i14_mbp: +0.007 ± 0.005, wins 28%
+paired diff i16_p431 - i14_mbp: -0.005 ± 0.008, wins 45%
+paired diff i16_m221 - i14_mbp: +0.002 ± 0.006, wins 27%

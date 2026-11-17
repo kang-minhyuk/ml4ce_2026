@@ -1,0 +1,32 @@
+100 runs per algorithm on 'dev', 239 s
+paired diff g6_ls15 - generic_bayes2: +0.000 ± 0.004, wins 37%
+paired diff g6_nl96 - generic_bayes2: -0.006 ± 0.005, wins 37%
+paired diff g6_lsd - generic_bayes2: -0.001 ± 0.005, wins 38%
+100 runs per algorithm on 'off_dev', 297 s
+paired diff g6_ls15 - generic_bayes2: -0.003 ± 0.002, wins 38%
+paired diff g6_nl96 - generic_bayes2: +0.003 ± 0.006, wins 46%
+paired diff g6_lsd - generic_bayes2: +0.006 ± 0.005, wins 37%
+100 runs per algorithm on 'hold', 238 s
+paired diff g6_ls15 - generic_bayes2: +0.007 ± 0.005, wins 43%
+paired diff g6_nl96 - generic_bayes2: +0.002 ± 0.006, wins 41%
+paired diff g6_lsd - generic_bayes2: +0.004 ± 0.006, wins 42%
+100 runs per algorithm on 'off_hold', 297 s
+paired diff g6_ls15 - generic_bayes2: -0.002 ± 0.004, wins 40%
+paired diff g6_nl96 - generic_bayes2: -0.007 ± 0.006, wins 31%
+paired diff g6_lsd - generic_bayes2: -0.005 ± 0.005, wins 40%
+40 runs per algorithm on 'off_low', 87 s
+paired diff g6_ls15 - generic_bayes2: -0.000 ± 0.002, wins 15%
+paired diff g6_nl96 - generic_bayes2: +0.003 ± 0.005, wins 18%
+paired diff g6_lsd - generic_bayes2: +0.006 ± 0.004, wins 22%
+40 runs per algorithm on 'off_wide', 130 s
+paired diff g6_ls15 - generic_bayes2: +0.004 ± 0.003, wins 42%
+paired diff g6_nl96 - generic_bayes2: -0.006 ± 0.005, wins 32%
+paired diff g6_lsd - generic_bayes2: +0.001 ± 0.005, wins 38%
+400 runs per algorithm on 'off_fresh', 1587 s
+paired diff g6_ls15 - generic_bayes2: +0.002 ± 0.002, wins 40%
+paired diff g6_nl96 - generic_bayes2: -0.001 ± 0.003, wins 37%
+paired diff g6_lsd - generic_bayes2: +0.004 ± 0.002, wins 41%
+g6_ls15        pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): +0.0010 +- 0.0016
+g6_nl96        pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): -0.0020 +- 0.0025
+g6_lsd         pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): +0.0014 +- 0.0023
+Tue Nov 17 08:55:20 AM GMT 2026

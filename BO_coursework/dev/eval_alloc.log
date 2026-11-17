@@ -1,0 +1,38 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 526 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i10_tp                              0.502 0.022 0.369 0.527 0.610 0.193    59390    8   0    51  11.3
+a_pf7                               0.501 0.023 0.369 0.528 0.605 0.193    59266    8   0    48  13.1
+a_pf3                               0.502 0.022 0.369 0.527 0.610 0.193    59390    8   0    44  12.9
+a_m110                              0.496 0.023 0.369 0.524 0.596 0.191    58776    8   0    48  11.9
+a_m131                              0.501 0.022 0.369 0.526 0.610 0.192    59294    8   0    45  11.3
+a_p520                              0.504 0.023 0.364 0.541 0.608 0.194    59564    8   0    46  13.2
+a_p320                              0.447 0.020 0.280 0.493 0.569 0.181    52713    8   0    38  12.6
+a_p430                              0.501 0.023 0.369 0.526 0.610 0.193    59383    8   0    41  11.3
+paired diff a_pf7 - i10_tp: -0.001 ± 0.004, wins 11%
+paired diff a_pf3 - i10_tp: +0.000 ± 0.000, wins 0%
+paired diff a_m110 - i10_tp: -0.006 ± 0.003, wins 9%
+paired diff a_m131 - i10_tp: -0.001 ± 0.001, wins 4%
+paired diff a_p520 - i10_tp: +0.002 ± 0.014, wins 31%
+paired diff a_p320 - i10_tp: -0.055 ± 0.016, wins 23%
+paired diff a_p430 - i10_tp: -0.001 ± 0.004, wins 22%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 636 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i10_tp                              0.500 0.025 0.374 0.528 0.600 0.100    59998   14   0    47  16.1
+a_pf7                               0.501 0.025 0.374 0.528 0.600 0.100    60043   14   0    45  16.3
+a_pf3                               0.500 0.025 0.374 0.528 0.600 0.100    59998   14   0    46  15.6
+a_m110                              0.500 0.025 0.374 0.529 0.597 0.102    60063   14   0    61  15.9
+a_m131                              0.500 0.025 0.374 0.528 0.599 0.100    59976   14   0    50  15.4
+a_p520                              0.491 0.027 0.371 0.516 0.587 0.053    58719   14   0    41  17.3
+a_p320                              0.474 0.024 0.342 0.503 0.577 0.063    56479   14   0    41  16.2
+a_p430                              0.502 0.025 0.374 0.538 0.595 0.138    60159   14   0    50  16.9
+paired diff a_pf7 - i10_tp: +0.000 ± 0.000, wins 2%
+paired diff a_pf3 - i10_tp: +0.000 ± 0.000, wins 0%
+paired diff a_m110 - i10_tp: -0.001 ± 0.003, wins 12%
+paired diff a_m131 - i10_tp: -0.000 ± 0.000, wins 1%
+paired diff a_p520 - i10_tp: -0.009 ± 0.014, wins 36%
+paired diff a_p320 - i10_tp: -0.027 ± 0.015, wins 30%
+paired diff a_p430 - i10_tp: +0.002 ± 0.005, wins 25%

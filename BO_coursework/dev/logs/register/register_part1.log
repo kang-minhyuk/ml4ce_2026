@@ -1,0 +1,44 @@
+== off_big
+400 runs per algorithm on 'off_big', 7647 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+reference_mfbo                      0.149 0.006 0.045 0.168 0.235 0.012    17744  168  19   300 158.0
+reference_screen_then_confirm       0.226 0.007 0.169 0.239 0.270 0.068    27538   47   0     2   0.3
+mfgp_structured                     0.304 0.007 0.214 0.316 0.381 0.130    37360   47   0   222  94.8
+generic_funnel                      0.429 0.007 0.279 0.458 0.549 0.237    52873   47   0    53  13.3
+generic_bayes                       0.475 0.007 0.326 0.498 0.602 0.275    58509   47   0    83  20.5
+informed_funnel                     0.636 0.010 0.444 0.694 0.769 0.375    78618   47   0    76  16.2
+informed_library                    0.639 0.010 0.444 0.696 0.777 0.377    79026   47   0    66  14.3
+informed_bayes                      0.730 0.009 0.552 0.781 0.856 0.485    90108   47   0    12   5.0
+paired diff reference_screen_then_confirm - reference_mfbo: +0.077 ± 0.008, wins 70%
+paired diff mfgp_structured - reference_mfbo: +0.155 ± 0.009, wins 82%
+paired diff generic_funnel - reference_mfbo: +0.280 ± 0.009, wins 95%
+paired diff generic_bayes - reference_mfbo: +0.326 ± 0.008, wins 97%
+paired diff informed_funnel - reference_mfbo: +0.487 ± 0.010, wins 99%
+paired diff informed_library - reference_mfbo: +0.490 ± 0.010, wins 99%
+paired diff informed_bayes - reference_mfbo: +0.581 ± 0.009, wins 100%
+== dev
+Process ForkServerPoolWorker-8:
+Traceback (most recent call last):
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkServerPoolWorker-1:
+Traceback (most recent call last):
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+BrokenPipeError: [Errno 32] Broken pipe
+Process ForkServerPoolWorker-6:
+Traceback (most recent call last):
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+BrokenPipeError: [Errno 32] Broken pipe
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown: {'/mp-graiea9u', '/mp-kdba3gox', '/mp-tct_la0s', '/mp-e0i2ytjo', '/mp-5446nlhm', '/mp-cgql9jf_'}

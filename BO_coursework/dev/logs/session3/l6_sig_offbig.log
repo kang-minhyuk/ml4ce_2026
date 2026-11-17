@@ -1,0 +1,9 @@
+400 runs per algorithm on 'off_big', 1073 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.730 0.009 0.552 0.781 0.856 0.485    90108   47   0    12   5.0
+l6_s1                               0.719 0.009 0.539 0.770 0.849 0.458    88790   47   0    12   4.2
+l6_s2                               0.716 0.009 0.537 0.768 0.843 0.457    88360   47   0    16   4.9
+l6_s1_inc                           0.718 0.009 0.539 0.771 0.844 0.455    88643   47   0    13   4.4
+paired diff l6_s1 - informed_bayes: -0.011 ± 0.002, wins 20%
+paired diff l6_s2 - informed_bayes: -0.014 ± 0.003, wins 17%
+paired diff l6_s1_inc - informed_bayes: -0.012 ± 0.002, wins 19%

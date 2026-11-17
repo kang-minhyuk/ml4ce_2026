@@ -1,0 +1,73 @@
+400 runs per algorithm on 'off_big', 381 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.730 0.009 0.552 0.781 0.856 0.485    90108   47   0    12   5.0
+w1_a                                0.736 0.009 0.555 0.791 0.862 0.487    90903   47   0    14   5.7
+w1_b                                0.735 0.009 0.556 0.786 0.863 0.494    90722   47   0    13   5.7
+w1_c                                0.740 0.009 0.561 0.791 0.869 0.489    91392   47   0    12   5.6
+paired diff w1_a - informed_bayes: +0.006 ± 0.003, wins 58%
+paired diff w1_b - informed_bayes: +0.005 ± 0.003, wins 56%
+paired diff w1_c - informed_bayes: +0.011 ± 0.003, wins 56%
+100 runs per algorithm on 'dev', 83 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.670 0.018 0.516 0.706 0.790 0.462    78899    8   0    10   4.0
+w1_a                                0.687 0.017 0.522 0.730 0.810 0.472    80922    8   0    11   4.9
+w1_b                                0.687 0.017 0.523 0.731 0.808 0.472    80753    8   0    11   4.7
+w1_c                                0.691 0.017 0.521 0.739 0.812 0.468    81229    8   0    10   4.4
+paired diff w1_a - informed_bayes: +0.017 ± 0.007, wins 59%
+paired diff w1_b - informed_bayes: +0.017 ± 0.007, wins 57%
+paired diff w1_c - informed_bayes: +0.020 ± 0.007, wins 58%
+100 runs per algorithm on 'off_dev', 101 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.678 0.018 0.469 0.746 0.820 0.485    83807   14   0    13   4.8
+w1_a                                0.679 0.018 0.476 0.746 0.814 0.476    83870   14   0    12   6.1
+w1_b                                0.681 0.018 0.476 0.747 0.819 0.485    84066   14   0    11   5.9
+w1_c                                0.688 0.018 0.477 0.762 0.824 0.489    84895   14   0    11   5.6
+paired diff w1_a - informed_bayes: +0.000 ± 0.005, wins 52%
+paired diff w1_b - informed_bayes: +0.003 ± 0.006, wins 51%
+paired diff w1_c - informed_bayes: +0.010 ± 0.006, wins 56%
+100 runs per algorithm on 'hold', 88 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.713 0.017 0.539 0.760 0.841 0.499    81698    3   0    11   4.0
+w1_a                                0.711 0.017 0.540 0.757 0.837 0.497    81459    3   0    11   5.0
+w1_b                                0.715 0.017 0.542 0.762 0.842 0.496    81885    3   0     9   4.9
+w1_c                                0.722 0.017 0.545 0.770 0.852 0.506    82587    3   0    12   4.8
+paired diff w1_a - informed_bayes: -0.002 ± 0.006, wins 47%
+paired diff w1_b - informed_bayes: +0.002 ± 0.006, wins 50%
+paired diff w1_c - informed_bayes: +0.009 ± 0.007, wins 56%
+100 runs per algorithm on 'off_hold', 97 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.712 0.016 0.489 0.785 0.863 0.485    83771   20   0    11   4.9
+w1_a                                0.715 0.016 0.494 0.793 0.859 0.522    84147   20   0    12   5.3
+w1_b                                0.714 0.016 0.494 0.792 0.856 0.507    84010   20   0    13   5.8
+w1_c                                0.708 0.015 0.491 0.783 0.850 0.507    83270   20   0    11   5.5
+paired diff w1_a - informed_bayes: +0.003 ± 0.006, wins 56%
+paired diff w1_b - informed_bayes: +0.002 ± 0.006, wins 51%
+paired diff w1_c - informed_bayes: -0.004 ± 0.007, wins 48%
+40 runs per algorithm on 'off_low', 32 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.471 0.031 0.130 0.604 0.680 0.234    55754   31   0     9   3.1
+w1_a                                0.483 0.030 0.129 0.613 0.706 0.242    57249   31   0     9   4.1
+w1_b                                0.478 0.030 0.129 0.608 0.696 0.219    56723   31   0    10   4.2
+w1_c                                0.478 0.029 0.132 0.607 0.696 0.221    56793   31   0    10   3.7
+paired diff w1_a - informed_bayes: +0.011 ± 0.007, wins 62%
+paired diff w1_b - informed_bayes: +0.007 ± 0.006, wins 68%
+paired diff w1_c - informed_bayes: +0.007 ± 0.006, wins 62%
+40 runs per algorithm on 'off_wide', 43 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.661 0.025 0.411 0.750 0.821 0.462    89852    8   0     8   5.1
+w1_a                                0.690 0.026 0.445 0.775 0.851 0.461    93113    8   0    10   6.0
+w1_b                                0.700 0.027 0.446 0.786 0.867 0.495    94291    8   0    10   5.9
+w1_c                                0.683 0.027 0.434 0.765 0.851 0.411    91991    8   0     9   5.5
+paired diff w1_a - informed_bayes: +0.030 ± 0.012, wins 70%
+paired diff w1_b - informed_bayes: +0.039 ± 0.011, wins 78%
+paired diff w1_c - informed_bayes: +0.023 ± 0.013, wins 68%
+20 runs per algorithm on 'practice20', 20 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.689 0.014 0.530 0.721 0.818 0.602    90758    0   0     5   3.2
+w1_a                                0.701 0.016 0.534 0.739 0.830 0.591    92345    0   0     8   4.9
+w1_b                                0.707 0.017 0.534 0.750 0.836 0.591    93078    0   0     9   4.8
+w1_c                                0.719 0.013 0.547 0.751 0.859 0.642    94724    0   0     6   4.2
+paired diff w1_a - informed_bayes: +0.012 ± 0.008, wins 80%
+paired diff w1_b - informed_bayes: +0.017 ± 0.006, wins 80%
+paired diff w1_c - informed_bayes: +0.030 ± 0.006, wins 90%
+Mon Nov 16 10:22:04 PM GMT 2026

@@ -1,0 +1,43 @@
+== dev
+100 runs per algorithm on 'dev', 302 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.670 0.018 0.516 0.706 0.790 0.462    78899    8   0    10   4.0
+p1_c221                             0.670 0.019 0.516 0.711 0.784 0.462    78939    8   0    11   5.2
+paired diff p1_c221 - informed_bayes: -0.000 ± 0.007, wins 31%
+== off_dev
+100 runs per algorithm on 'off_dev', 380 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.678 0.018 0.469 0.746 0.820 0.485    83807   14   0    13   4.8
+p1_c221                             0.668 0.020 0.471 0.728 0.805 0.433    82762   14   0    15   6.6
+paired diff p1_c221 - informed_bayes: -0.010 ± 0.009, wins 34%
+== hold
+100 runs per algorithm on 'hold', 293 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.713 0.017 0.539 0.760 0.841 0.499    81698    3   0    11   4.0
+p1_c221                             0.718 0.017 0.560 0.769 0.825 0.506    82270    3   0    11   4.8
+paired diff p1_c221 - informed_bayes: +0.005 ± 0.007, wins 35%
+== off_hold
+100 runs per algorithm on 'off_hold', 369 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.712 0.016 0.489 0.785 0.863 0.485    83771   20   0    11   4.9
+p1_c221                             0.710 0.016 0.513 0.773 0.844 0.507    83624   20   0    14   6.7
+paired diff p1_c221 - informed_bayes: -0.002 ± 0.006, wins 31%
+== off_low
+40 runs per algorithm on 'off_low', 112 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.471 0.031 0.130 0.604 0.680 0.234    55754   31   0     9   3.1
+p1_c221                             0.473 0.031 0.130 0.597 0.692 0.234    56175   31   0    11   4.3
+paired diff p1_c221 - informed_bayes: +0.002 ± 0.009, wins 18%
+== off_wide
+40 runs per algorithm on 'off_wide', 151 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.661 0.025 0.411 0.750 0.821 0.462    89852    8   0     8   5.1
+p1_c221                             0.660 0.026 0.444 0.734 0.803 0.465    90373    8   0    10   6.8
+paired diff p1_c221 - informed_bayes: -0.000 ± 0.014, wins 32%
+== practice20
+20 runs per algorithm on 'practice20', 66 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.689 0.014 0.530 0.721 0.818 0.602    90758    0   0     5   3.2
+p1_c221                             0.696 0.013 0.530 0.727 0.830 0.630    91556    0   0     8   5.7
+paired diff p1_c221 - informed_bayes: +0.006 ± 0.011, wins 30%
+== DONE

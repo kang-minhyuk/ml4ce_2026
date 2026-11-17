@@ -1,0 +1,36 @@
+400 runs per algorithm on 'off_big', 251 s
+paired diff x4_m20 - informed_bayes2: +0.002 ± 0.001, wins 24%
+paired diff x4_m20b - informed_bayes2: +0.004 ± 0.002, wins 63%
+paired diff x2_b05 - informed_bayes2: +0.002 ± 0.001, wins 66%
+100 runs per algorithm on 'dev', 81 s
+paired diff x4_m20 - informed_bayes2: +0.002 ± 0.001, wins 29%
+paired diff x4_m20b - informed_bayes2: +0.004 ± 0.004, wins 63%
+paired diff x2_b05 - informed_bayes2: +0.001 ± 0.004, wins 60%
+100 runs per algorithm on 'off_dev', 98 s
+paired diff x4_m20 - informed_bayes2: +0.003 ± 0.003, wins 28%
+paired diff x4_m20b - informed_bayes2: -0.000 ± 0.004, wins 57%
+paired diff x2_b05 - informed_bayes2: -0.002 ± 0.003, wins 58%
+100 runs per algorithm on 'hold', 85 s
+paired diff x4_m20 - informed_bayes2: +0.005 ± 0.003, wins 32%
+paired diff x4_m20b - informed_bayes2: +0.007 ± 0.004, wins 61%
+paired diff x2_b05 - informed_bayes2: +0.002 ± 0.003, wins 53%
+100 runs per algorithm on 'off_hold', 94 s
+paired diff x4_m20 - informed_bayes2: +0.003 ± 0.002, wins 23%
+paired diff x4_m20b - informed_bayes2: -0.003 ± 0.004, wins 59%
+paired diff x2_b05 - informed_bayes2: -0.004 ± 0.004, wins 64%
+40 runs per algorithm on 'off_low', 31 s
+paired diff x4_m20 - informed_bayes2: +0.000 ± 0.002, wins 18%
+paired diff x4_m20b - informed_bayes2: +0.003 ± 0.007, wins 60%
+paired diff x2_b05 - informed_bayes2: +0.003 ± 0.007, wins 60%
+40 runs per algorithm on 'off_wide', 42 s
+paired diff x4_m20 - informed_bayes2: +0.004 ± 0.004, wins 28%
+paired diff x4_m20b - informed_bayes2: +0.005 ± 0.008, wins 52%
+paired diff x2_b05 - informed_bayes2: +0.003 ± 0.006, wins 55%
+20 runs per algorithm on 'practice20', 19 s
+paired diff x4_m20 - informed_bayes2: -0.013 ± 0.004, wins 15%
+paired diff x4_m20b - informed_bayes2: -0.014 ± 0.004, wins 30%
+paired diff x2_b05 - informed_bayes2: +0.001 ± 0.003, wins 70%
+x4_m20         pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): +0.0030 +- 0.0010
+x4_m20b        pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): +0.0023 +- 0.0019
+x2_b05         pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): -0.0004 +- 0.0016
+Tue Nov 17 02:16:03 AM GMT 2026

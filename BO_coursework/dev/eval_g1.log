@@ -1,0 +1,22 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 159 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+mfgp_structured                     0.333 0.016 0.244 0.352 0.402 0.169    39757    8   0   170  50.7
+g1_generic                          0.338 0.014 0.214 0.354 0.445 0.164    39825    8   0    29   9.7
+g1_genlog                           0.402 0.016 0.255 0.432 0.520 0.195    47801    8   0    33   9.4
+i17_funnel                          0.596 0.019 0.408 0.658 0.721 0.350    70600    8   0    37   9.8
+paired diff g1_generic - mfgp_structured: +0.005 ± 0.019, wins 50%
+paired diff g1_genlog - mfgp_structured: +0.069 ± 0.018, wins 65%
+paired diff i17_funnel - mfgp_structured: +0.263 ± 0.022, wins 87%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 204 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+mfgp_structured                     0.287 0.015 0.206 0.295 0.360 0.098    34662   14   0   219  91.5
+g1_generic                          0.334 0.016 0.208 0.356 0.440 0.127    41017   14   0    32  12.6
+g1_genlog                           0.382 0.017 0.246 0.410 0.492 0.128    46731   14   0    33  12.6
+i17_funnel                          0.578 0.021 0.397 0.632 0.704 0.263    70884   14   0    34  12.1
+paired diff g1_generic - mfgp_structured: +0.047 ± 0.016, wins 65%
+paired diff g1_genlog - mfgp_structured: +0.095 ± 0.017, wins 75%
+paired diff i17_funnel - mfgp_structured: +0.291 ± 0.021, wins 92%

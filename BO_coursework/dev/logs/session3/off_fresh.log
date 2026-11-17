@@ -1,0 +1,18 @@
+400 runs per algorithm on 'off_fresh', 1807 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes2                     0.742 0.008 0.557 0.803 0.867 0.507    91184   58   0    11   5.6
+informed_bayes                      0.724 0.009 0.543 0.778 0.851 0.468    88867   58   0    15   5.3
+informed_library                    0.643 0.010 0.448 0.693 0.787 0.388    78445   58   0    36  13.4
+informed_funnel                     0.638 0.010 0.448 0.693 0.774 0.383    77954   58   0    42  13.3
+generic_bayes                       0.470 0.007 0.322 0.493 0.595 0.284    57436   58   0    70  17.6
+generic_funnel                      0.434 0.007 0.291 0.457 0.552 0.252    52721   58   0    50  13.8
+x5_c2                               0.740 0.008 0.558 0.797 0.863 0.498    90836   58   0    12   5.6
+x4_m20                              0.741 0.008 0.557 0.801 0.867 0.507    91074   58   0    14   5.7
+paired diff informed_bayes - informed_bayes2: -0.019 ± 0.004, wins 39%
+paired diff informed_library - informed_bayes2: -0.100 ± 0.008, wins 25%
+paired diff informed_funnel - informed_bayes2: -0.104 ± 0.008, wins 22%
+paired diff generic_bayes - informed_bayes2: -0.272 ± 0.007, wins 2%
+paired diff generic_funnel - informed_bayes2: -0.309 ± 0.007, wins 3%
+paired diff x5_c2 - informed_bayes2: -0.003 ± 0.003, wins 38%
+paired diff x4_m20 - informed_bayes2: -0.001 ± 0.001, wins 21%
+Tue Nov 17 03:35:38 AM GMT 2026

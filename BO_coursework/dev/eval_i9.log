@@ -1,0 +1,30 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 385 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i6_funnel                           0.478 0.021 0.340 0.497 0.596 0.209    56746    8   0    79  13.0
+i9_fp                               0.464 0.023 0.337 0.478 0.577 0.126    55220    8   0    70  12.6
+i9_tp                               0.476 0.022 0.338 0.498 0.591 0.199    56271    8   0    47  12.6
+i9_pg                               0.427 0.022 0.305 0.436 0.541 0.141    50632    8   0    57  13.8
+i9_all3                             0.479 0.024 0.333 0.497 0.607 0.146    56700    8   0    50  13.1
+i9_fp_pg                            0.454 0.024 0.325 0.474 0.561 0.153    54043    8   0    50  12.8
+paired diff i9_fp - i6_funnel: -0.014 ± 0.012, wins 42%
+paired diff i9_tp - i6_funnel: -0.002 ± 0.010, wins 49%
+paired diff i9_pg - i6_funnel: -0.051 ± 0.015, wins 36%
+paired diff i9_all3 - i6_funnel: +0.001 ± 0.014, wins 52%
+paired diff i9_fp_pg - i6_funnel: -0.024 ± 0.014, wins 43%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 495 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i6_funnel                           0.448 0.025 0.327 0.466 0.550 0.062    53702   14   0    53  16.2
+i9_fp                               0.483 0.026 0.357 0.505 0.586 0.091    58262   14   0    63  20.4
+i9_tp                               0.474 0.025 0.341 0.496 0.586 0.094    56834   14   0    42  17.3
+i9_pg                               0.448 0.025 0.329 0.463 0.551 0.093    53778   14   0    40  16.7
+i9_all3                             0.481 0.024 0.357 0.508 0.577 0.129    58075   14   0    56  16.6
+i9_fp_pg                            0.472 0.024 0.356 0.505 0.554 0.111    57066   14   0    42  16.6
+paired diff i9_fp - i6_funnel: +0.035 ± 0.014, wins 55%
+paired diff i9_tp - i6_funnel: +0.027 ± 0.011, wins 49%
+paired diff i9_pg - i6_funnel: -0.000 ± 0.014, wins 41%
+paired diff i9_all3 - i6_funnel: +0.033 ± 0.015, wins 52%
+paired diff i9_fp_pg - i6_funnel: +0.024 ± 0.016, wins 49%

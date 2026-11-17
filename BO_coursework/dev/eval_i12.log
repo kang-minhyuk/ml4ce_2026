@@ -1,0 +1,26 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 302 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i10_tp                              0.502 0.022 0.369 0.527 0.610 0.193    59390    8   0    51  11.3
+i12_all                             0.502 0.022 0.369 0.527 0.610 0.193    59390    8   0    42  10.8
+i12_funnel                          0.489 0.023 0.366 0.515 0.586 0.140    57741    8   0    61  13.0
+i12_ls2                             0.487 0.023 0.365 0.512 0.586 0.187    57765    8   0    54  11.5
+i12_ls3                             0.485 0.023 0.365 0.504 0.588 0.159    57477    8   0    43  11.6
+paired diff i12_all - i10_tp: +0.000 ± 0.000, wins 0%
+paired diff i12_funnel - i10_tp: -0.013 ± 0.010, wins 44%
+paired diff i12_ls2 - i10_tp: -0.015 ± 0.010, wins 41%
+paired diff i12_ls3 - i10_tp: -0.017 ± 0.009, wins 45%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 361 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i10_tp                              0.500 0.025 0.374 0.528 0.600 0.100    59998   14   0    47  16.1
+i12_all                             0.500 0.025 0.374 0.528 0.600 0.100    59998   14   0    52  15.7
+i12_funnel                          0.494 0.024 0.372 0.524 0.587 0.136    59711   14   0    43  15.8
+i12_ls2                             0.498 0.025 0.371 0.526 0.595 0.109    60381   14   0    47  16.6
+i12_ls3                             0.501 0.024 0.371 0.528 0.604 0.158    60560   14   0    42  15.0
+paired diff i12_all - i10_tp: +0.000 ± 0.000, wins 0%
+paired diff i12_funnel - i10_tp: -0.006 ± 0.011, wins 38%
+paired diff i12_ls2 - i10_tp: -0.003 ± 0.010, wins 46%
+paired diff i12_ls3 - i10_tp: +0.001 ± 0.009, wins 47%

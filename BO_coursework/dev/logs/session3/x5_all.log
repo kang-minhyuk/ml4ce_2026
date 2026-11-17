@@ -1,0 +1,27 @@
+400 runs per algorithm on 'off_big', 248 s
+paired diff x5_c1 - informed_bayes2: +0.002 ± 0.004, wins 31%
+paired diff x5_c2 - informed_bayes2: +0.004 ± 0.004, wins 40%
+100 runs per algorithm on 'dev', 55 s
+paired diff x5_c1 - informed_bayes2: -0.004 ± 0.004, wins 23%
+paired diff x5_c2 - informed_bayes2: -0.000 ± 0.004, wins 40%
+100 runs per algorithm on 'off_dev', 65 s
+paired diff x5_c1 - informed_bayes2: +0.008 ± 0.006, wins 33%
+paired diff x5_c2 - informed_bayes2: +0.012 ± 0.006, wins 48%
+100 runs per algorithm on 'hold', 58 s
+paired diff x5_c1 - informed_bayes2: -0.003 ± 0.006, wins 27%
+paired diff x5_c2 - informed_bayes2: +0.001 ± 0.006, wins 39%
+100 runs per algorithm on 'off_hold', 62 s
+paired diff x5_c1 - informed_bayes2: +0.002 ± 0.004, wins 37%
+paired diff x5_c2 - informed_bayes2: +0.004 ± 0.004, wins 47%
+40 runs per algorithm on 'off_low', 23 s
+paired diff x5_c1 - informed_bayes2: +0.004 ± 0.008, wins 15%
+paired diff x5_c2 - informed_bayes2: +0.004 ± 0.008, wins 28%
+40 runs per algorithm on 'off_wide', 29 s
+paired diff x5_c1 - informed_bayes2: +0.018 ± 0.011, wins 45%
+paired diff x5_c2 - informed_bayes2: +0.019 ± 0.012, wins 42%
+20 runs per algorithm on 'practice20', 14 s
+paired diff x5_c1 - informed_bayes2: +0.004 ± 0.005, wins 20%
+paired diff x5_c2 - informed_bayes2: -0.008 ± 0.007, wins 30%
+x5_c1          pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): +0.0026 +- 0.0024
+x5_c2          pooled over dev,off_dev,hold,off_hold,off_low,off_wide (n=480): +0.0055 +- 0.0025
+Tue Nov 17 02:40:42 AM GMT 2026

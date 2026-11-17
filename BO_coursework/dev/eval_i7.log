@@ -1,0 +1,30 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 576 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i6_funnel                           0.478 0.021 0.340 0.497 0.596 0.209    56746    8   0    79  13.0
+i7_funnel                           0.476 0.021 0.349 0.498 0.581 0.208    56888    8   0    34  11.9
+i7_b3                               0.467 0.021 0.333 0.491 0.577 0.207    56152    8   0    61  12.6
+i7_b8                               0.482 0.022 0.349 0.519 0.577 0.190    57615    8   0    38  13.2
+i7_hyb                              0.475 0.022 0.339 0.501 0.587 0.170    56229    8   0    95  30.4
+i7_hyb_b3                           0.467 0.022 0.332 0.491 0.578 0.170    55119    8   0   138  31.0
+paired diff i7_funnel - i6_funnel: -0.002 ± 0.011, wins 37%
+paired diff i7_b3 - i6_funnel: -0.011 ± 0.012, wins 43%
+paired diff i7_b8 - i6_funnel: +0.004 ± 0.011, wins 42%
+paired diff i7_hyb - i6_funnel: -0.002 ± 0.018, wins 53%
+paired diff i7_hyb_b3 - i6_funnel: -0.011 ± 0.019, wins 52%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 737 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i6_funnel                           0.448 0.025 0.327 0.466 0.550 0.062    53702   14   0    53  16.2
+i7_funnel                           0.447 0.025 0.320 0.465 0.558 0.078    53867   14   0    42  16.2
+i7_b3                               0.459 0.025 0.334 0.474 0.568 0.078    55011   14   0    53  17.8
+i7_b8                               0.440 0.025 0.319 0.464 0.538 0.063    52858   14   0    45  16.0
+i7_hyb                              0.447 0.024 0.294 0.482 0.565 0.091    54161   14   0   130  38.8
+i7_hyb_b3                           0.430 0.024 0.279 0.450 0.560 0.085    51868   14   0   107  39.9
+paired diff i7_funnel - i6_funnel: -0.000 ± 0.011, wins 40%
+paired diff i7_b3 - i6_funnel: +0.011 ± 0.008, wins 41%
+paired diff i7_b8 - i6_funnel: -0.007 ± 0.011, wins 35%
+paired diff i7_hyb - i6_funnel: -0.001 ± 0.017, wins 46%
+paired diff i7_hyb_b3 - i6_funnel: -0.018 ± 0.016, wins 46%

@@ -1,0 +1,14 @@
+400 runs per algorithm on 'off_big', 2075 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+generic_bayes                       0.475 0.007 0.326 0.498 0.602 0.275    58509   47   0    83  20.5
+g4_r011                             0.467 0.007 0.326 0.490 0.586 0.260    57507   47   0    72  18.2
+g4_r022                             0.459 0.008 0.326 0.475 0.577 0.244    56653   47   0    60  18.1
+g4_r042                             0.419 0.008 0.326 0.410 0.520 0.185    51435   47   0    70  18.5
+g4_r022m                            0.457 0.008 0.326 0.473 0.571 0.244    56237   47   0    65  18.6
+g4_r122                             0.454 0.008 0.317 0.474 0.571 0.246    55741   47   0    63  18.3
+paired diff g4_r011 - generic_bayes: -0.008 ± 0.003, wins 41%
+paired diff g4_r022 - generic_bayes: -0.016 ± 0.004, wins 38%
+paired diff g4_r042 - generic_bayes: -0.057 ± 0.005, wins 26%
+paired diff g4_r022m - generic_bayes: -0.019 ± 0.004, wins 34%
+paired diff g4_r122 - generic_bayes: -0.022 ± 0.005, wins 35%
+Tue Nov 17 01:45:59 AM GMT 2026

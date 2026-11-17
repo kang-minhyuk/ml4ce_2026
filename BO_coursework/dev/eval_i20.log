@@ -1,0 +1,17 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 386 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i17_funnel                          0.596 0.019 0.408 0.658 0.721 0.350    70600    8   0    37   9.8
+i20_f                               0.592 0.020 0.402 0.658 0.716 0.331    70323    8   0    37  10.3
+i20_f431                            0.595 0.019 0.402 0.656 0.727 0.355    70533    8   0    40  13.4
+i20_f441                            0.575 0.020 0.402 0.627 0.697 0.318    68187    8   0    49  14.4
+i20_f442s                           0.585 0.019 0.402 0.642 0.712 0.341    69504    8   0    40  13.7
+paired diff i20_f - i17_funnel: -0.004 ± 0.006, wins 29%
+paired diff i20_f431 - i17_funnel: -0.001 ± 0.007, wins 48%
+paired diff i20_f441 - i17_funnel: -0.021 ± 0.010, wins 45%
+paired diff i20_f442s - i17_funnel: -0.010 ± 0.009, wins 42%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown: {'/mp-of7cj994', '/mp-zzju8ah6', '/mp-7mn_5_x5', '/mp-xmg50u22', '/mp-63j20rle', '/mp-9afb65ey'}
+  warnings.warn(

@@ -1,0 +1,16 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+400 runs per algorithm on 'off_big', 602 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.730 0.009 0.552 0.781 0.856 0.485    90108   47   0    12   5.0
+v1_f03                              0.731 0.009 0.553 0.785 0.856 0.482    90342   47   0    13   5.6
+v1_f03L                             0.730 0.009 0.553 0.783 0.854 0.482    90172   47   0    11   5.5
+v1_f03L1                            0.732 0.009 0.554 0.786 0.857 0.487    90393   47   0    12   5.6
+v1_f05L                             0.733 0.009 0.555 0.786 0.858 0.482    90488   47   0    15   5.4
+v1_f07L                             0.734 0.009 0.555 0.788 0.857 0.481    90579   47   0    13   5.2
+paired diff v1_f03 - informed_bayes: +0.002 ± 0.002, wins 51%
+paired diff v1_f03L - informed_bayes: +0.000 ± 0.002, wins 50%
+paired diff v1_f03L1 - informed_bayes: +0.003 ± 0.002, wins 52%
+paired diff v1_f05L - informed_bayes: +0.003 ± 0.002, wins 54%
+paired diff v1_f07L - informed_bayes: +0.004 ± 0.002, wins 55%
+Mon Nov 16 09:53:19 PM GMT 2026

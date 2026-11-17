@@ -1,0 +1,17 @@
+== off_big generic
+400 runs per algorithm on 'off_big', 2184 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+generic_funnel                      0.429 0.007 0.279 0.458 0.549 0.237    52873   47   0    53  13.3
+g1_bayes                            0.456 0.007 0.316 0.481 0.571 0.261    55806   47   0    53  14.2
+g1_bayes_gw75                       0.454 0.007 0.311 0.476 0.574 0.256    55802   47   0    49  14.1
+g1_voi                              0.471 0.007 0.323 0.496 0.593 0.268    57963   47   0    61  18.5
+g1_voi_gw75                         0.471 0.007 0.316 0.500 0.598 0.285    57843   47   0    62  18.4
+g1_voi_nobr                         0.475 0.007 0.326 0.498 0.602 0.275    58509   47   0    56  18.3
+paired diff g1_bayes - generic_funnel: +0.027 ± 0.007, wins 53%
+paired diff g1_bayes_gw75 - generic_funnel: +0.025 ± 0.007, wins 54%
+paired diff g1_voi - generic_funnel: +0.042 ± 0.007, wins 58%
+paired diff g1_voi_gw75 - generic_funnel: +0.043 ± 0.006, wins 59%
+paired diff g1_voi_nobr - generic_funnel: +0.047 ± 0.007, wins 62%
+== DONE
+
+[exited with code 0]

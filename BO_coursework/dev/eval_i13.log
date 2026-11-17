@@ -1,0 +1,22 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 190 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i10_tp                              0.502 0.022 0.369 0.527 0.610 0.193    59390    8   0    51  11.3
+i13_funnel                          0.500 0.022 0.369 0.529 0.602 0.190    59172    8   0    38   9.6
+i13_mbp                             0.516 0.022 0.397 0.540 0.610 0.246    61383    8   0    32   9.3
+i13_p3                              0.508 0.022 0.369 0.518 0.638 0.236    60110    8   0    38  11.0
+paired diff i13_funnel - i10_tp: -0.002 ± 0.013, wins 37%
+paired diff i13_mbp - i10_tp: +0.014 ± 0.014, wins 42%
+paired diff i13_p3 - i10_tp: +0.006 ± 0.012, wins 48%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 228 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i10_tp                              0.500 0.025 0.374 0.528 0.600 0.100    59998   14   0    47  16.1
+i13_funnel                          0.505 0.023 0.374 0.513 0.627 0.192    61331   14   0    30  13.2
+i13_mbp                             0.510 0.023 0.391 0.514 0.624 0.167    61903   14   0    30  13.0
+i13_p3                              0.516 0.023 0.374 0.542 0.632 0.151    62958   14   0    32  14.0
+paired diff i13_funnel - i10_tp: +0.004 ± 0.011, wins 46%
+paired diff i13_mbp - i10_tp: +0.009 ± 0.013, wins 45%
+paired diff i13_p3 - i10_tp: +0.015 ± 0.011, wins 50%

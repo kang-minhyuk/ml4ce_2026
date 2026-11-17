@@ -1,0 +1,9 @@
+informed_bayes2.py   tiny_budget      score         0 ckpt [None, None, None] end budget err False wall 1.5
+informed_bayes2.py   one_pilot        score         0 ckpt [None, None, None] end budget err False wall 0.8
+informed_bayes2.py   few_experiments  score     59060 ckpt [19418, 19418, 20224] end experiment limit err False wall 0.5
+informed_bayes2.py   odd_batches      score     78563 ckpt [19333, 24123, 35108] end budget err False wall 2.1
+informed_bayes2.py   big_init         score     52518 ckpt [None, 19345, 33173] end budget + experiment limit err False wall 1.8
+informed_bayes2.py   no_init          score    106002 ckpt [31992, 35091, 38919] end budget err False wall 2.1
+informed_bayes2.py   cheap_mbr        score    105974 ckpt [25035, 38860, 42079] end budget err False wall 2.3
+informed_bayes2.py   pricey_mbr       score     45676 ckpt [None, 21719, 23957] end budget err False wall 0.6
+informed_bayes2.py   huge_budget      score    116614 ckpt [31854, 42079, 42680] end budget err False wall 5.2

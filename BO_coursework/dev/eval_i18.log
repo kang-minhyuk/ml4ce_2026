@@ -1,0 +1,19 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 840 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i17_funnel                          0.596 0.019 0.408 0.658 0.721 0.350    70600    8   0    37   9.8
+i18_gk                              0.564 0.020 0.390 0.622 0.681 0.324    66577    8   0    90  27.3
+i18_g1                              0.542 0.019 0.368 0.600 0.659 0.321    63979    8   0    83  18.4
+i18_hyb                             0.578 0.018 0.383 0.637 0.713 0.353    68373    8   0   107  29.5
+i18_gk_p431                         0.564 0.020 0.390 0.626 0.675 0.324    66498    8   0   122  29.9
+i18_gk_p5                           0.576 0.020 0.411 0.632 0.683 0.324    67856    8   0   115  29.9
+paired diff i18_gk - i17_funnel: -0.031 ± 0.016, wins 43%
+paired diff i18_g1 - i17_funnel: -0.053 ± 0.019, wins 35%
+paired diff i18_hyb - i17_funnel: -0.018 ± 0.014, wins 56%
+paired diff i18_gk_p431 - i17_funnel: -0.032 ± 0.016, wins 44%
+paired diff i18_gk_p5 - i17_funnel: -0.020 ± 0.016, wins 47%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown: {'/mp-z8bdeu2n', '/mp-hbz13vme', '/mp-fra2g9g2', '/mp-3m7grc9d', '/mp-a29qdrws', '/mp-wska1p6n'}
+  warnings.warn(

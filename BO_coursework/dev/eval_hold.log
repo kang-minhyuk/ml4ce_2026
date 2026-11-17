@@ -1,0 +1,26 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/evaluate.py:154: RuntimeWarning: Mean of empty slice
+  print(f"{n[:34]:34s} {nv.mean():6.3f} {nv.std() / np.sqrt(max(len(nv), 1)):5.3f} {ck[0]:5.3f} {ck[1]:5.3f} "
+/home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:219: RuntimeWarning: Degrees of freedom <= 0 for slice
+  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:178: RuntimeWarning: invalid value encountered in divide
+  arrmean = um.true_divide(arrmean, div, out=arrmean,
+/home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:211: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+100 runs per algorithm on 'hold', 689 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+mfgp_structured                       nan   nan   nan   nan   nan   nan    37974    3   0   207  62.6
+g1_genlog                             nan   nan   nan   nan   nan   nan    49245    3   0    37   9.3
+i17_funnel                            nan   nan   nan   nan   nan   nan    72312    3   0    30   7.5
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_hold', 727 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+mfgp_structured                     0.291 0.015 0.187 0.314 0.371 0.124    33680   20   0   222  58.5
+g1_genlog                           0.442 0.017 0.271 0.482 0.572 0.221    52170   20   0    39  14.2
+i17_funnel                          0.598 0.020 0.377 0.677 0.740 0.334    69402   20   0    40  14.4
+paired diff g1_genlog - mfgp_structured: +0.151 ± 0.018, wins 80%
+paired diff i17_funnel - mfgp_structured: +0.307 ± 0.021, wins 92%

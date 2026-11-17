@@ -1,0 +1,14 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+400 runs per algorithm on 'off_big', 560 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.730 0.009 0.552 0.781 0.856 0.485    90108   47   0    12   5.0
+v2_capF                             0.731 0.009 0.553 0.782 0.856 0.477    90208   47   0    18   5.7
+v2_capR                             0.718 0.008 0.543 0.773 0.840 0.478    88529   47   0    21   6.4
+v2_capFR                            0.722 0.008 0.551 0.773 0.840 0.483    88978   47   0    20   6.2
+v2_capF1                            0.733 0.009 0.557 0.782 0.859 0.478    90453   47   0    21   6.1
+paired diff v2_capF - informed_bayes: +0.001 ± 0.002, wins 48%
+paired diff v2_capR - informed_bayes: -0.011 ± 0.006, wins 47%
+paired diff v2_capFR - informed_bayes: -0.008 ± 0.007, wins 52%
+paired diff v2_capF1 - informed_bayes: +0.003 ± 0.003, wins 51%
+Mon Nov 16 10:07:29 PM GMT 2026

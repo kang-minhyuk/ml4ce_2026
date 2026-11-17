@@ -1,0 +1,18 @@
+== dev
+k1_m52                              0.597 0.020 0.416 0.651 0.724 0.310    71013    8   0    46  11.2
+k1_m33                              0.607 0.019 0.419 0.661 0.741 0.359    72712    8   0    44  10.5
+k1_m51                              0.619 0.021 0.441 0.670 0.748 0.330    73460    8   0    40   9.3
+k1_m72                              0.600 0.019 0.410 0.656 0.733 0.359    71409    8   0    37   9.3
+paired diff k1_m52 - informed_library: -0.017 ± 0.014, wins 39%
+paired diff k1_m33 - informed_library: -0.007 ± 0.015, wins 45%
+paired diff k1_m51 - informed_library: +0.005 ± 0.015, wins 43%
+paired diff k1_m72 - informed_library: -0.014 ± 0.015, wins 43%
+== off_dev
+k1_m52                              0.622 0.020 0.420 0.681 0.763 0.351    75844   14   0    39  14.7
+k1_m33                              0.599 0.020 0.401 0.663 0.735 0.311    73137   14   0    38  14.1
+k1_m51                              0.601 0.021 0.411 0.656 0.738 0.294    73227   14   0    39  13.4
+k1_m72                              0.602 0.021 0.409 0.662 0.734 0.351    73925   14   0    40  13.0
+paired diff k1_m52 - informed_library: +0.017 ± 0.015, wins 55%
+paired diff k1_m33 - informed_library: -0.005 ± 0.014, wins 50%
+paired diff k1_m51 - informed_library: -0.003 ± 0.013, wins 51%
+paired diff k1_m72 - informed_library: -0.003 ± 0.015, wins 48%

@@ -1,0 +1,16 @@
+('all', 'bayes') mean rel pilot titer 0.717 p10 0.187 p25 0.547
+('all', 'bayes_s.6') mean rel pilot titer 0.715 p10 0.206 p25 0.547
+('all', 'bayes_w1.0') mean rel pilot titer 0.713 p10 0.114 p25 0.532
+('all', 'bayes_w1.6') mean rel pilot titer 0.716 p10 0.225 p25 0.538
+('all', 'bestwell') mean rel pilot titer 0.484 p10 0.030 p25 0.188
+('all', 'quad') mean rel pilot titer 0.570 p10 0.008 p25 0.177
+('all', 'tmplLS') mean rel pilot titer 0.638 p10 0.016 p25 0.300
+('first', 'bayes') mean rel pilot titer 0.627 p10 0.093 p25 0.385
+('first', 'bayes_s.6') mean rel pilot titer 0.617 p10 0.094 p25 0.368
+('first', 'bayes_w1.0') mean rel pilot titer 0.617 p10 0.067 p25 0.335
+('first', 'bayes_w1.6') mean rel pilot titer 0.623 p10 0.103 p25 0.386
+('first', 'bestwell') mean rel pilot titer 0.398 p10 0.012 p25 0.095
+('first', 'quad') mean rel pilot titer 0.445 p10 0.007 p25 0.045
+('first', 'tmplLS') mean rel pilot titer 0.512 p10 0.008 p25 0.073
+
+[exited with code 0]

@@ -1,0 +1,8 @@
+400 runs per algorithm on 'off_big', 977 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+generic_bayes                       0.475 0.007 0.326 0.498 0.602 0.275    58509   47   0    83  20.5
+g3_cp9                              0.476 0.007 0.326 0.501 0.602 0.293    58544   47   0    90  22.9
+g3_cp9_m221                         0.476 0.007 0.336 0.502 0.591 0.287    58609   47   0    68  19.8
+paired diff g3_cp9 - generic_bayes: +0.001 ± 0.002, wins 11%
+paired diff g3_cp9_m221 - generic_bayes: +0.001 ± 0.004, wins 30%
+Mon Nov 16 10:38:27 PM GMT 2026

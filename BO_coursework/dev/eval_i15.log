@@ -1,0 +1,30 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 293 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i14_mbp                             0.573 0.019 0.403 0.623 0.694 0.329    68342    8   0    28   8.8
+i15_cg                              0.575 0.019 0.403 0.627 0.695 0.325    68592    8   0    30  10.4
+i15_m131                            0.570 0.019 0.403 0.616 0.692 0.329    67996    8   0    32  10.0
+i15_m221                            0.576 0.019 0.393 0.633 0.701 0.329    68632    8   0    44  10.0
+i15_p431                            0.579 0.018 0.403 0.629 0.705 0.327    68745    8   0    34  11.1
+i15_ucb                             0.569 0.019 0.404 0.619 0.686 0.321    67838    8   0    32   9.1
+paired diff i15_cg - i14_mbp: +0.002 ± 0.003, wins 34%
+paired diff i15_m131 - i14_mbp: -0.003 ± 0.002, wins 10%
+paired diff i15_m221 - i14_mbp: +0.003 ± 0.002, wins 12%
+paired diff i15_p431 - i14_mbp: +0.006 ± 0.006, wins 38%
+paired diff i15_ucb - i14_mbp: -0.004 ± 0.003, wins 39%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 354 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i14_mbp                             0.559 0.022 0.394 0.611 0.673 0.202    67854   14   0    31  11.6
+i15_cg                              0.559 0.022 0.394 0.604 0.679 0.203    67954   14   0    34  12.4
+i15_m131                            0.556 0.022 0.394 0.602 0.673 0.202    67472   14   0    30  12.6
+i15_m221                            0.553 0.021 0.389 0.602 0.668 0.202    67145   14   0    29  12.1
+i15_p431                            0.559 0.022 0.394 0.609 0.674 0.262    68388   14   0    30  14.0
+i15_ucb                             0.561 0.022 0.394 0.610 0.679 0.201    68130   14   0    34  10.8
+paired diff i15_cg - i14_mbp: -0.000 ± 0.004, wins 48%
+paired diff i15_m131 - i14_mbp: -0.003 ± 0.002, wins 13%
+paired diff i15_m221 - i14_mbp: -0.006 ± 0.004, wins 9%
+paired diff i15_p431 - i14_mbp: -0.000 ± 0.007, wins 46%
+paired diff i15_ucb - i14_mbp: +0.002 ± 0.003, wins 47%

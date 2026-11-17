@@ -1,0 +1,7 @@
+400 runs per algorithm on 'off_big', 723 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+p1_c221                             0.737 0.009 0.564 0.793 0.855 0.491    91119   47   0     8   3.1
+q1_fine                             0.736 0.009 0.559 0.794 0.854 0.487    90955   47   0    55  21.0
+q1_voix                             0.737 0.009 0.565 0.792 0.854 0.491    91084   47   0    37   8.0
+paired diff q1_fine - p1_c221: -0.002 ± 0.004, wins 47%
+paired diff q1_voix - p1_c221: -0.000 ± 0.003, wins 34%

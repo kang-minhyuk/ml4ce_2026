@@ -1,0 +1,26 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 233 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i17_funnel                          0.596 0.019 0.408 0.658 0.721 0.350    70600    8   0    37   9.8
+i21_p3                              0.596 0.019 0.411 0.655 0.722 0.346    70769    8   0    39   9.6
+i21_p5                              0.596 0.019 0.409 0.656 0.723 0.349    70750    8   0    33  10.2
+i21_p8                              0.599 0.019 0.411 0.659 0.728 0.347    71207    8   0    48   9.6
+i21_t3p5                            0.606 0.019 0.417 0.667 0.736 0.353    71960    8   0    33   9.7
+paired diff i21_p3 - i17_funnel: +0.001 ± 0.005, wins 37%
+paired diff i21_p5 - i17_funnel: +0.001 ± 0.007, wins 35%
+paired diff i21_p8 - i17_funnel: +0.004 ± 0.009, wins 35%
+paired diff i21_t3p5 - i17_funnel: +0.011 ± 0.008, wins 51%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 276 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i17_funnel                          0.578 0.021 0.397 0.632 0.704 0.263    70884   14   0    34  12.1
+i21_p3                              0.581 0.021 0.399 0.637 0.706 0.256    71183   14   0    29  12.9
+i21_p5                              0.580 0.020 0.400 0.634 0.705 0.263    70976   14   0    34  12.6
+i21_p8                              0.582 0.021 0.397 0.640 0.709 0.278    71275   14   0    32  12.6
+i21_t3p5                            0.578 0.021 0.397 0.641 0.698 0.274    70684   14   0    31  11.9
+paired diff i21_p3 - i17_funnel: +0.003 ± 0.003, wins 46%
+paired diff i21_p5 - i17_funnel: +0.002 ± 0.003, wins 43%
+paired diff i21_p8 - i17_funnel: +0.004 ± 0.004, wins 44%
+paired diff i21_t3p5 - i17_funnel: +0.000 ± 0.005, wins 48%

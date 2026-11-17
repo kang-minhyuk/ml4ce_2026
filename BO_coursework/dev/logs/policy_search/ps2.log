@@ -1,0 +1,32 @@
+stage 1 top:
+  +0.0073 +- 0.0063 {'bayes_sig': 0.5, 'pilot_frac': [0.0, 0.67, 1.0], 'lib_sig': 0.1, 'carry_plates': 9, 'mbr_per_seg': [2, 2, 1]}
+  +0.0051 +- 0.0060 {'lib_sig': 0.1, 'carry_plates': 2, 'voi_k': 10, 'screen_eu': 0.5, 'bayes_wscale': 1.5}
+  +0.0041 +- 0.0062 {'bayes_wscale': 1.4, 'voi_k': 8}
+  +0.0041 +- 0.0068 {'n_space_plates': 2, 'lib_sig': 0.15, 'plates_per_seg': [5, 2, 0], 'pilot_frac': [0.0, 0.67, 1.0], 'voi_k': 8}
+  +0.0038 +- 0.0080 {'screen_eu': 1.0, 'mbr_per_seg': [3, 2, 1], 'pilot_frac': [0.0, 0.67, 1.0], 'lib_sig': 0.07, 'voi_k': 6}
+  +0.0033 +- 0.0019 {'lib_sig': 0.07, 'pilot_frac': [0.4, 0.67, 1.0]}
+  +0.0032 +- 0.0061 {'bayes_wscale': 1.4, 'voi_k': 12, 'screen_eu': 0.5, 'bayes_sig': 0.5, 'cap_pen': 3.0}
+  +0.0031 +- 0.0052 {'bayes_wscale': 1.4, 'feat_s': 0.7, 'lib_sig': 0.1, 'switch': 1.1}
+  +0.0030 +- 0.0075 {'plates_per_seg': [6, 1, 0], 'carry_plates': 9, 'screen_eu': 0.5, 'bayes_wscale': 1.4}
+  +0.0020 +- 0.0024 {'pilot_frac': [0.4, 0.67, 1.0], 'screen_eu': 0.5, 'mbr_per_seg': [2, 3, 1], 'carry_plates': 2}
+  +0.0010 +- 0.0023 {'n_space_plates': 2, 'pilot_frac': [0.0, 0.67, 1.0], 'lib_sig': 0.15, 'cap_pen': 2.0, 'screen_eu': 0.25}
+  +0.0010 +- 0.0079 {'lib_sig': 0.1, 'bayes_sig': 0.5, 'pilot_frac': [0.0, 0.67, 1.0], 'bayes_wscale': 1.4, 'voi_k': 6}
+stage 2 (held-out 300):
+  d2 +0.0029 +- 0.0047 (d1 +0.0010) informed_bayes2_s2_033 {'lib_sig': 0.1, 'bayes_sig': 0.5, 'pilot_frac': [0.0, 0.67, 1.0], 'bayes_wscale': 1.4, 'voi_k': 6}
+  d2 +0.0013 +- 0.0040 (d1 +0.0030) informed_bayes2_s2_012 {'plates_per_seg': [6, 1, 0], 'carry_plates': 9, 'screen_eu': 0.5, 'bayes_wscale': 1.4}
+  d2 -0.0005 +- 0.0046 (d1 +0.0073) informed_bayes2_s2_072 {'bayes_sig': 0.5, 'pilot_frac': [0.0, 0.67, 1.0], 'lib_sig': 0.1, 'carry_plates': 9, 'mbr_per_seg': [2, 2, 1]}
+  d2 -0.0005 +- 0.0020 (d1 +0.0033) informed_bayes2_s2_046 {'lib_sig': 0.07, 'pilot_frac': [0.4, 0.67, 1.0]}
+  d2 -0.0009 +- 0.0021 (d1 +0.0020) informed_bayes2_s2_031 {'pilot_frac': [0.4, 0.67, 1.0], 'screen_eu': 0.5, 'mbr_per_seg': [2, 3, 1], 'carry_plates': 2}
+  d2 -0.0013 +- 0.0026 (d1 +0.0010) informed_bayes2_s2_022 {'n_space_plates': 2, 'pilot_frac': [0.0, 0.67, 1.0], 'lib_sig': 0.15, 'cap_pen': 2.0, 'screen_eu': 0.25}
+  d2 -0.0014 +- 0.0045 (d1 +0.0038) informed_bayes2_s2_002 {'screen_eu': 1.0, 'mbr_per_seg': [3, 2, 1], 'pilot_frac': [0.0, 0.67, 1.0], 'lib_sig': 0.07, 'voi_k': 6}
+  d2 -0.0025 +- 0.0037 (d1 +0.0041) informed_bayes2_s2_008 {'n_space_plates': 2, 'lib_sig': 0.15, 'plates_per_seg': [5, 2, 0], 'pilot_frac': [0.0, 0.67, 1.0], 'voi_k': 8}
+  d2 -0.0028 +- 0.0039 (d1 +0.0032) informed_bayes2_s2_044 {'bayes_wscale': 1.4, 'voi_k': 12, 'screen_eu': 0.5, 'bayes_sig': 0.5, 'cap_pen': 3.0}
+  d2 -0.0035 +- 0.0033 (d1 +0.0051) informed_bayes2_s2_065 {'lib_sig': 0.1, 'carry_plates': 2, 'voi_k': 10, 'screen_eu': 0.5, 'bayes_wscale': 1.5}
+  d2 -0.0037 +- 0.0034 (d1 +0.0041) informed_bayes2_s2_000 {'bayes_wscale': 1.4, 'voi_k': 8}
+  d2 -0.0055 +- 0.0029 (d1 +0.0031) informed_bayes2_s2_061 {'bayes_wscale': 1.4, 'feat_s': 0.7, 'lib_sig': 0.1, 'switch': 1.1}
+stage 3 (other 480):
+  d3 -0.0038 +- 0.0039 (d2 +0.0029) informed_bayes2_s2_033 {'lib_sig': 0.1, 'bayes_sig': 0.5, 'pilot_frac': [0.0, 0.67, 1.0], 'bayes_wscale': 1.4, 'voi_k': 6}
+  d3 +0.0026 +- 0.0024 (d2 +0.0013) informed_bayes2_s2_012 {'plates_per_seg': [6, 1, 0], 'carry_plates': 9, 'screen_eu': 0.5, 'bayes_wscale': 1.4}
+  d3 -0.0026 +- 0.0035 (d2 -0.0005) informed_bayes2_s2_072 {'bayes_sig': 0.5, 'pilot_frac': [0.0, 0.67, 1.0], 'lib_sig': 0.1, 'carry_plates': 9, 'mbr_per_seg': [2, 2, 1]}
+  d3 -0.0058 +- 0.0021 (d2 -0.0005) informed_bayes2_s2_046 {'lib_sig': 0.07, 'pilot_frac': [0.4, 0.67, 1.0]}
+Tue Nov 17 12:17:18 AM GMT 2026

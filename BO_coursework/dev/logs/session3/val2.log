@@ -1,0 +1,93 @@
+== off_big
+400 runs per algorithm on 'off_big', 118 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                    0.639 0.010 0.444 0.696 0.777 0.377    79026   47   0    66  14.3
+k11_se05                            0.731 0.009 0.559 0.780 0.853 0.483    90287   47   0    66  17.4
+informed_bayes                      0.730 0.009 0.552 0.781 0.856 0.485    90108   47   0    12   5.0
+paired diff k11_se05 - informed_library: +0.092 ± 0.008, wins 69%
+paired diff informed_bayes - informed_library: +0.091 ± 0.008, wins 68%
+== dev
+100 runs per algorithm on 'dev', 27 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                    0.614 0.020 0.422 0.670 0.750 0.344    72697    8   0    34  11.0
+k11_se05                            0.675 0.018 0.508 0.718 0.798 0.455    79641    8   0    62  13.1
+informed_bayes                      0.670 0.018 0.516 0.706 0.790 0.462    78899    8   0    10   4.0
+paired diff k11_se05 - informed_library: +0.060 ± 0.017, wins 61%
+paired diff informed_bayes - informed_library: +0.056 ± 0.017, wins 59%
+== off_dev
+100 runs per algorithm on 'off_dev', 33 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                    0.604 0.020 0.420 0.652 0.741 0.365    74125   14   0    36  13.6
+k11_se05                            0.680 0.018 0.476 0.744 0.821 0.487    83745   14   0    66  15.3
+informed_bayes                      0.678 0.018 0.469 0.746 0.820 0.485    83807   14   0    13   4.8
+paired diff k11_se05 - informed_library: +0.076 ± 0.014, wins 71%
+paired diff informed_bayes - informed_library: +0.074 ± 0.014, wins 69%
+== hold
+100 runs per algorithm on 'hold', 29 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                    0.650 0.018 0.473 0.709 0.768 0.439    74040    3   0    39  11.1
+k11_se05                            0.717 0.017 0.542 0.764 0.844 0.495    82284    3   0    34  12.4
+informed_bayes                      0.713 0.017 0.539 0.760 0.841 0.499    81698    3   0    11   4.0
+paired diff k11_se05 - informed_library: +0.067 ± 0.015, wins 69%
+paired diff informed_bayes - informed_library: +0.063 ± 0.013, wins 68%
+== off_hold
+100 runs per algorithm on 'off_hold', 32 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                    0.618 0.017 0.386 0.694 0.775 0.405    72332   20   0    36  13.5
+k11_se05                            0.717 0.016 0.501 0.793 0.859 0.520    84403   20   0    40  16.6
+informed_bayes                      0.712 0.016 0.489 0.785 0.863 0.485    83771   20   0    11   4.9
+paired diff k11_se05 - informed_library: +0.099 ± 0.014, wins 77%
+paired diff informed_bayes - informed_library: +0.094 ± 0.013, wins 76%
+== off_extra
+  print(f"{n[:34]:34s} {nv.mean():6.3f} {nv.std() / np.sqrt(max(len(nv), 1)):5.3f} {ck[0]:5.3f} {ck[1]:5.3f} "
+  ret = ret.dtype.type(ret / rcount)
+  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+  arrmean = um.true_divide(arrmean, div, out=arrmean,
+  ret = ret.dtype.type(ret / rcount)
+100 runs per algorithm on 'off_extra', 31 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                      nan   nan   nan   nan   nan   nan    70924   18   0    42  10.5
+k11_se05                              nan   nan   nan   nan   nan   nan    80391   18   0    52  12.5
+informed_bayes                        nan   nan   nan   nan   nan   nan    81321   18   0    12   4.8
+== off_low
+40 runs per algorithm on 'off_low', 13 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                    0.398 0.025 0.076 0.511 0.607 0.191    46169   31   0    22   8.2
+k11_se05                            0.473 0.031 0.133 0.600 0.687 0.248    55867   31   0    26  10.5
+informed_bayes                      0.471 0.031 0.130 0.604 0.680 0.234    55754   31   0     9   3.1
+paired diff k11_se05 - informed_library: +0.075 ± 0.023, wins 60%
+paired diff informed_bayes - informed_library: +0.073 ± 0.023, wins 57%
+== off_wide
+40 runs per algorithm on 'off_wide', 16 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                    0.553 0.034 0.345 0.616 0.699 0.226    74739    8   0    34  13.1
+k11_se05                            0.679 0.024 0.444 0.767 0.828 0.532    91941    8   0    30  14.5
+informed_bayes                      0.661 0.025 0.411 0.750 0.821 0.462    89852    8   0     8   5.1
+paired diff k11_se05 - informed_library: +0.126 ± 0.029, wins 80%
+paired diff informed_bayes - informed_library: +0.107 ± 0.030, wins 75%
+== stress
+  print(f"{n[:34]:34s} {nv.mean():6.3f} {nv.std() / np.sqrt(max(len(nv), 1)):5.3f} {ck[0]:5.3f} {ck[1]:5.3f} "
+  ret = ret.dtype.type(ret / rcount)
+  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+  arrmean = um.true_divide(arrmean, div, out=arrmean,
+  ret = ret.dtype.type(ret / rcount)
+60 runs per algorithm on 'stress', 18 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                      nan   nan   nan   nan   nan   nan    68015    4   0    51   9.7
+k11_se05                              nan   nan   nan   nan   nan   nan    78252    4   0    96  10.2
+informed_bayes                        nan   nan   nan   nan   nan   nan    78678    4   0    14   3.3
+== practice
+5 runs per algorithm on 'practice', 4 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                    0.682 0.040 0.567 0.701 0.779 0.594    91103    0   0     7   5.3
+k11_se05                            0.681 0.023 0.554 0.688 0.801 0.619    90968    0   0    11  10.3
+informed_bayes                      0.692 0.031 0.515 0.730 0.831 0.629    92418    0   0     2   2.0
+paired diff k11_se05 - informed_library: -0.001 ± 0.037, wins 40%
+paired diff informed_bayes - informed_library: +0.010 ± 0.031, wins 60%
+== tl30 dev
+100 runs per algorithm on 'dev', 61 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_library                    0.612 0.020 0.420 0.665 0.751 0.339    72637    8   0    15   9.3
+informed_bayes                      0.670 0.018 0.516 0.706 0.790 0.462    78899    8   0    11   4.0
+paired diff informed_bayes - informed_library: +0.058 ± 0.017, wins 59%
+== DONE

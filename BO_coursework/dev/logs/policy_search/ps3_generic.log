@@ -1,0 +1,32 @@
+stage 1 top:
+  +0.0135 +- 0.0106 {'bayes_sig': 0.5, 'mbr_per_seg': [2, 1, 1], 'pilot_top': 2, 'pilot_frac': [0.4, 0.67, 1.0]}
+  +0.0112 +- 0.0082 {'screen_eu': 1.0, 'mbr_per_seg': [1, 2, 1], 'pilot_top': 3, 'bayes_sig': 0.25}
+  +0.0109 +- 0.0067 {'log_sd_mult': 6.0, 'pilot_top': 2, 'plates_per_seg': [5, 1, 0]}
+  +0.0077 +- 0.0093 {'plates_per_seg': [4, 2, 0], 'bayes_sig': 0.5, 'pilot_frac': [0.0, 0.5, 1.0]}
+  +0.0071 +- 0.0096 {'pilot_top': 3, 'bayes_sig': 0.5, 'log_sd_mult': 2.0, 'screen_eu': 0.5, 'mbr_per_seg': [2, 2, 1]}
+  +0.0071 +- 0.0079 {'pilot_frac': [0.0, 0.67, 1.0], 'mbr_per_seg': [1, 2, 1], 'plates_per_seg': [5, 1, 0], 'switch': 1.1}
+  +0.0066 +- 0.0087 {'bayes_sig': 0.25, 'plates_per_seg': [5, 1, 0]}
+  +0.0058 +- 0.0072 {'voi_k': 12, 'pilot_top': 3, 'screen_eu': 1.0, 'log_sd_mult': 2.0, 'switch': 1.0}
+  +0.0055 +- 0.0090 {'plates_per_seg': [5, 3, 0], 'n_space_plates': 2, 'log_sd_mult': 2.0, 'bayes_wscale': 1.15}
+  +0.0049 +- 0.0103 {'voi_k': 10, 'bayes_sig': 0.35, 'n_space_plates': 1}
+  +0.0045 +- 0.0104 {'screen_eu': 1.0, 'n_space_plates': 1}
+  +0.0043 +- 0.0072 {'bayes_wscale': 1.0, 'voi_k': 10, 'pilot_top': 1, 'screen_eu': 0.5}
+stage 2 (held-out 300):
+  d2 +0.0144 +- 0.0057 (d1 +0.0058) generic_bayes_s3_058 {'voi_k': 12, 'pilot_top': 3, 'screen_eu': 1.0, 'log_sd_mult': 2.0, 'switch': 1.0}
+  d2 +0.0115 +- 0.0055 (d1 +0.0055) generic_bayes_s3_030 {'plates_per_seg': [5, 3, 0], 'n_space_plates': 2, 'log_sd_mult': 2.0, 'bayes_wscale': 1.15}
+  d2 +0.0082 +- 0.0063 (d1 +0.0071) generic_bayes_s3_043 {'pilot_top': 3, 'bayes_sig': 0.5, 'log_sd_mult': 2.0, 'screen_eu': 0.5, 'mbr_per_seg': [2, 2, 1]}
+  d2 +0.0065 +- 0.0052 (d1 +0.0043) generic_bayes_s3_010 {'bayes_wscale': 1.0, 'voi_k': 10, 'pilot_top': 1, 'screen_eu': 0.5}
+  d2 +0.0039 +- 0.0072 (d1 +0.0045) generic_bayes_s3_026 {'screen_eu': 1.0, 'n_space_plates': 1}
+  d2 +0.0028 +- 0.0057 (d1 +0.0066) generic_bayes_s3_031 {'bayes_sig': 0.25, 'plates_per_seg': [5, 1, 0]}
+  d2 +0.0026 +- 0.0073 (d1 +0.0049) generic_bayes_s3_015 {'voi_k': 10, 'bayes_sig': 0.35, 'n_space_plates': 1}
+  d2 +0.0021 +- 0.0064 (d1 +0.0077) generic_bayes_s3_040 {'plates_per_seg': [4, 2, 0], 'bayes_sig': 0.5, 'pilot_frac': [0.0, 0.5, 1.0]}
+  d2 +0.0008 +- 0.0053 (d1 +0.0112) generic_bayes_s3_019 {'screen_eu': 1.0, 'mbr_per_seg': [1, 2, 1], 'pilot_top': 3, 'bayes_sig': 0.25}
+  d2 -0.0005 +- 0.0069 (d1 +0.0135) generic_bayes_s3_005 {'bayes_sig': 0.5, 'mbr_per_seg': [2, 1, 1], 'pilot_top': 2, 'pilot_frac': [0.4, 0.67, 1.0]}
+  d2 -0.0047 +- 0.0042 (d1 +0.0071) generic_bayes_s3_017 {'pilot_frac': [0.0, 0.67, 1.0], 'mbr_per_seg': [1, 2, 1], 'plates_per_seg': [5, 1, 0], 'switch': 1.1}
+  d2 -0.0064 +- 0.0038 (d1 +0.0109) generic_bayes_s3_002 {'log_sd_mult': 6.0, 'pilot_top': 2, 'plates_per_seg': [5, 1, 0]}
+stage 3 (other 480):
+  d3 +0.0085 +- 0.0038 (d2 +0.0144) generic_bayes_s3_058 {'voi_k': 12, 'pilot_top': 3, 'screen_eu': 1.0, 'log_sd_mult': 2.0, 'switch': 1.0}
+  d3 +0.0004 +- 0.0037 (d2 +0.0115) generic_bayes_s3_030 {'plates_per_seg': [5, 3, 0], 'n_space_plates': 2, 'log_sd_mult': 2.0, 'bayes_wscale': 1.15}
+  d3 +0.0069 +- 0.0044 (d2 +0.0082) generic_bayes_s3_043 {'pilot_top': 3, 'bayes_sig': 0.5, 'log_sd_mult': 2.0, 'screen_eu': 0.5, 'mbr_per_seg': [2, 2, 1]}
+  d3 -0.0087 +- 0.0034 (d2 +0.0065) generic_bayes_s3_010 {'bayes_wscale': 1.0, 'voi_k': 10, 'pilot_top': 1, 'screen_eu': 0.5}
+Tue Nov 17 07:05:15 AM GMT 2026

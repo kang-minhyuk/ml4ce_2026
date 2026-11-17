@@ -1,0 +1,9 @@
+ck1: actual 0.311 | no pilot 0.11 | with pilot: clone 0.707 at-true-T/pH 0.341 actual 0.350 | clone top1 0.19 |T err| med 1.12 p90 2.89 |pH err| med 0.254 p90 0.618 T bias +0.83 pH bias -0.242
+     loss: clone 0.293  recipe 0.366  location -0.009  missing-pilot 0.110
+ck2: actual 0.480 | no pilot 0.00 | with pilot: clone 0.808 at-true-T/pH 0.458 actual 0.480 | clone top1 0.36 |T err| med 0.80 p90 2.68 |pH err| med 0.169 p90 0.463 T bias +0.58 pH bias -0.164
+     loss: clone 0.192  recipe 0.349  location -0.022  missing-pilot 0.000
+ck3: actual 0.577 | no pilot 0.00 | with pilot: clone 0.811 at-true-T/pH 0.544 actual 0.577 | clone top1 0.36 |T err| med 0.86 p90 2.50 |pH err| med 0.173 p90 0.424 T bias +0.65 pH bias -0.173
+     loss: clone 0.189  recipe 0.267  location -0.033  missing-pilot 0.000
+n=100 clones 29.6 plated 29.6 mbr 12.8 pilot clones 2.02
+best plated 1.000 -> best screened 0.973 -> best piloted 0.888 -> last-pilot clone 0.831
+frac best clone: plated 1.00 screened 0.78 piloted 0.43 last 0.34

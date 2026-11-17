@@ -1,0 +1,11 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 776 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i3_funnel                           0.452 0.022 0.338 0.462 0.556 0.191    52628    8   0    75  14.7
+i3_g1                               0.455 0.023 0.332 0.479 0.553 0.163    53411    8   0   119  13.9
+i3_g2                               0.398 0.022 0.285 0.398 0.511 0.153    46114    8   0    73  13.4
+i3_g3                               0.431 0.021 0.318 0.437 0.537 0.190    51053    8   0    87  13.2
+paired diff i3_g1 - i3_funnel: +0.003 ± 0.014, wins 50%
+paired diff i3_g2 - i3_funnel: -0.054 ± 0.018, wins 40%
+paired diff i3_g3 - i3_funnel: -0.021 ± 0.016, wins 42%

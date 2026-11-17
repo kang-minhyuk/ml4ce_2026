@@ -1,0 +1,16 @@
+400 runs per algorithm on 'off_big', 757 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes2                     0.745 0.009 0.572 0.793 0.869 0.489    91938   47   0    10   3.6
+x2_s25                              0.746 0.009 0.576 0.793 0.868 0.483    92042   47   0    12   5.8
+x2_s50                              0.736 0.009 0.571 0.782 0.856 0.472    90879   47   0    15   5.7
+x2_sT                               0.743 0.009 0.573 0.791 0.866 0.493    91784   47   0    13   5.7
+x2_sP                               0.737 0.009 0.570 0.784 0.858 0.476    91020   47   0    12   5.6
+x2_b05                              0.746 0.009 0.575 0.796 0.868 0.489    92120   47   0    13   5.9
+x2_b0                               0.744 0.009 0.575 0.792 0.865 0.487    91908   47   0    14   5.7
+paired diff x2_s25 - informed_bayes2: +0.001 ± 0.002, wins 60%
+paired diff x2_s50 - informed_bayes2: -0.009 ± 0.002, wins 46%
+paired diff x2_sT - informed_bayes2: -0.001 ± 0.002, wins 52%
+paired diff x2_sP - informed_bayes2: -0.007 ± 0.002, wins 53%
+paired diff x2_b05 - informed_bayes2: +0.002 ± 0.001, wins 66%
+paired diff x2_b0 - informed_bayes2: -0.001 ± 0.002, wins 55%
+Tue Nov 17 12:54:47 AM GMT 2026

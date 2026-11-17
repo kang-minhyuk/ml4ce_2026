@@ -1,3 +1,9 @@
 student/results/**
 uv.lock
 **/__pycache__/**
+# local environment and regenerable caches (not pushed)
+.venv/
+scenario_suite/results/
+scenario_suite/.labs/
+dev/.labs_off/
+.ipynb_checkpoints/

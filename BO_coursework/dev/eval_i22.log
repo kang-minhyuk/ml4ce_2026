@@ -1,0 +1,30 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 345 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i17_funnel                          0.596 0.019 0.408 0.658 0.721 0.350    70600    8   0    37   9.8
+i22_funnel                          0.609 0.019 0.423 0.666 0.738 0.339    71907    8   0    42  10.9
+i22_nostage                         0.608 0.020 0.423 0.670 0.730 0.330    71922    8   0    41  11.6
+i22_mf0                             0.601 0.019 0.403 0.661 0.739 0.340    71115    8   0    64  10.5
+i22_noadv                           0.602 0.020 0.423 0.660 0.723 0.300    71246    8   0    40  10.9
+i22_nofb                            0.593 0.020 0.401 0.650 0.728 0.299    70358    8   0    39  11.5
+paired diff i22_funnel - i17_funnel: +0.013 ± 0.012, wins 29%
+paired diff i22_nostage - i17_funnel: +0.012 ± 0.012, wins 30%
+paired diff i22_mf0 - i17_funnel: +0.005 ± 0.007, wins 14%
+paired diff i22_noadv - i17_funnel: +0.006 ± 0.012, wins 25%
+paired diff i22_nofb - i17_funnel: -0.003 ± 0.012, wins 23%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 412 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i17_funnel                          0.578 0.021 0.397 0.632 0.704 0.263    70884   14   0    34  12.1
+i22_funnel                          0.598 0.020 0.420 0.651 0.723 0.356    73324   14   0    35  14.4
+i22_nostage                         0.595 0.020 0.420 0.656 0.709 0.304    72905   14   0    41  13.5
+i22_mf0                             0.583 0.020 0.396 0.638 0.715 0.345    71549   14   0    45  15.0
+i22_noadv                           0.596 0.021 0.420 0.654 0.714 0.344    72968   14   0    37  15.1
+i22_nofb                            0.590 0.020 0.411 0.643 0.716 0.350    72132   14   0    31  14.1
+paired diff i22_funnel - i17_funnel: +0.020 ± 0.015, wins 27%
+paired diff i22_nostage - i17_funnel: +0.017 ± 0.014, wins 28%
+paired diff i22_mf0 - i17_funnel: +0.005 ± 0.013, wins 18%
+paired diff i22_noadv - i17_funnel: +0.018 ± 0.016, wins 26%
+paired diff i22_nofb - i17_funnel: +0.012 ± 0.010, wins 22%

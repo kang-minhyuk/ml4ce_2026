@@ -1,0 +1,26 @@
+stage 1 top:
+  +0.0213 +- 0.0096 {'mbr_per_seg': [3, 2, 1], 'bayes_sig': 0.5, 'bayes_wscale': 1.4, 'plates_per_seg': [5, 2, 0]}
+  +0.0181 +- 0.0089 {'pilot_frac': [0.0, 0.67, 1.0], 'screen_eu': 1.0, 'bayes_sig': 0.5, 'mbr_per_seg': [2, 2, 1], 'switch': 0.9}
+  +0.0181 +- 0.0096 {'mbr_per_seg': [2, 3, 1], 'n_space_plates': 1, 'voi_k': 12, 'bayes_sig': 0.5, 'pilot_frac': [0.4, 0.67, 1.0]}
+  +0.0178 +- 0.0098 {'bayes_wscale': 1.7, 'n_space_plates': 1, 'switch': 0.9, 'voi_k': 12, 'mbr_per_seg': [3, 2, 1]}
+  +0.0160 +- 0.0076 {'mbr_per_seg': [2, 1, 1], 'plates_per_seg': [5, 3, 0], 'switch': 1.1, 'pilot_frac': [0.4, 0.67, 1.0], 'bayes_wscale': 1.4}
+  +0.0150 +- 0.0099 {'switch': 0.9, 'mbr_per_seg': [2, 2, 1], 'bayes_wscale': 1.3, 'pilot_frac': [0.0, 0.5, 1.0], 'bayes_sig': 0.5}
+  +0.0146 +- 0.0078 {'bayes_sig': 0.5, 'pilot_frac': [0.0, 0.67, 1.0], 'lib_sig': 0.07, 'screen_eu': 0.75}
+  +0.0136 +- 0.0099 {'mbr_per_seg': [2, 2, 0], 'bayes_sig': 0.5}
+  +0.0131 +- 0.0088 {'switch': 1.0, 'mbr_per_seg': [2, 1, 1], 'voi_k': 6}
+  +0.0127 +- 0.0100 {'bayes_sig': 0.5, 'switch': 0.9, 'pilot_frac': [0.0, 0.5, 1.0], 'mbr_per_seg': [2, 3, 1]}
+  +0.0126 +- 0.0055 {'bayes_sig': 0.35, 'mbr_per_seg': [3, 2, 1], 'switch': 1.0}
+  +0.0126 +- 0.0055 {'n_space_plates': 2, 'lib_sig': 0.1, 'mbr_per_seg': [3, 2, 1]}
+stage 2 (held-out 300):
+  d2 +0.0051 +- 0.0045 (d1 +0.0150) informed_bayes_s1_029 {'switch': 0.9, 'mbr_per_seg': [2, 2, 1], 'bayes_wscale': 1.3, 'pilot_frac': [0.0, 0.5, 1.0], 'bayes_sig': 0.5}
+  d2 +0.0048 +- 0.0047 (d1 +0.0136) informed_bayes_s1_092 {'mbr_per_seg': [2, 2, 0], 'bayes_sig': 0.5}
+  d2 +0.0035 +- 0.0047 (d1 +0.0181) informed_bayes_s1_009 {'pilot_frac': [0.0, 0.67, 1.0], 'screen_eu': 1.0, 'bayes_sig': 0.5, 'mbr_per_seg': [2, 2, 1], 'switch': 0.9}
+  d2 +0.0024 +- 0.0049 (d1 +0.0213) informed_bayes_s1_057 {'mbr_per_seg': [3, 2, 1], 'bayes_sig': 0.5, 'bayes_wscale': 1.4, 'plates_per_seg': [5, 2, 0]}
+  d2 +0.0020 +- 0.0068 (d1 +0.0181) informed_bayes_s1_087 {'mbr_per_seg': [2, 3, 1], 'n_space_plates': 1, 'voi_k': 12, 'bayes_sig': 0.5, 'pilot_frac': [0.4, 0.67, 1.0]}
+  d2 +0.0019 +- 0.0046 (d1 +0.0127) informed_bayes_s1_013 {'bayes_sig': 0.5, 'switch': 0.9, 'pilot_frac': [0.0, 0.5, 1.0], 'mbr_per_seg': [2, 3, 1]}
+  d2 +0.0006 +- 0.0032 (d1 +0.0126) informed_bayes_s1_010 {'bayes_sig': 0.35, 'mbr_per_seg': [3, 2, 1], 'switch': 1.0}
+  d2 +0.0006 +- 0.0032 (d1 +0.0126) informed_bayes_s1_066 {'n_space_plates': 2, 'lib_sig': 0.1, 'mbr_per_seg': [3, 2, 1]}
+  d2 -0.0005 +- 0.0039 (d1 +0.0160) informed_bayes_s1_007 {'mbr_per_seg': [2, 1, 1], 'plates_per_seg': [5, 3, 0], 'switch': 1.1, 'pilot_frac': [0.4, 0.67, 1.0], 'bayes_wscale': 1.4}
+  d2 -0.0014 +- 0.0046 (d1 +0.0131) informed_bayes_s1_082 {'switch': 1.0, 'mbr_per_seg': [2, 1, 1], 'voi_k': 6}
+  d2 -0.0032 +- 0.0042 (d1 +0.0146) informed_bayes_s1_043 {'bayes_sig': 0.5, 'pilot_frac': [0.0, 0.67, 1.0], 'lib_sig': 0.07, 'screen_eu': 0.75}
+  d2 -0.0036 +- 0.0065 (d1 +0.0178) informed_bayes_s1_064 {'bayes_wscale': 1.7, 'n_space_plates': 1, 'switch': 0.9, 'voi_k': 12, 'mbr_per_seg': [3, 2, 1]}

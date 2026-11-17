@@ -1,0 +1,19 @@
+400 runs per algorithm on 'off_big', 1015 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes                      0.730 0.009 0.552 0.781 0.856 0.485    90108   47   0    12   5.0
+m1_m221                             0.735 0.009 0.566 0.782 0.856 0.486    90737   47   0     8   2.9
+m2_m211                             0.735 0.009 0.566 0.787 0.852 0.479    90725   47   0    14   3.4
+m2_m221_p420                        0.729 0.009 0.553 0.780 0.852 0.472    90163   47   0     8   3.0
+m2_m221_pf67                        0.736 0.009 0.566 0.788 0.854 0.484    90890   47   0     9   3.0
+m2_m221_ws15                        0.737 0.008 0.564 0.788 0.859 0.495    91075   47   0     9   3.0
+m2_m231                             0.733 0.009 0.566 0.778 0.856 0.486    90598   47   0     8   3.2
+m2_m321                             0.733 0.009 0.565 0.781 0.854 0.487    90578   47   0     9   3.1
+m2_ws17                             0.732 0.008 0.555 0.783 0.858 0.492    90527   47   0     9   3.1
+paired diff m1_m221 - informed_bayes: +0.005 ± 0.003, wins 12%
+paired diff m2_m211 - informed_bayes: +0.005 ± 0.003, wins 26%
+paired diff m2_m221_p420 - informed_bayes: -0.001 ± 0.004, wins 30%
+paired diff m2_m221_pf67 - informed_bayes: +0.006 ± 0.003, wins 21%
+paired diff m2_m221_ws15 - informed_bayes: +0.007 ± 0.003, wins 29%
+paired diff m2_m231 - informed_bayes: +0.004 ± 0.003, wins 13%
+paired diff m2_m321 - informed_bayes: +0.004 ± 0.003, wins 13%
+paired diff m2_ws17 - informed_bayes: +0.002 ± 0.003, wins 30%

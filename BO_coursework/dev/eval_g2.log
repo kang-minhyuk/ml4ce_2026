@@ -1,0 +1,21 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+40 runs per algorithm on 'off_low', 26 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+g1_genlog                           0.198 0.022 0.053 0.248 0.294 0.020    23403   31   0    30  11.6
+g2_genlog                           0.251 0.024 0.061 0.322 0.370 0.054    28320   31   0    18   7.9
+paired diff g2_genlog - g1_genlog: +0.053 ± 0.020, wins 52%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 68 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+g1_genlog                           0.402 0.016 0.255 0.432 0.520 0.195    47801    8   0    33   9.4
+g2_genlog                           0.426 0.014 0.271 0.456 0.550 0.263    50428    8   0    34   9.7
+paired diff g2_genlog - g1_genlog: +0.024 ± 0.008, wins 33%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 79 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+g1_genlog                           0.382 0.017 0.246 0.410 0.492 0.128    46731   14   0    33  12.6
+g2_genlog                           0.401 0.016 0.248 0.431 0.523 0.202    48445   14   0    36  11.8
+paired diff g2_genlog - g1_genlog: +0.018 ± 0.008, wins 28%

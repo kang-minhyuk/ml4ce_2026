@@ -1,0 +1,17 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+400 runs per algorithm on 'off_big', 4093 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+generic_bayes                       0.475 0.007 0.326 0.498 0.602 0.275    58509   47   0    83  20.5
+g2_br                               0.471 0.007 0.323 0.496 0.593 0.268    57963   47   0    71  18.2
+g2_funnel                           0.636 0.010 0.444 0.694 0.769 0.375    78618   47   0    53  13.8
+g2_genlog                           0.429 0.007 0.279 0.458 0.549 0.237    52873   47   0    60  13.7
+g2_m221                             0.475 0.007 0.336 0.499 0.591 0.266    58575   47   0    72  17.5
+g2_m221_ws15                        0.478 0.007 0.341 0.500 0.592 0.266    58822   47   0    65  15.6
+g2_ws15                             0.474 0.007 0.330 0.496 0.597 0.267    58422   47   0    44  10.4
+paired diff g2_br - generic_bayes: -0.005 ± 0.005, wins 46%
+paired diff g2_funnel - generic_bayes: +0.160 ± 0.008, wins 84%
+paired diff g2_genlog - generic_bayes: -0.047 ± 0.007, wins 35%
+paired diff g2_m221 - generic_bayes: +0.000 ± 0.004, wins 19%
+paired diff g2_m221_ws15 - generic_bayes: +0.002 ± 0.004, wins 39%
+paired diff g2_ws15 - generic_bayes: -0.001 ± 0.003, wins 32%

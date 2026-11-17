@@ -1,0 +1,5 @@
+78aa8dbcf43124950d574f13ee79ecfe6ecaadbf  generic_bayes.py
+3950248d03f041536c20d3db75e15a25b43fadd0  generic_funnel.py
+f72b971686f050b4160a216831c949327cd029ea  informed_bayes.py
+e02495982f1ec9d6b961c6e48652801493f821ac  informed_funnel.py
+ad2e61ceffdca1a31fdd96662ec79250a80c903e  informed_library.py

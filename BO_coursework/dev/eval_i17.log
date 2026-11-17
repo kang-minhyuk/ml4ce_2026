@@ -1,0 +1,26 @@
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'dev', 230 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i16_funnel                          0.582 0.018 0.400 0.636 0.709 0.347    69225    8   0    31  10.5
+i17_k1                              0.585 0.019 0.406 0.640 0.710 0.360    69438    8   0    30   9.0
+i17_k2                              0.592 0.020 0.407 0.657 0.712 0.349    70161    8   0    37  10.0
+i17_funnel                          0.596 0.019 0.408 0.658 0.721 0.350    70600    8   0    37   9.8
+i17_k4                              0.595 0.019 0.408 0.658 0.719 0.350    70624    8   0    38   9.4
+paired diff i17_k1 - i16_funnel: +0.004 ± 0.007, wins 57%
+paired diff i17_k2 - i16_funnel: +0.011 ± 0.008, wins 58%
+paired diff i17_funnel - i16_funnel: +0.014 ± 0.008, wins 62%
+paired diff i17_k4 - i16_funnel: +0.014 ± 0.008, wins 61%
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+<frozen site>:107: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/bruno/Documents/ml4ce_2026-main/BO_coursework/.venv, got /home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/../.venv
+100 runs per algorithm on 'off_dev', 277 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+i16_funnel                          0.566 0.022 0.392 0.624 0.683 0.202    68891   14   0    34  13.3
+i17_k1                              0.567 0.021 0.392 0.632 0.678 0.237    69450   14   0    26  12.7
+i17_k2                              0.575 0.021 0.397 0.631 0.697 0.263    70592   14   0    39  12.3
+i17_funnel                          0.578 0.021 0.397 0.632 0.704 0.263    70884   14   0    34  12.1
+i17_k4                              0.574 0.021 0.397 0.632 0.694 0.263    70475   14   0    29  11.8
+paired diff i17_k1 - i16_funnel: +0.001 ± 0.005, wins 55%
+paired diff i17_k2 - i16_funnel: +0.009 ± 0.007, wins 60%
+paired diff i17_funnel - i16_funnel: +0.011 ± 0.007, wins 61%
+paired diff i17_k4 - i16_funnel: +0.008 ± 0.007, wins 55%

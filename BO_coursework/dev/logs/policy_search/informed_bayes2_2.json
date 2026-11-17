@@ -1,0 +1,1352 @@
+{
+ "stage1": [
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_072.py",
+   "cfg": {
+    "bayes_sig": 0.5,
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "lib_sig": 0.1,
+    "carry_plates": 9,
+    "mbr_per_seg": [
+     2,
+     2,
+     1
+    ]
+   },
+   "d1": 0.007312726436433626,
+   "se1": 0.006285547056851896,
+   "d2": -0.00047143299975525426,
+   "se2": 0.004600039495685007,
+   "d3": -0.002581866630260978,
+   "se3": 0.0035249271783486793
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_065.py",
+   "cfg": {
+    "lib_sig": 0.1,
+    "carry_plates": 2,
+    "voi_k": 10,
+    "screen_eu": 0.5,
+    "bayes_wscale": 1.5
+   },
+   "d1": 0.00507754260470478,
+   "se1": 0.006032374257763922,
+   "d2": -0.003502835309784348,
+   "se2": 0.003313511081191575
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_000.py",
+   "cfg": {
+    "bayes_wscale": 1.4,
+    "voi_k": 8
+   },
+   "d1": 0.00414487785634602,
+   "se1": 0.006163050631430676,
+   "d2": -0.0036592813884456566,
+   "se2": 0.0034482983322592403
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_008.py",
+   "cfg": {
+    "n_space_plates": 2,
+    "lib_sig": 0.15,
+    "plates_per_seg": [
+     5,
+     2,
+     0
+    ],
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "voi_k": 8
+   },
+   "d1": 0.004127143533405353,
+   "se1": 0.006787605903624717,
+   "d2": -0.002474750044422822,
+   "se2": 0.0037109067386641346
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_002.py",
+   "cfg": {
+    "screen_eu": 1.0,
+    "mbr_per_seg": [
+     3,
+     2,
+     1
+    ],
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "lib_sig": 0.07,
+    "voi_k": 6
+   },
+   "d1": 0.0037690431123695188,
+   "se1": 0.008043136264566856,
+   "d2": -0.0014385513321675788,
+   "se2": 0.004500360492818621
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_046.py",
+   "cfg": {
+    "lib_sig": 0.07,
+    "pilot_frac": [
+     0.4,
+     0.67,
+     1.0
+    ]
+   },
+   "d1": 0.0033164475003891075,
+   "se1": 0.0019059387369956449,
+   "d2": -0.0004906301210407112,
+   "se2": 0.0020461474016191367,
+   "d3": -0.005794719948322037,
+   "se3": 0.0020931157612101865
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_044.py",
+   "cfg": {
+    "bayes_wscale": 1.4,
+    "voi_k": 12,
+    "screen_eu": 0.5,
+    "bayes_sig": 0.5,
+    "cap_pen": 3.0
+   },
+   "d1": 0.0032219069351624944,
+   "se1": 0.0061105609690035294,
+   "d2": -0.002792121496358571,
+   "se2": 0.0038581389438499467
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_061.py",
+   "cfg": {
+    "bayes_wscale": 1.4,
+    "feat_s": 0.7,
+    "lib_sig": 0.1,
+    "switch": 1.1
+   },
+   "d1": 0.00306949010987181,
+   "se1": 0.005235642616680029,
+   "d2": -0.005532919057660228,
+   "se2": 0.0028679913011832826
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_012.py",
+   "cfg": {
+    "plates_per_seg": [
+     6,
+     1,
+     0
+    ],
+    "carry_plates": 9,
+    "screen_eu": 0.5,
+    "bayes_wscale": 1.4
+   },
+   "d1": 0.003011785926470813,
+   "se1": 0.007487297635135465,
+   "d2": 0.001300831249240239,
+   "se2": 0.003994548228206342,
+   "d3": 0.0025938902040342766,
+   "se3": 0.0024045738577455882
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_031.py",
+   "cfg": {
+    "pilot_frac": [
+     0.4,
+     0.67,
+     1.0
+    ],
+    "screen_eu": 0.5,
+    "mbr_per_seg": [
+     2,
+     3,
+     1
+    ],
+    "carry_plates": 2
+   },
+   "d1": 0.00202474192841528,
+   "se1": 0.0023673332112132328,
+   "d2": -0.0009325636240079713,
+   "se2": 0.0021299164883871956
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_022.py",
+   "cfg": {
+    "n_space_plates": 2,
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "lib_sig": 0.15,
+    "cap_pen": 2.0,
+    "screen_eu": 0.25
+   },
+   "d1": 0.0010289503111956643,
+   "se1": 0.002302321371703351,
+   "d2": -0.0012995639541826505,
+   "se2": 0.002563259659102311
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_033.py",
+   "cfg": {
+    "lib_sig": 0.1,
+    "bayes_sig": 0.5,
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "bayes_wscale": 1.4,
+    "voi_k": 6
+   },
+   "d1": 0.000989258012593165,
+   "se1": 0.007919968376062504,
+   "d2": 0.0029127644484528465,
+   "se2": 0.0047446816075233916,
+   "d3": -0.0037867987773165476,
+   "se3": 0.003933227132550269
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_039.py",
+   "cfg": {
+    "bayes_sig": 0.5,
+    "plates_per_seg": [
+     5,
+     1,
+     0
+    ]
+   },
+   "d1": 0.0006101280215399696,
+   "se1": 0.007770954412115035
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_049.py",
+   "cfg": {
+    "mbr_per_seg": [
+     2,
+     2,
+     0
+    ],
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "bayes_sig": 0.35
+   },
+   "d1": 0.0004925641527392638,
+   "se1": 0.0026589203797804796
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_079.py",
+   "cfg": {
+    "plates_per_seg": [
+     5,
+     3,
+     0
+    ],
+    "pilot_frac": [
+     0.4,
+     0.67,
+     1.0
+    ]
+   },
+   "d1": 0.0002031633305835323,
+   "se1": 0.0038395306040889176
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_018.py",
+   "cfg": {
+    "feat_s": 0.5,
+    "lib_sig": 0.07
+   },
+   "d1": 0.0001378431949805592,
+   "se1": 0.00014569871363964378
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_015.py",
+   "cfg": {
+    "switch": 1.0,
+    "bayes_sig": 0.35
+   },
+   "d1": 0.0,
+   "se1": 0.0
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_027.py",
+   "cfg": {
+    "cap_pen": 2.0,
+    "bayes_sig": 0.35
+   },
+   "d1": 0.0,
+   "se1": 0.0
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_040.py",
+   "cfg": {
+    "switch": 1.0,
+    "voi_k": 10
+   },
+   "d1": 0.0,
+   "se1": 0.0
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_068.py",
+   "cfg": {
+    "mbr_per_seg": [
+     3,
+     2,
+     1
+    ],
+    "switch": 1.1,
+    "lib_sig": 0.15,
+    "feat_s": 0.5,
+    "pilot_frac": [
+     0.4,
+     0.67,
+     1.0
+    ]
+   },
+   "d1": -6.373825696926072e-05,
+   "se1": 0.0026802994468625363
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_064.py",
+   "cfg": {
+    "pilot_frac": [
+     0.0,
+     0.34,
+     1.0
+    ],
+    "feat_s": 0.3,
+    "bayes_sig": 0.5
+   },
+   "d1": -0.00021467786235495224,
+   "se1": 0.007507011191299251
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_041.py",
+   "cfg": {
+    "n_space_plates": 2,
+    "cap_pen": 3.0,
+    "lib_sig": 0.1,
+    "feat_s": 0.7
+   },
+   "d1": -0.0002329238974848549,
+   "se1": 0.002191967067931907
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_052.py",
+   "cfg": {
+    "mbr_per_seg": [
+     2,
+     3,
+     1
+    ],
+    "screen_eu": 0.25,
+    "voi_k": 10
+   },
+   "d1": -0.0009160929592330446,
+   "se1": 0.00177348218641886
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_076.py",
+   "cfg": {
+    "cap_pen": 1.0,
+    "voi_k": 12
+   },
+   "d1": -0.0012097766144405781,
+   "se1": 0.005522238341496629
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_073.py",
+   "cfg": {
+    "lib_sig": 0.07,
+    "carry_plates": 0,
+    "n_space_plates": 2,
+    "bayes_wscale": 1.4
+   },
+   "d1": -0.001339524620394308,
+   "se1": 0.005321916661148089
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_071.py",
+   "cfg": {
+    "mbr_per_seg": [
+     2,
+     1,
+     1
+    ],
+    "cap_pen": 1.0,
+    "bayes_sig": 0.35,
+    "bayes_wscale": 1.2
+   },
+   "d1": -0.0017813635767632704,
+   "se1": 0.005431995557430508
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_043.py",
+   "cfg": {
+    "switch": 0.9,
+    "screen_eu": 0.75,
+    "bayes_wscale": 1.3,
+    "plates_per_seg": [
+     5,
+     3,
+     0
+    ],
+    "voi_k": 8
+   },
+   "d1": -0.001985733422966708,
+   "se1": 0.007475234983794599
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_009.py",
+   "cfg": {
+    "voi_k": 12,
+    "n_space_plates": 2,
+    "feat_s": 0.7,
+    "screen_eu": 0.5
+   },
+   "d1": -0.0021601517623353805,
+   "se1": 0.005069214434249054
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_054.py",
+   "cfg": {
+    "carry_plates": 2,
+    "bayes_wscale": 1.7,
+    "mbr_per_seg": [
+     3,
+     2,
+     1
+    ],
+    "pilot_frac": [
+     0.0,
+     0.5,
+     1.0
+    ],
+    "voi_k": 12
+   },
+   "d1": -0.0022321631149840706,
+   "se1": 0.007901092274904351
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_063.py",
+   "cfg": {
+    "feat_s": 0.3,
+    "bayes_sig": 0.35
+   },
+   "d1": -0.0022939207179946018,
+   "se1": 0.0020534177676211508
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_026.py",
+   "cfg": {
+    "plates_per_seg": [
+     6,
+     2,
+     0
+    ],
+    "voi_k": 12,
+    "lib_sig": 0.1
+   },
+   "d1": -0.002932692630299658,
+   "se1": 0.006524365006800445
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_053.py",
+   "cfg": {
+    "pilot_frac": [
+     0.0,
+     0.34,
+     1.0
+    ],
+    "switch": 1.0,
+    "n_space_plates": 1,
+    "cap_pen": 3.0,
+    "bayes_wscale": 1.7
+   },
+   "d1": -0.003281153361806415,
+   "se1": 0.008375180758643932
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_051.py",
+   "cfg": {
+    "voi_k": 8,
+    "switch": 1.1
+   },
+   "d1": -0.0035590445422929895,
+   "se1": 0.00714471338865742
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_011.py",
+   "cfg": {
+    "bayes_sig": 0.5,
+    "plates_per_seg": [
+     4,
+     2,
+     0
+    ]
+   },
+   "d1": -0.0037778109875366483,
+   "se1": 0.009488224723427533
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_062.py",
+   "cfg": {
+    "pilot_frac": [
+     0.4,
+     0.5,
+     1.0
+    ],
+    "bayes_wscale": 1.7,
+    "voi_k": 8,
+    "carry_plates": 9,
+    "mbr_per_seg": [
+     2,
+     3,
+     1
+    ]
+   },
+   "d1": -0.004370235880957633,
+   "se1": 0.007497538139727411
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_001.py",
+   "cfg": {
+    "feat_s": 0.3,
+    "plates_per_seg": [
+     5,
+     3,
+     0
+    ],
+    "carry_plates": 9,
+    "switch": 0.9
+   },
+   "d1": -0.00506028916460805,
+   "se1": 0.004737616935686537
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_070.py",
+   "cfg": {
+    "feat_s": 0.5,
+    "lib_sig": 0.07,
+    "n_space_plates": 1
+   },
+   "d1": -0.005353389997833386,
+   "se1": 0.009163382253427516
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_059.py",
+   "cfg": {
+    "cap_pen": 2.0,
+    "bayes_sig": 0.25,
+    "feat_s": 0.5,
+    "pilot_frac": [
+     0.0,
+     0.34,
+     1.0
+    ]
+   },
+   "d1": -0.0054045929132224505,
+   "se1": 0.006670278324513415
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_042.py",
+   "cfg": {
+    "n_space_plates": 1,
+    "screen_eu": 1.0,
+    "feat_s": 0.7,
+    "mbr_per_seg": [
+     2,
+     1,
+     1
+    ],
+    "carry_plates": 9
+   },
+   "d1": -0.005438125712968312,
+   "se1": 0.009284053709862988
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_075.py",
+   "cfg": {
+    "switch": 0.9,
+    "carry_plates": 2,
+    "plates_per_seg": [
+     6,
+     2,
+     0
+    ]
+   },
+   "d1": -0.0054920687653632425,
+   "se1": 0.006781682521459038
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_066.py",
+   "cfg": {
+    "feat_s": 0.5,
+    "n_space_plates": 2,
+    "cap_pen": 1.0,
+    "switch": 0.9,
+    "carry_plates": 0
+   },
+   "d1": -0.00558270412557809,
+   "se1": 0.004409991638207701
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_055.py",
+   "cfg": {
+    "bayes_sig": 0.35,
+    "plates_per_seg": [
+     5,
+     1,
+     0
+    ],
+    "screen_eu": 0.75
+   },
+   "d1": -0.006239926522342132,
+   "se1": 0.0038637043273638365
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_016.py",
+   "cfg": {
+    "cap_pen": 3.0,
+    "switch": 1.1,
+    "voi_k": 6
+   },
+   "d1": -0.006498535149536598,
+   "se1": 0.008282309759646769
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_035.py",
+   "cfg": {
+    "carry_plates": 2,
+    "plates_per_seg": [
+     4,
+     2,
+     0
+    ],
+    "switch": 1.0,
+    "bayes_wscale": 1.4,
+    "bayes_sig": 0.5
+   },
+   "d1": -0.006524342330994228,
+   "se1": 0.009006402906749937
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_010.py",
+   "cfg": {
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "lib_sig": 0.15,
+    "screen_eu": 0.25,
+    "plates_per_seg": [
+     6,
+     1,
+     0
+    ],
+    "bayes_wscale": 1.3
+   },
+   "d1": -0.006646037745362257,
+   "se1": 0.005959874500196212
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_029.py",
+   "cfg": {
+    "cap_pen": 1.0,
+    "carry_plates": 0
+   },
+   "d1": -0.006675658234660184,
+   "se1": 0.0031668801698533206
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_034.py",
+   "cfg": {
+    "bayes_wscale": 1.5,
+    "voi_k": 6,
+    "feat_s": 0.5,
+    "carry_plates": 9,
+    "bayes_sig": 0.35
+   },
+   "d1": -0.0068291155434091,
+   "se1": 0.007941899463060178
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_038.py",
+   "cfg": {
+    "bayes_wscale": 1.4,
+    "voi_k": 12,
+    "switch": 0.9,
+    "plates_per_seg": [
+     4,
+     3,
+     0
+    ]
+   },
+   "d1": -0.0068419431627336404,
+   "se1": 0.007875156198801116
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_028.py",
+   "cfg": {
+    "bayes_wscale": 1.3,
+    "pilot_frac": [
+     0.0,
+     0.34,
+     1.0
+    ],
+    "voi_k": 6
+   },
+   "d1": -0.0069954768053322215,
+   "se1": 0.008272204785269636
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_060.py",
+   "cfg": {
+    "plates_per_seg": [
+     4,
+     3,
+     0
+    ],
+    "n_space_plates": 1,
+    "carry_plates": 2,
+    "feat_s": 0.7,
+    "switch": 1.1
+   },
+   "d1": -0.00715962082512131,
+   "se1": 0.009135708810829984
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_023.py",
+   "cfg": {
+    "screen_eu": 0.25,
+    "bayes_sig": 0.25,
+    "feat_s": 0.3
+   },
+   "d1": -0.007309636321155139,
+   "se1": 0.006846541441565497
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_004.py",
+   "cfg": {
+    "carry_plates": 2,
+    "bayes_sig": 0.25,
+    "cap_pen": 1.0
+   },
+   "d1": -0.00738248543293228,
+   "se1": 0.007138598192888079
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_017.py",
+   "cfg": {
+    "plates_per_seg": [
+     4,
+     2,
+     0
+    ],
+    "bayes_sig": 0.35,
+    "carry_plates": 9,
+    "cap_pen": 3.0,
+    "switch": 1.1
+   },
+   "d1": -0.0077747000113651986,
+   "se1": 0.008196577098242803
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_067.py",
+   "cfg": {
+    "carry_plates": 0,
+    "screen_eu": 0.5,
+    "lib_sig": 0.07,
+    "cap_pen": 2.0,
+    "switch": 1.1
+   },
+   "d1": -0.007838755340924678,
+   "se1": 0.0027005661425595785
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_025.py",
+   "cfg": {
+    "carry_plates": 0,
+    "switch": 1.0,
+    "n_space_plates": 1
+   },
+   "d1": -0.007966089384299147,
+   "se1": 0.009798512333893158
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_036.py",
+   "cfg": {
+    "carry_plates": 0,
+    "n_space_plates": 1
+   },
+   "d1": -0.007966089384299147,
+   "se1": 0.009798512333893158
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_005.py",
+   "cfg": {
+    "pilot_frac": [
+     0.0,
+     0.8,
+     1.0
+    ],
+    "screen_eu": 1.0,
+    "voi_k": 10,
+    "cap_pen": 3.0
+   },
+   "d1": -0.008006118870922403,
+   "se1": 0.005935832170699309
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_077.py",
+   "cfg": {
+    "voi_k": 6,
+    "feat_s": 0.5,
+    "cap_pen": 3.0,
+    "lib_sig": 0.15,
+    "pilot_frac": [
+     0.4,
+     0.5,
+     1.0
+    ]
+   },
+   "d1": -0.008229750729571463,
+   "se1": 0.008112153238031296
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_021.py",
+   "cfg": {
+    "bayes_sig": 0.25,
+    "n_space_plates": 3
+   },
+   "d1": -0.008694563039288792,
+   "se1": 0.007983592548333085
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_056.py",
+   "cfg": {
+    "pilot_frac": [
+     0.4,
+     0.67,
+     1.0
+    ],
+    "screen_eu": 0.75,
+    "switch": 1.0,
+    "bayes_wscale": 1.4,
+    "n_space_plates": 3
+   },
+   "d1": -0.009257272225600062,
+   "se1": 0.008524024868193866
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_030.py",
+   "cfg": {
+    "pilot_frac": [
+     0.0,
+     0.8,
+     1.0
+    ],
+    "screen_eu": 1.0
+   },
+   "d1": -0.009373971527932989,
+   "se1": 0.005642744121971672
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_069.py",
+   "cfg": {
+    "voi_k": 6,
+    "switch": 1.0,
+    "screen_eu": 0.75,
+    "feat_s": 0.5,
+    "pilot_frac": [
+     0.0,
+     0.8,
+     1.0
+    ]
+   },
+   "d1": -0.009664351456478773,
+   "se1": 0.010082102967991464
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_045.py",
+   "cfg": {
+    "n_space_plates": 1,
+    "cap_pen": 1.0,
+    "pilot_frac": [
+     0.4,
+     0.5,
+     1.0
+    ],
+    "feat_s": 0.5
+   },
+   "d1": -0.010055957817265532,
+   "se1": 0.009465991854173114
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_014.py",
+   "cfg": {
+    "lib_sig": 0.07,
+    "cap_pen": 1.0,
+    "carry_plates": 0,
+    "bayes_sig": 0.25
+   },
+   "d1": -0.010788222009904022,
+   "se1": 0.007496588525584537
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_074.py",
+   "cfg": {
+    "mbr_per_seg": [
+     1,
+     2,
+     1
+    ],
+    "lib_sig": 0.1,
+    "feat_s": 0.3
+   },
+   "d1": -0.0110937507385547,
+   "se1": 0.005428430717027043
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_057.py",
+   "cfg": {
+    "bayes_sig": 0.35,
+    "bayes_wscale": 1.4,
+    "plates_per_seg": [
+     4,
+     3,
+     0
+    ],
+    "lib_sig": 0.15,
+    "cap_pen": 3.0
+   },
+   "d1": -0.01180929977033656,
+   "se1": 0.007715671734256307
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_032.py",
+   "cfg": {
+    "pilot_frac": [
+     0.0,
+     0.8,
+     1.0
+    ],
+    "bayes_sig": 0.5,
+    "plates_per_seg": [
+     5,
+     3,
+     0
+    ],
+    "screen_eu": 0.5,
+    "switch": 0.9
+   },
+   "d1": -0.012174970533404675,
+   "se1": 0.009218234026168785
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_037.py",
+   "cfg": {
+    "mbr_per_seg": [
+     1,
+     3,
+     1
+    ],
+    "switch": 1.0,
+    "n_space_plates": 2,
+    "cap_pen": 1.0
+   },
+   "d1": -0.012286763839328765,
+   "se1": 0.005026155658905403
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_013.py",
+   "cfg": {
+    "carry_plates": 9,
+    "bayes_sig": 0.25,
+    "mbr_per_seg": [
+     1,
+     2,
+     1
+    ]
+   },
+   "d1": -0.015039308499550194,
+   "se1": 0.008501080997176873
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_019.py",
+   "cfg": {
+    "n_space_plates": 2,
+    "pilot_frac": [
+     0.0,
+     0.8,
+     1.0
+    ],
+    "plates_per_seg": [
+     6,
+     1,
+     0
+    ],
+    "bayes_sig": 0.5
+   },
+   "d1": -0.015801485483491983,
+   "se1": 0.008988129802209463
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_020.py",
+   "cfg": {
+    "n_space_plates": 3,
+    "carry_plates": 9,
+    "bayes_wscale": 1.4
+   },
+   "d1": -0.016149778019455073,
+   "se1": 0.009146157046041737
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_047.py",
+   "cfg": {
+    "cap_pen": 2.0,
+    "voi_k": 10,
+    "n_space_plates": 3,
+    "carry_plates": 9
+   },
+   "d1": -0.017239569950062247,
+   "se1": 0.00912511315888418
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_058.py",
+   "cfg": {
+    "bayes_sig": 0.35,
+    "cap_pen": 2.0,
+    "n_space_plates": 3
+   },
+   "d1": -0.017239569950062247,
+   "se1": 0.00912511315888418
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_048.py",
+   "cfg": {
+    "n_space_plates": 3,
+    "voi_k": 12,
+    "bayes_sig": 0.5
+   },
+   "d1": -0.017678775529708358,
+   "se1": 0.008559232216302119
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_024.py",
+   "cfg": {
+    "bayes_wscale": 1.3,
+    "n_space_plates": 3,
+    "screen_eu": 0.25
+   },
+   "d1": -0.0181559780612676,
+   "se1": 0.00903291934878286
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_078.py",
+   "cfg": {
+    "carry_plates": 9,
+    "bayes_sig": 0.35,
+    "mbr_per_seg": [
+     3,
+     2,
+     1
+    ],
+    "n_space_plates": 3,
+    "plates_per_seg": [
+     5,
+     3,
+     0
+    ]
+   },
+   "d1": -0.01875717334002995,
+   "se1": 0.009583596514324591
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_003.py",
+   "cfg": {
+    "n_space_plates": 3,
+    "lib_sig": 0.07,
+    "mbr_per_seg": [
+     3,
+     2,
+     1
+    ],
+    "screen_eu": 0.5
+   },
+   "d1": -0.0187874295205186,
+   "se1": 0.009420135087087136
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_007.py",
+   "cfg": {
+    "n_space_plates": 3,
+    "feat_s": 0.7,
+    "voi_k": 10
+   },
+   "d1": -0.019525686982619816,
+   "se1": 0.009130685009453219
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_050.py",
+   "cfg": {
+    "switch": 1.0,
+    "voi_k": 10,
+    "mbr_per_seg": [
+     2,
+     3,
+     1
+    ],
+    "n_space_plates": 3
+   },
+   "d1": -0.020575676459081548,
+   "se1": 0.009177628172968867
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_006.py",
+   "cfg": {
+    "lib_sig": 0.15,
+    "n_space_plates": 3,
+    "cap_pen": 2.0,
+    "mbr_per_seg": [
+     2,
+     3,
+     1
+    ]
+   },
+   "d1": -0.02107530146176428,
+   "se1": 0.00916750760032701
+  }
+ ],
+ "stage2": [
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_033.py",
+   "cfg": {
+    "lib_sig": 0.1,
+    "bayes_sig": 0.5,
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "bayes_wscale": 1.4,
+    "voi_k": 6
+   },
+   "d1": 0.000989258012593165,
+   "se1": 0.007919968376062504,
+   "d2": 0.0029127644484528465,
+   "se2": 0.0047446816075233916,
+   "d3": -0.0037867987773165476,
+   "se3": 0.003933227132550269
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_012.py",
+   "cfg": {
+    "plates_per_seg": [
+     6,
+     1,
+     0
+    ],
+    "carry_plates": 9,
+    "screen_eu": 0.5,
+    "bayes_wscale": 1.4
+   },
+   "d1": 0.003011785926470813,
+   "se1": 0.007487297635135465,
+   "d2": 0.001300831249240239,
+   "se2": 0.003994548228206342,
+   "d3": 0.0025938902040342766,
+   "se3": 0.0024045738577455882
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_072.py",
+   "cfg": {
+    "bayes_sig": 0.5,
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "lib_sig": 0.1,
+    "carry_plates": 9,
+    "mbr_per_seg": [
+     2,
+     2,
+     1
+    ]
+   },
+   "d1": 0.007312726436433626,
+   "se1": 0.006285547056851896,
+   "d2": -0.00047143299975525426,
+   "se2": 0.004600039495685007,
+   "d3": -0.002581866630260978,
+   "se3": 0.0035249271783486793
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_046.py",
+   "cfg": {
+    "lib_sig": 0.07,
+    "pilot_frac": [
+     0.4,
+     0.67,
+     1.0
+    ]
+   },
+   "d1": 0.0033164475003891075,
+   "se1": 0.0019059387369956449,
+   "d2": -0.0004906301210407112,
+   "se2": 0.0020461474016191367,
+   "d3": -0.005794719948322037,
+   "se3": 0.0020931157612101865
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_031.py",
+   "cfg": {
+    "pilot_frac": [
+     0.4,
+     0.67,
+     1.0
+    ],
+    "screen_eu": 0.5,
+    "mbr_per_seg": [
+     2,
+     3,
+     1
+    ],
+    "carry_plates": 2
+   },
+   "d1": 0.00202474192841528,
+   "se1": 0.0023673332112132328,
+   "d2": -0.0009325636240079713,
+   "se2": 0.0021299164883871956
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_022.py",
+   "cfg": {
+    "n_space_plates": 2,
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "lib_sig": 0.15,
+    "cap_pen": 2.0,
+    "screen_eu": 0.25
+   },
+   "d1": 0.0010289503111956643,
+   "se1": 0.002302321371703351,
+   "d2": -0.0012995639541826505,
+   "se2": 0.002563259659102311
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_002.py",
+   "cfg": {
+    "screen_eu": 1.0,
+    "mbr_per_seg": [
+     3,
+     2,
+     1
+    ],
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "lib_sig": 0.07,
+    "voi_k": 6
+   },
+   "d1": 0.0037690431123695188,
+   "se1": 0.008043136264566856,
+   "d2": -0.0014385513321675788,
+   "se2": 0.004500360492818621
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_008.py",
+   "cfg": {
+    "n_space_plates": 2,
+    "lib_sig": 0.15,
+    "plates_per_seg": [
+     5,
+     2,
+     0
+    ],
+    "pilot_frac": [
+     0.0,
+     0.67,
+     1.0
+    ],
+    "voi_k": 8
+   },
+   "d1": 0.004127143533405353,
+   "se1": 0.006787605903624717,
+   "d2": -0.002474750044422822,
+   "se2": 0.0037109067386641346
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_044.py",
+   "cfg": {
+    "bayes_wscale": 1.4,
+    "voi_k": 12,
+    "screen_eu": 0.5,
+    "bayes_sig": 0.5,
+    "cap_pen": 3.0
+   },
+   "d1": 0.0032219069351624944,
+   "se1": 0.0061105609690035294,
+   "d2": -0.002792121496358571,
+   "se2": 0.0038581389438499467
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_065.py",
+   "cfg": {
+    "lib_sig": 0.1,
+    "carry_plates": 2,
+    "voi_k": 10,
+    "screen_eu": 0.5,
+    "bayes_wscale": 1.5
+   },
+   "d1": 0.00507754260470478,
+   "se1": 0.006032374257763922,
+   "d2": -0.003502835309784348,
+   "se2": 0.003313511081191575
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_000.py",
+   "cfg": {
+    "bayes_wscale": 1.4,
+    "voi_k": 8
+   },
+   "d1": 0.00414487785634602,
+   "se1": 0.006163050631430676,
+   "d2": -0.0036592813884456566,
+   "se2": 0.0034482983322592403
+  },
+  {
+   "path": "/home/bruno/Documents/ml4ce_2026-main/BO_coursework/dev/algos/ps/informed_bayes2_s2_061.py",
+   "cfg": {
+    "bayes_wscale": 1.4,
+    "feat_s": 0.7,
+    "lib_sig": 0.1,
+    "switch": 1.1
+   },
+   "d1": 0.00306949010987181,
+   "se1": 0.005235642616680029,
+   "d2": -0.005532919057660228,
+   "se2": 0.0028679913011832826
+  }
+ ]
+}

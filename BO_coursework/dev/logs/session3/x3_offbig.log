@@ -1,0 +1,14 @@
+400 runs per algorithm on 'off_big', 732 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+informed_bayes2                     0.745 0.009 0.572 0.793 0.869 0.489    91938   47   0    10   3.6
+x3_j1                               0.743 0.009 0.572 0.791 0.866 0.486    91739   47   0    14   6.8
+x3_j2                               0.743 0.009 0.572 0.792 0.865 0.489    91724   47   0    15   6.6
+x3_j1s                              0.742 0.009 0.572 0.792 0.863 0.485    91606   47   0    16   6.8
+x3_j2s                              0.742 0.009 0.572 0.791 0.863 0.488    91596   47   0    15   6.7
+x3_j1s3                             0.741 0.009 0.572 0.790 0.860 0.486    91442   47   0    14   6.7
+paired diff x3_j1 - informed_bayes2: -0.001 ± 0.001, wins 35%
+paired diff x3_j2 - informed_bayes2: -0.002 ± 0.001, wins 28%
+paired diff x3_j1s - informed_bayes2: -0.003 ± 0.001, wins 32%
+paired diff x3_j2s - informed_bayes2: -0.003 ± 0.001, wins 26%
+paired diff x3_j1s3 - informed_bayes2: -0.004 ± 0.001, wins 31%
+Tue Nov 17 01:08:33 AM GMT 2026

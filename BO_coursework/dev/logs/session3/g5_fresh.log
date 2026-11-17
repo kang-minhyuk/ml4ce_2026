@@ -1,0 +1,14 @@
+400 runs per algorithm on 'off_fresh', 819 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+generic_bayes                       0.470 0.007 0.322 0.493 0.595 0.284    57436   58   0    70  17.6
+generic_bayes_s3_058                0.478 0.007 0.316 0.506 0.613 0.293    58299   58   0    71  18.3
+generic_bayes_s3_043                0.470 0.008 0.321 0.494 0.596 0.283    57454   58   0    80  17.2
+paired diff generic_bayes_s3_058 - generic_bayes: +0.008 ± 0.004, wins 50%
+paired diff generic_bayes_s3_043 - generic_bayes: +0.000 ± 0.005, wins 49%
+20 runs per algorithm on 'practice20', 40 s
+algorithm                            norm   ±se   n33   n66  n100   p10      raw zero err  maxs  meds
+generic_bayes                       0.602 0.021 0.461 0.636 0.709 0.457    79205    0   0    21  15.6
+generic_bayes_s3_058                0.641 0.020 0.497 0.660 0.766 0.533    84496    0   0    24  19.0
+generic_bayes_s3_043                0.608 0.016 0.443 0.628 0.755 0.521    80140    0   0    17  12.2
+paired diff generic_bayes_s3_058 - generic_bayes: +0.039 ± 0.022, wins 60%
+paired diff generic_bayes_s3_043 - generic_bayes: +0.006 ± 0.020, wins 40%
